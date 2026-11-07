@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "language": "en-US",
+  "status": "generated",
+  "kind": "generated-original",
+  "requestedVoice": {
+    "name": "Ordis - Robotic Voice (Warframe)",
+    "page": "https://www.101soundboards.com/tts/1033939-ordis-robotic-voice-warframe-sq-tts-text-to-speech",
+    "downloadPage": "https://www.101soundboards.com/tts/1033939-ordis-robotic-voice-warframe-sq-tts-text-to-speech/download_model",
+    "formatAdvertised": "RVCv2",
+    "downloadStatus": "provided_by_user_at_repository_root",
+    "archive": "ordis_robotic_voice_warframe_13875.zip"
+  },
+  "sourceVoice": {
+    "name": "Piper en_US-ryan-high",
+    "model": "tooling/voice/models/piper-en/en_US-ryan-high.onnx"
+  },
+  "styleReferences": [
+    "https://wiki.warframe.com/w/Ordis/Quotes"
+  ],
+  "phrases": [
+    {
+      "id": "receive",
+      "animation": "listen",
+      "text": "Understood, Operator. I’ll trace the signal."
+    },
+    {
+      "id": "plan",
+      "animation": "think",
+      "text": "I’ll compare the frequency and signature first."
+    },
+    {
+      "id": "search",
+      "animation": "search",
+      "text": "Searching the transmission logs. Let’s see what turns up."
+    },
+    {
+      "id": "found",
+      "animation": "report",
+      "text": "There it is. Relay E seventeen, near Europa. Checking it now."
+    },
+    {
+      "id": "analyse",
+      "animation": "analyse",
+      "text": "Two hundred packets. I’m checking power and integrity."
+    },
+    {
+      "id": "verify",
+      "animation": "compare",
+      "text": "Two observations agree. The source is confirmed."
+    },
+    {
+      "id": "report",
+      "animation": "report",
+      "text": "Operator, source confirmed: Relay E seventeen, Europa. Power is up thirty four percent. Integrity is ninety eight percent. No hostile signature found. I recommend isolation and recalibration. No changes applied. Awaiting your instructions."
+    },
+    {
+      "id": "not-found",
+      "animation": "report",
+      "text": "No matching source, Operator. There isn’t enough evidence for a reliable conclusion."
+    },
+    {
+      "id": "unconfirmed",
+      "animation": "compare",
+      "text": "I need more evidence before I can confirm that source."
+    },
+    {
+      "id": "report-generic",
+      "animation": "report",
+      "text": "Operator, the analysis is ready. Please review the findings before taking action."
+    }
+  ],
+  "scenario": "signal-investigation-demo"
+}

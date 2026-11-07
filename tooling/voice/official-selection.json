@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "language": "en",
+  "source": "https://wiki.warframe.com/w/Ordis/Quotes",
+  "clips": [
+    {
+      "id": "glitch",
+      "animation": "speak",
+      "text": "Ordis is hap - angry. Hmm, I may require maintenance after all.",
+      "source": "https://wiki.warframe.com/images/DIdle080Ordis_en.ogg?c4648",
+      "sourcePage": "https://wiki.warframe.com/w/File:DIdle080Ordis_en.ogg",
+      "filename": "DIdle080Ordis_en.ogg",
+      "kind": "game-recording"
+    },
+    {
+      "id": "view",
+      "animation": "idle",
+      "text": "Operator, are you enjoying the view?",
+      "source": "https://wiki.warframe.com/images/DIdle090Ordis_en.ogg?ba271",
+      "sourcePage": "https://wiki.warframe.com/w/File:DIdle090Ordis_en.ogg",
+      "filename": "DIdle090Ordis_en.ogg",
+      "kind": "game-recording"
+    },
+    {
+      "id": "welcome",
+      "animation": "listen",
+      "text": "Welcome back, Operator!",
+      "source": "https://wiki.warframe.com/images/DDayTrib0200Ordis_en.ogg?b4d4c",
+      "sourcePage": "https://wiki.warframe.com/w/File:DDayTrib0200Ordis_en.ogg",
+      "filename": "DDayTrib0200Ordis_en.ogg",
+      "kind": "game-recording"
+    },
+    {
+      "id": "support",
+      "animation": "summon",
+      "text": "Prepare for incoming support.",
+      "source": "https://wiki.warframe.com/images/DSupportIncoming00150Ordis_en.ogg?2a034",
+      "sourcePage": "https://wiki.warframe.com/w/File:DSupportIncoming00150Ordis_en.ogg",
+      "filename": "DSupportIncoming00150Ordis_en.ogg",
+      "kind": "game-recording"
+    }
+  ]
+}

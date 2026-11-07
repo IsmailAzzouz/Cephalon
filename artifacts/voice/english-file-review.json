@@ -1,0 +1,130 @@
+[
+  {
+    "collection": "ordis-en",
+    "id": "listen",
+    "duration": 1.42,
+    "finite": true,
+    "peak": 0.5514,
+    "rms": 0.12562
+  },
+  {
+    "collection": "ordis-en",
+    "id": "read",
+    "duration": 2.16,
+    "finite": true,
+    "peak": 0.62582,
+    "rms": 0.12292
+  },
+  {
+    "collection": "ordis-en",
+    "id": "write",
+    "duration": 2.74,
+    "finite": true,
+    "peak": 0.52011,
+    "rms": 0.12124
+  },
+  {
+    "collection": "ordis-en",
+    "id": "think",
+    "duration": 2.24,
+    "finite": true,
+    "peak": 0.65214,
+    "rms": 0.12336
+  },
+  {
+    "collection": "ordis-en",
+    "id": "search",
+    "duration": 3.92,
+    "finite": true,
+    "peak": 0.65082,
+    "rms": 0.12694
+  },
+  {
+    "collection": "ordis-en",
+    "id": "found",
+    "duration": 2.5,
+    "finite": true,
+    "peak": 0.59296,
+    "rms": 0.12345
+  },
+  {
+    "collection": "ordis-en",
+    "id": "analyse",
+    "duration": 3.28,
+    "finite": true,
+    "peak": 0.57006,
+    "rms": 0.11535
+  },
+  {
+    "collection": "ordis-en",
+    "id": "compare",
+    "duration": 2.86,
+    "finite": true,
+    "peak": 0.66127,
+    "rms": 0.12291
+  },
+  {
+    "collection": "ordis-en",
+    "id": "summon",
+    "duration": 3.7,
+    "finite": true,
+    "peak": 0.63245,
+    "rms": 0.1167
+  },
+  {
+    "collection": "ordis-en",
+    "id": "contact",
+    "duration": 3.04,
+    "finite": true,
+    "peak": 0.59667,
+    "rms": 0.11937
+  },
+  {
+    "collection": "ordis-en",
+    "id": "report",
+    "duration": 3.38,
+    "finite": true,
+    "peak": 0.7328,
+    "rms": 0.11781
+  },
+  {
+    "collection": "ordis-en",
+    "id": "complete",
+    "duration": 3.46,
+    "finite": true,
+    "peak": 0.69172,
+    "rms": 0.12338
+  },
+  {
+    "collection": "ordis-official",
+    "id": "glitch",
+    "duration": 5.01,
+    "finite": true,
+    "peak": 0.53862,
+    "rms": 0.09154
+  },
+  {
+    "collection": "ordis-official",
+    "id": "view",
+    "duration": 2.63,
+    "finite": true,
+    "peak": 0.50714,
+    "rms": 0.09345
+  },
+  {
+    "collection": "ordis-official",
+    "id": "welcome",
+    "duration": 2.05,
+    "finite": true,
+    "peak": 0.4746,
+    "rms": 0.08152
+  },
+  {
+    "collection": "ordis-official",
+    "id": "support",
+    "duration": 1.97,
+    "finite": true,
+    "peak": 0.42316,
+    "rms": 0.08208
+  }
+]

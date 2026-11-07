@@ -1,0 +1,9 @@
+{
+  "name": "@cephalon/contracts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./avatar-events": { "types": "./src/avatar-events.d.ts" }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "errors": [],
+  "importExport": {
+    "review": {
+      "label": "Relire un document",
+      "behavior": "read",
+      "state": "thinking",
+      "activity": "analysing",
+      "focus": [
+        -0.55,
+        0.2
+      ],
+      "duration": 8,
+      "tempo": 0.7,
+      "intensity": 0.85,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    },
+    "tool": "review"
+  },
+  "duplicateBefore": 13,
+  "duplicateAfter": 14,
+  "preview": {
+    "active": "custom-review-1",
+    "panelHidden": true
+  },
+  "narrow": {
+    "width": 320,
+    "hint": {
+      "width": 288,
+      "scroll": 288
+    }
+  },
+  "reduced": {
+    "paused": true,
+    "frozen": true
+  },
+  "audioEnd": {
+    "levelWithOtherSpeech": 0.6,
+    "levelAfterLastSpeech": 0
+  }
+}

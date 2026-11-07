@@ -1,0 +1,63 @@
+{
+  "errors": [],
+  "reduced": {
+    "missionRunning": true,
+    "controllerPaused": true,
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "audioPlaying": true
+  },
+  "signals": [
+    {
+      "voice": 0,
+      "mic": 0
+    },
+    {
+      "voice": 0.31529368744083597,
+      "mic": 0
+    },
+    {
+      "voice": 0.49602731127846306,
+      "mic": 0
+    },
+    {
+      "voice": 0.3642587124570307,
+      "mic": 0
+    },
+    {
+      "voice": 0.49041867934298605,
+      "mic": 0
+    },
+    {
+      "voice": 0.678494522485972,
+      "mic": 0
+    },
+    {
+      "voice": 0.41342923365695583,
+      "mic": 0
+    },
+    {
+      "voice": 0.21224560182621935,
+      "mic": 0
+    }
+  ],
+  "noSource": {
+    "clip": "not-found",
+    "text": "No matching source, Operator. There isn’t enough evidence for a reliable conclusion.",
+    "result": null
+  },
+  "changedData": {
+    "clip": "report-generic",
+    "spoken": "Operator, the analysis is ready. Please review the findings before taking action.",
+    "report": "Operator, source confirmed: Other relay, Mars. Power is up 10%. Integrity is 98%. The signature is not in the trust register. I recommend continued monitoring. No changes applied. Awaiting your instructions."
+  },
+  "earlyCancel": {
+    "output": false,
+    "running": false,
+    "speechActive": false,
+    "waiting": false
+  }
+}

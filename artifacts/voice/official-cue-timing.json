@@ -1,0 +1,52 @@
+[
+  {
+    "word": "Ordious",
+    "start": 0.0,
+    "end": 0.62
+  },
+  {
+    "word": "is",
+    "start": 0.62,
+    "end": 0.88
+  },
+  {
+    "word": "half",
+    "start": 0.88,
+    "end": 1.2
+  },
+  {
+    "word": "angry,",
+    "start": 1.2,
+    "end": 1.9
+  },
+  {
+    "word": "I",
+    "start": 2.44,
+    "end": 3.1
+  },
+  {
+    "word": "may",
+    "start": 3.1,
+    "end": 3.28
+  },
+  {
+    "word": "require",
+    "start": 3.28,
+    "end": 3.6
+  },
+  {
+    "word": "maintenance",
+    "start": 3.6,
+    "end": 4.02
+  },
+  {
+    "word": "after",
+    "start": 4.02,
+    "end": 4.38
+  },
+  {
+    "word": "all.",
+    "start": 4.38,
+    "end": 4.76
+  }
+]

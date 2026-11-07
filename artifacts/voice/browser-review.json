@@ -1,0 +1,419 @@
+{
+  "errors": [],
+  "clipCount": 12,
+  "samples": [
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 0,
+      "paused": false,
+      "voice": 0.035296777497457514,
+      "mic": 0,
+      "bands": [
+        0.01831549047537826,
+        0.017378542534883613,
+        0.007566051595551103
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": false
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 0,
+      "paused": false,
+      "voice": 0.01311737388767675,
+      "mic": 0,
+      "bands": [
+        0.005289862574889558,
+        0.005019254160023173,
+        0.0021852198404838305
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": false
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 0.238005,
+      "paused": false,
+      "voice": 0.00744815369022403,
+      "mic": 0,
+      "bands": [
+        0.33421077630264995,
+        0.10880742072374357,
+        0.0019125669700023626
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 0.461497,
+      "paused": false,
+      "voice": 0.42131807403673904,
+      "mic": 0,
+      "bands": [
+        0.8629265267272567,
+        0.5118850664650029,
+        0.231651240965135
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 1.399002,
+      "paused": false,
+      "voice": 0.5852919947126196,
+      "mic": 0,
+      "bands": [
+        0.8679684330670232,
+        0.5886231586719941,
+        0.3642425730846451
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 1.63184,
+      "paused": false,
+      "voice": 0.3700678323814456,
+      "mic": 0,
+      "bands": [
+        0.6969612696508501,
+        0.5531434523392428,
+        0.4448159062889569
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 1.848889,
+      "paused": false,
+      "voice": 0.27346023879135994,
+      "mic": 0,
+      "bands": [
+        0.6664266788454356,
+        0.46167812032626854,
+        0.5368707707513148
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 2.072381,
+      "paused": false,
+      "voice": 0.26945618753183087,
+      "mic": 0,
+      "bands": [
+        0.665663636776449,
+        0.4989111475950614,
+        0.5172549857713212
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 2.295873,
+      "paused": false,
+      "voice": 0.08744482600404725,
+      "mic": 0,
+      "bands": [
+        0.39746967763129576,
+        0.24226271009949754,
+        0.1367493538851472
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 2.51691,
+      "paused": false,
+      "voice": 0.3308240574528539,
+      "mic": 0,
+      "bands": [
+        0.2989331934834269,
+        0.3720700931525797,
+        0.5611980784838574
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 2.742857,
+      "paused": false,
+      "voice": 0.6450269709276477,
+      "mic": 0,
+      "bands": [
+        0.7903766520469725,
+        0.5397125803450179,
+        0.4868502706699892
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 2.957642,
+      "paused": false,
+      "voice": 0.9392021067312345,
+      "mic": 0,
+      "bands": [
+        0.8135329316281886,
+        0.7483121432963658,
+        0.49928433892568064
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 3.181134,
+      "paused": false,
+      "voice": 0.5230197382411,
+      "mic": 0,
+      "bands": [
+        0.8136031992436377,
+        0.6169510022844639,
+        0.4357992920436665
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 3.404142,
+      "paused": false,
+      "voice": 0.16511411030712603,
+      "mic": 0,
+      "bands": [
+        0.47285920676372123,
+        0.19979097071484192,
+        0.1048575848320337
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 3.626314,
+      "paused": false,
+      "voice": 0.4297814559947547,
+      "mic": 0,
+      "bands": [
+        0.8794652140266672,
+        0.4431188587029157,
+        0.5823618823904333
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 3.85161,
+      "paused": false,
+      "voice": 0.4520838709559386,
+      "mic": 0,
+      "bands": [
+        0.8772271512050093,
+        0.5302040187390678,
+        0.35641618887210996
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 4.066395,
+      "paused": false,
+      "voice": 0.4800461348620258,
+      "mic": 0,
+      "bands": [
+        0.8173490578319934,
+        0.5242058852284083,
+        0.4746556805896101
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 4.289887,
+      "paused": false,
+      "voice": 0.5621623981852087,
+      "mic": 0,
+      "bands": [
+        0.8678656806924625,
+        0.6282751140869295,
+        0.4069423516692975
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 4.512182,
+      "paused": false,
+      "voice": 0.28431366824881465,
+      "mic": 0,
+      "bands": [
+        0.6624841682106866,
+        0.45830630557342633,
+        0.23263554799411468
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 4.790796,
+      "paused": false,
+      "voice": 0.6008563142990474,
+      "mic": 0,
+      "bands": [
+        0.8883584858138072,
+        0.6080887189344365,
+        0.3686212396420457
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 5.0039,
+      "paused": false,
+      "voice": 0.3527271762234056,
+      "mic": 0,
+      "bands": [
+        0.8406813312451508,
+        0.6477197400578614,
+        0.3774525258184728
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 5.218685,
+      "paused": false,
+      "voice": 0.4323635051173474,
+      "mic": 0,
+      "bands": [
+        0.8966673262965418,
+        0.45515920150504524,
+        0.39661151300216463
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 5.442004,
+      "paused": false,
+      "voice": 0.33099585657501934,
+      "mic": 0,
+      "bands": [
+        0.5186200731867834,
+        0.38622323104628903,
+        0.5780875522599291
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "speaking",
+      "demo": false,
+      "currentTime": 5.654059,
+      "paused": false,
+      "voice": 0.1054922098671315,
+      "mic": 0,
+      "bands": [
+        0.3225431170658762,
+        0.1303459916125547,
+        0.18310101977539242
+      ],
+      "output": true,
+      "context": "running",
+      "panelHidden": true
+    },
+    {
+      "state": "idle",
+      "demo": false,
+      "currentTime": null,
+      "paused": null,
+      "voice": 0.033293544516461625,
+      "mic": 0,
+      "bands": [
+        0.12688393163423653,
+        0.03306853591204688,
+        0.04388034916308308
+      ],
+      "output": false,
+      "context": "running",
+      "panelHidden": true
+    }
+  ],
+  "maxVoice": 0.9392021067312345,
+  "maxMic": 0,
+  "stopped": {
+    "output": false,
+    "element": false,
+    "state": "idle",
+    "signal": 0
+  },
+  "localFile": {
+    "output": true,
+    "src": "blob:http://192.168.129.101:5173/370a3086-9922-4384-bac7-ece95ca7532b",
+    "voice": 0.490568812716632
+  }
+}

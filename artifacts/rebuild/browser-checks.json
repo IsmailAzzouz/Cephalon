@@ -1,0 +1,65 @@
+{
+  "results": [
+    {
+      "audioFile": {
+        "state": "speaking",
+        "level": 0.3779586880489923,
+        "mic": 0,
+        "bands": [
+          0.7552941176470588,
+          0.13384932920536635,
+          0.024958200334397322
+        ]
+      }
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "ok": true
+    },
+    {
+      "name": "small",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "ok": true
+    },
+    {
+      "name": "landscape",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "ok": true
+    },
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "ok": true
+    },
+    {
+      "name": "reduced",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "ok": true
+    },
+    {
+      "microphone": {
+        "state": "listening",
+        "input": 0.19588334445798236,
+        "output": 0,
+        "demo": false
+      }
+    }
+  ],
+  "errors": []
+}

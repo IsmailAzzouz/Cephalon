@@ -1,0 +1,45 @@
+{
+  "archive": "tooling/voice/ordis_robotic_voice_warframe_13875.zip",
+  "archiveSha256": "f92b7dd46df4e2e323038310419882de0f757be3aab4296b7e8c0335921359e2",
+  "files": [
+    {
+      "name": "Ordis.pth",
+      "bytes": 55193241,
+      "sha256": "d4297f6496cf4b68ee7decabb900fdc081e6ba4b458fdd9d34253281be51cde3"
+    },
+    {
+      "name": "added_IVF108_Flat_nprobe_1_Ordis_v2.index",
+      "bytes": 13339619,
+      "sha256": "8e52aaa95000ecea3f6b3315d778f763872c89a781cb4ae8eda2cf72263bdd25"
+    }
+  ],
+  "model": {
+    "format": "RVC v2",
+    "sampleRate": 40000,
+    "f0": true,
+    "trainingInfo": "1000epoch",
+    "speakerId": 0
+  },
+  "supportingAssets": [
+    {
+      "path": "tooling/voice/models/piper/fr_FR-tom-medium.onnx",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/main/fr/fr_FR/tom/medium",
+      "sha256": "bf65074ccdeeeeaa832e75edb1c0a513c01c9a972bdf085ff8a6e71ea234fd41"
+    },
+    {
+      "path": "tooling/voice/models/rvc-base/hubert_base.pt",
+      "source": "https://huggingface.co/Daswer123/RVC_Base",
+      "sha256": "f54b40fd2802423a5643779c4861af1e9ee9c1564dc9d32f54f20b5ffba7db96"
+    },
+    {
+      "path": "tooling/voice/models/rvc-base/rmvpe.pt",
+      "source": "https://huggingface.co/Daswer123/RVC_Base",
+      "sha256": "6d62215f4306e3ca278246188607209f09af3dc77ed4232efdd069798c4ec193"
+    },
+    {
+      "path": "tooling/voice/models/piper-en/en_US-ryan-high.onnx",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/ryan/high",
+      "sha256": "b3990d7606e183ec8dbfba70a4607074f162de1a0c412e0180d1ff60bb154eca"
+    }
+  ]
+}

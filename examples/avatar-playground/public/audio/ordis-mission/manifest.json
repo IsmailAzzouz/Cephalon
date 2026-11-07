@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "voice": "Ordis - Robotic Voice (Warframe)",
+  "language": "en-US",
+  "kind": "generated-original",
+  "status": "generated",
+  "modelSha256": "d4297f6496cf4b68ee7decabb900fdc081e6ba4b458fdd9d34253281be51cde3",
+  "pipeline": {
+    "source": "Piper en_US-ryan-high",
+    "conversion": "rvc-python 0.1.5 / Ordis RVC v2",
+    "pitchSemitones": 0,
+    "indexRate": 0.65,
+    "f0": "rmvpe",
+    "device": "cpu"
+  },
+  "clips": [
+    {
+      "id": "receive",
+      "animation": "listen",
+      "text": "Understood, Operator. I’ll trace the signal.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 2.38,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-mission/receive.wav",
+      "mp3": "/audio/ordis-mission/receive.mp3",
+      "sha256": "bc952e7217985ffc907c0146282cae7c48ccd704fd61b5498317736e1a350c3e",
+      "peak": 0.63367,
+      "rms": 0.13179
+    },
+    {
+      "id": "plan",
+      "animation": "think",
+      "text": "I’ll compare the frequency and signature first.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 2.3,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-mission/plan.wav",
+      "mp3": "/audio/ordis-mission/plan.mp3",
+      "sha256": "1e096c6d1948818ae1d3c6389a63dcf57984bf0ed64b00ecf7b0c1d71c0684ae",
+      "peak": 0.77158,
+      "rms": 0.13218
+    },
+    {
+      "id": "search",
+      "animation": "search",
+      "text": "Searching the transmission logs. Let’s see what turns up.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 2.78,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-mission/search.wav",
+      "mp3": "/audio/ordis-mission/search.mp3",
+      "sha256": "278c8dab7679635471afba59803123e81eaaa06f8c6483fd0d7fff8bfdcc48df",
+      "peak": 0.60431,
+      "rms": 0.11683
+    },
+    {
+      "id": "found",
+      "animation": "report",
+      "text": "There it is. Relay E seventeen, near Europa. Checking it now.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 3.42,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-mission/found.wav",
+      "mp3": "/audio/ordis-mission/found.mp3",
+      "sha256": "32bfcb555806e8497d644412cd354424950881bc7e498b86cdd72454f8cff282",
+      "peak": 0.71738,
+      "rms": 0.12756
+    },
+    {
+      "id": "analyse",
+      "animation": "analyse",
+      "text": "Two hundred packets. I’m checking power and integrity.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 2.78,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-mission/analyse.wav",
+      "mp3": "/audio/ordis-mission/analyse.mp3",
+      "sha256": "ada10267372d328dd6d637919b39b24315bbb5a8dd6a36eb9522ca4cead0277d",
+      "peak": 0.79968,
+      "rms": 0.13244
+    },
+    {
+      "id": "verify",
+      "animation": "compare",
+      "text": "Two observations agree. The source is confirmed.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 2.66,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-mission/verify.wav",
+      "mp3": "/audio/ordis-mission/verify.mp3",
+      "sha256": "5bb37edfa71aa5155e3ccdd240bf849c8b9f1a98be18b84308281c815ae4008f",
+      "peak": 0.69095,
+      "rms": 0.12395
+    },
+    {
+      "id": "report",
+      "animation": "report",
+      "text": "Operator, source confirmed: Relay E seventeen, Europa. Power is up thirty four percent. Integrity is ninety eight percent. No hostile signature found. I recommend isolation and recalibration. No changes applied. Awaiting your instructions.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 14.1,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-mission/report.wav",
+      "mp3": "/audio/ordis-mission/report.mp3",
+      "sha256": "2c836e3d4c7a156d8f19ade11608670d5123a23350c3e193dacd3afa3ef4405f",
+      "peak": 0.841,
+      "rms": 0.13075
+    },
+    {
+      "id": "not-found",
+      "animation": "report",
+      "text": "No matching source, Operator. There isn’t enough evidence for a reliable conclusion.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 4.54,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-mission/not-found.wav",
+      "mp3": "/audio/ordis-mission/not-found.mp3",
+      "sha256": "a9f616c587fe7dc4231ecc03b8965e0ebd97884997a62be660019ff39a5ab3eb",
+      "peak": 0.60434,
+      "rms": 0.119
+    },
+    {
+      "id": "unconfirmed",
+      "animation": "compare",
+      "text": "I need more evidence before I can confirm that source.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 2.66,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-mission/unconfirmed.wav",
+      "mp3": "/audio/ordis-mission/unconfirmed.mp3",
+      "sha256": "a0a9cb55d0e26a236de2eeb96a67aaef5b7ad4a8616885d85e0e1dd62dead73b",
+      "peak": 0.56454,
+      "rms": 0.13191
+    },
+    {
+      "id": "report-generic",
+      "animation": "report",
+      "text": "Operator, the analysis is ready. Please review the findings before taking action.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 4.3,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-mission/report-generic.wav",
+      "mp3": "/audio/ordis-mission/report-generic.mp3",
+      "sha256": "95e9350ecea42ecfa2c38f9e69b087eb68d505994c68bb8ab266138cf4c53eea",
+      "peak": 0.73618,
+      "rms": 0.12206
+    }
+  ]
+}

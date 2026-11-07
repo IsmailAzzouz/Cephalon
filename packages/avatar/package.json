@@ -1,0 +1,9 @@
+{
+  "name": "@cephalon/avatar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "imports": { "#three": "./vendor/three/three.module.js" },
+  "exports": { "./*": "./src/*.js" },
+  "scripts": { "test": "node --test tests/*.test.mjs" }
+}

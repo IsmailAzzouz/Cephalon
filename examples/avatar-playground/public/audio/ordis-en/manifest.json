@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "voice": "Ordis - Robotic Voice (Warframe)",
+  "language": "en-US",
+  "kind": "generated-original",
+  "status": "generated",
+  "modelSha256": "d4297f6496cf4b68ee7decabb900fdc081e6ba4b458fdd9d34253281be51cde3",
+  "pipeline": {
+    "source": "Piper en_US-ryan-high",
+    "conversion": "rvc-python 0.1.5 / Ordis RVC v2",
+    "pitchSemitones": 0,
+    "indexRate": 0.65,
+    "f0": "rmvpe",
+    "device": "cpu"
+  },
+  "clips": [
+    {
+      "id": "listen",
+      "animation": "listen",
+      "text": "Operator, I’m listening.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 1.42,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-en/listen.wav",
+      "mp3": "/audio/ordis-en/listen.mp3",
+      "sha256": "48617a9e0e387f4370511459c1554ea45657a66ed8abe5a2bb52061ead200499",
+      "peak": 0.586,
+      "rms": 0.13281
+    },
+    {
+      "id": "read",
+      "animation": "read",
+      "text": "Let me read through those files, Operator.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 2.16,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-en/read.wav",
+      "mp3": "/audio/ordis-en/read.mp3",
+      "sha256": "73863b4b740263f9c1752140d5c5537e322825644314f183ee86633f82b63094",
+      "peak": 0.65729,
+      "rms": 0.13072
+    },
+    {
+      "id": "write",
+      "animation": "write",
+      "text": "Writing the changes. One careful adjustment at a time.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 2.74,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-en/write.wav",
+      "mp3": "/audio/ordis-en/write.mp3",
+      "sha256": "345d5c17e4db4ad76617c82753b444efdc11c679d88a58566812eca96789b7bf",
+      "peak": 0.54886,
+      "rms": 0.12874
+    },
+    {
+      "id": "think",
+      "animation": "think",
+      "text": "Hmm. There’s a connection here. Give Ordis a moment.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 2.24,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-en/think.wav",
+      "mp3": "/audio/ordis-en/think.mp3",
+      "sha256": "ba21cb6c7469b8c29f24acb397552a432466d5c445a93f0c8c115c8a5c874e7a",
+      "peak": 0.69781,
+      "rms": 0.13049
+    },
+    {
+      "id": "search",
+      "animation": "search",
+      "text": "Searching now, Operator. This signal is proving rather elusive.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 3.92,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-en/search.wav",
+      "mp3": "/audio/ordis-en/search.mp3",
+      "sha256": "26fa94dabac47517cecc79a123501bf6e9d6c65b11b48a0e6da8f3422525b376",
+      "peak": 0.68619,
+      "rms": 0.13634
+    },
+    {
+      "id": "found",
+      "animation": "report",
+      "text": "I’ve found a match, Operator. Let me make certain.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 2.5,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-en/found.wav",
+      "mp3": "/audio/ordis-en/found.mp3",
+      "sha256": "5ddcb780991d401b3f9866d5183314109a0b391b6de0ce9930a22179996dcffb",
+      "peak": 0.62982,
+      "rms": 0.13117
+    },
+    {
+      "id": "analyse",
+      "animation": "analyse",
+      "text": "Analysis in progress. Ordis is checking every detail.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 3.28,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-en/analyse.wav",
+      "mp3": "/audio/ordis-en/analyse.mp3",
+      "sha256": "bb793797a511f4789dca4e34fcdbea6d1d16ab1871021a2decbb5b44f5675551",
+      "peak": 0.60742,
+      "rms": 0.12434
+    },
+    {
+      "id": "compare",
+      "animation": "compare",
+      "text": "Comparing the results. Something doesn’t quite line up.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 2.86,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-en/compare.wav",
+      "mp3": "/audio/ordis-en/compare.mp3",
+      "sha256": "a0ee4bcecea3bc828fa4826d706a3c672c268d02835d62866747aa786b8c992a",
+      "peak": 0.7027,
+      "rms": 0.13103
+    },
+    {
+      "id": "summon",
+      "animation": "summon",
+      "text": "Opening a link to the other agents. A second opinion would be most welcome.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 3.7,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-en/summon.wav",
+      "mp3": "/audio/ordis-en/summon.mp3",
+      "sha256": "90c75abe4555a13eb30e1872ae6f1863ecb8d6bdfb534df7b3ca75b03210951a",
+      "peak": 0.67725,
+      "rms": 0.12533
+    },
+    {
+      "id": "contact",
+      "animation": "contact",
+      "text": "Connection established. Sharing the relevant information now.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 3.04,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-en/contact.wav",
+      "mp3": "/audio/ordis-en/contact.mp3",
+      "sha256": "6bdd70cf4af4fd1a9ad31fe8323e729e8761c8039a51dd615ffc9191f97e81ca",
+      "peak": 0.62851,
+      "rms": 0.1267
+    },
+    {
+      "id": "report",
+      "animation": "report",
+      "text": "Operator, the analysis is complete. Here are the findings.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 3.38,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-en/report.wav",
+      "mp3": "/audio/ordis-en/report.mp3",
+      "sha256": "0bc5cb85dea0b8cf27b1e036f75a9633e64314130c7dc5782a0e4d79aabe8824",
+      "peak": 0.77365,
+      "rms": 0.12608
+    },
+    {
+      "id": "complete",
+      "animation": "report",
+      "text": "All done, Operator. Ordis is ready for whatever comes next.",
+      "generation": {
+        "pitchSemitones": 0,
+        "indexRate": 0.65
+      },
+      "duration": 3.46,
+      "sampleRate": 40000,
+      "wav": "/audio/ordis-en/complete.wav",
+      "mp3": "/audio/ordis-en/complete.mp3",
+      "sha256": "71edbe30af902e58ae9152c5acf68f337f038c3bb1dbf9e04f6aa71c84a57913",
+      "peak": 0.72748,
+      "rms": 0.13049
+    }
+  ]
+}

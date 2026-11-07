@@ -1,0 +1,17 @@
+[
+  {
+    "id": "listen",
+    "expected": "Operator, I\u2019m listening.",
+    "transcribed": "I'll read her. I'm listening."
+  },
+  {
+    "id": "summon",
+    "expected": "Opening a link to the other agents. A second opinion would be most welcome.",
+    "transcribed": "Opening a link to the other agents is second opinion would be must welcome."
+  },
+  {
+    "id": "report",
+    "expected": "Operator, the analysis is complete. Here are the findings.",
+    "transcribed": "Alvarator, the analysis is complete here are the findings."
+  }
+]

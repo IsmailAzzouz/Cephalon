@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "language": "fr-FR",
+  "status": "generated",
+  "requestedVoice": {
+    "name": "Ordis - Robotic Voice (Warframe)",
+    "page": "https://www.101soundboards.com/tts/1033939-ordis-robotic-voice-warframe-sq-tts-text-to-speech",
+    "downloadPage": "https://www.101soundboards.com/tts/1033939-ordis-robotic-voice-warframe-sq-tts-text-to-speech/download_model",
+    "formatAdvertised": "RVCv2",
+    "downloadStatus": "provided_by_user_at_repository_root",
+    "archive": "ordis_robotic_voice_warframe_13875.zip"
+  },
+  "phrases": [
+    {
+      "id": "listen",
+      "animation": "listen",
+      "text": "À votre écoute, Opérateur."
+    },
+    {
+      "id": "read",
+      "animation": "read",
+      "text": "Je parcours les données. Un instant, Opérateur."
+    },
+    {
+      "id": "write",
+      "animation": "write",
+      "text": "J’applique les modifications. Chaque détail compte."
+    },
+    {
+      "id": "think",
+      "animation": "think",
+      "text": "Hum… laissez-moi examiner les possibilités."
+    },
+    {
+      "id": "search",
+      "animation": "search",
+      "text": "Je lance la recherche. Ce signal ne restera pas caché longtemps."
+    },
+    {
+      "id": "found",
+      "animation": "report",
+      "text": "J’ai quelque chose, Opérateur. Une correspondance confirmée."
+    },
+    {
+      "id": "analyse",
+      "animation": "analyse",
+      "text": "Analyse en cours. Je vérifie la cohérence des résultats."
+    },
+    {
+      "id": "compare",
+      "animation": "compare",
+      "text": "Je recoupe les observations. Les deux sources doivent concorder."
+    },
+    {
+      "id": "summon",
+      "animation": "summon",
+      "text": "J’ouvre les canaux de liaison. Sous-agents, j’ai besoin de votre expertise."
+    },
+    {
+      "id": "contact",
+      "animation": "contact",
+      "text": "Liaison établie. Je vous transmets les données."
+    },
+    {
+      "id": "report",
+      "animation": "report",
+      "text": "Opérateur, l’analyse est terminée. Voici mes conclusions."
+    },
+    {
+      "id": "complete",
+      "animation": "report",
+      "text": "Tâche accomplie, Opérateur. Ordis reste à votre disposition."
+    }
+  ]
+}

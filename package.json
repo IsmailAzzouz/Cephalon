@@ -1,0 +1,15 @@
+{
+  "name": "cephalon",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Compagnon de bureau Ordis, agents spécialisés et atelier d’avatar",
+  "workspaces": ["apps/*", "packages/*", "examples/avatar-playground"],
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs --dist",
+    "test": "node --test packages/avatar/tests/*.test.mjs examples/signal-mission/tests/*.test.mjs tests/integration/*.test.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,245 @@
+{
+  "clips": [
+    {
+      "id": "listen",
+      "mp3": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "2.168163"
+        }
+      },
+      "decodedFinite": true,
+      "decodedPeak": 0.78328,
+      "decodedRms": 0.10733
+    },
+    {
+      "id": "read",
+      "mp3": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "3.526531"
+        }
+      },
+      "decodedFinite": true,
+      "decodedPeak": 0.67151,
+      "decodedRms": 0.10789
+    },
+    {
+      "id": "write",
+      "mp3": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "4.127347"
+        }
+      },
+      "decodedFinite": true,
+      "decodedPeak": 0.72867,
+      "decodedRms": 0.09881
+    },
+    {
+      "id": "think",
+      "mp3": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "2.768980"
+        }
+      },
+      "decodedFinite": true,
+      "decodedPeak": 0.56476,
+      "decodedRms": 0.11132
+    },
+    {
+      "id": "search",
+      "mp3": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "4.806531"
+        }
+      },
+      "decodedFinite": true,
+      "decodedPeak": 0.51041,
+      "decodedRms": 0.09012
+    },
+    {
+      "id": "found",
+      "mp3": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "4.362449"
+        }
+      },
+      "decodedFinite": true,
+      "decodedPeak": 0.80074,
+      "decodedRms": 0.11259
+    },
+    {
+      "id": "analyse",
+      "mp3": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "3.944490"
+        }
+      },
+      "decodedFinite": true,
+      "decodedPeak": 0.63807,
+      "decodedRms": 0.11198
+    },
+    {
+      "id": "compare",
+      "mp3": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "4.153469"
+        }
+      },
+      "decodedFinite": true,
+      "decodedPeak": 0.53586,
+      "decodedRms": 0.09405
+    },
+    {
+      "id": "summon",
+      "mp3": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "5.720816"
+        }
+      },
+      "decodedFinite": true,
+      "decodedPeak": 0.76089,
+      "decodedRms": 0.0985
+    },
+    {
+      "id": "contact",
+      "mp3": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "3.186939"
+        }
+      },
+      "decodedFinite": true,
+      "decodedPeak": 0.61396,
+      "decodedRms": 0.11266
+    },
+    {
+      "id": "report",
+      "mp3": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "4.728163"
+        }
+      },
+      "decodedFinite": true,
+      "decodedPeak": 0.79813,
+      "decodedRms": 0.13103
+    },
+    {
+      "id": "complete",
+      "mp3": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "4.466939"
+        }
+      },
+      "decodedFinite": true,
+      "decodedPeak": 0.80219,
+      "decodedRms": 0.11694
+    }
+  ],
+  "totalDuration": 47.480000000000004
+}

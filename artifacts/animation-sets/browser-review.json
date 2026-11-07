@@ -1,0 +1,487 @@
+{
+  "errors": [],
+  "poses": {
+    "read": {
+      "pose": {
+        "yaw": -0.47251391945618326,
+        "pitch": -0.07750771393041139,
+        "roll": 0.10636118673567489,
+        "x": -0.07256289590276245,
+        "y": 0.04268609187955619,
+        "z": 0.11999305292441369,
+        "focusX": -0.5945820126533506,
+        "focusY": 0.17476313493810589,
+        "field": 0.9997748176410944,
+        "fieldSide": -1,
+        "readProgress": 0.3634090909090914,
+        "toolPulse": 0,
+        "comparison": 0,
+        "writing": 0,
+        "contact": 0,
+        "contactPulse": 0,
+        "contactCount": 0
+      },
+      "active": {
+        "active": "read",
+        "id": "animation-1",
+        "pending": [
+          {
+            "id": "animation-1",
+            "name": "read",
+            "tool": ""
+          }
+        ]
+      },
+      "ringRotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "write": {
+      "pose": {
+        "yaw": 0.39656894095653095,
+        "pitch": 0.02963513589241578,
+        "roll": 0.04873304838062978,
+        "x": 0.06510606864199707,
+        "y": 0.009321978676329333,
+        "z": 0.19999634226753651,
+        "focusX": 0.47277264953622705,
+        "focusY": -0.12000000000256669,
+        "field": 0.9999999999068211,
+        "fieldSide": 1,
+        "readProgress": 1,
+        "toolPulse": 0,
+        "comparison": 0,
+        "writing": 1,
+        "contact": 0,
+        "contactPulse": 0,
+        "contactCount": 0
+      },
+      "active": {
+        "active": "write",
+        "id": "animation-3",
+        "pending": [
+          {
+            "id": "animation-3",
+            "name": "write",
+            "tool": ""
+          }
+        ]
+      },
+      "ringRotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "listen": {
+      "pose": {
+        "yaw": 0.0129612615020189,
+        "pitch": -0.014803239022761375,
+        "roll": -0.07573687986692797,
+        "x": 0.0018898060457233133,
+        "y": -0.007907480304915903,
+        "z": 0.16000231586714714,
+        "focusX": 0.01721282586206828,
+        "focusY": 0.05999999831640695,
+        "field": 0.00022502478641096743,
+        "fieldSide": 1,
+        "readProgress": 0,
+        "toolPulse": 0,
+        "comparison": 0,
+        "writing": 0,
+        "contact": 0,
+        "contactPulse": 0,
+        "contactCount": 0
+      },
+      "active": {
+        "active": "listen",
+        "id": "animation-5",
+        "pending": [
+          {
+            "id": "animation-5",
+            "name": "listen",
+            "tool": ""
+          }
+        ]
+      },
+      "ringRotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "speak": {
+      "pose": {
+        "yaw": 0.015199784156967608,
+        "pitch": 0.0028299619590613275,
+        "roll": 0.01660571132728756,
+        "x": 0.0022308648965572607,
+        "y": 0.0019981779066127643,
+        "z": 0.15999999999908868,
+        "focusX": 0.020103072229889784,
+        "focusY": 0.040000000143969885,
+        "field": 3.778590021798697e-10,
+        "fieldSide": 1,
+        "readProgress": 0,
+        "toolPulse": 0,
+        "comparison": 0,
+        "writing": 0,
+        "contact": 0,
+        "contactPulse": 0,
+        "contactCount": 0
+      },
+      "active": {
+        "active": "speak",
+        "id": "animation-7",
+        "pending": [
+          {
+            "id": "animation-7",
+            "name": "speak",
+            "tool": ""
+          }
+        ]
+      },
+      "ringRotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "think": {
+      "pose": {
+        "yaw": -0.3119992572841267,
+        "pitch": -0.1727998050513791,
+        "roll": -0.04699749189987276,
+        "x": -0.048002504230427664,
+        "y": 0.05352480896828114,
+        "z": -0.03998842128596275,
+        "focusX": -0.3999999969462288,
+        "focusY": 0.35999999770060576,
+        "field": 6.340524463035343e-16,
+        "fieldSide": -1,
+        "readProgress": 0,
+        "toolPulse": 0,
+        "comparison": 0,
+        "writing": 0,
+        "contact": 0,
+        "contactPulse": 0,
+        "contactCount": 0
+      },
+      "active": {
+        "active": "think",
+        "id": "animation-9",
+        "pending": [
+          {
+            "id": "animation-9",
+            "name": "think",
+            "tool": ""
+          }
+        ]
+      },
+      "ringRotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "search": {
+      "pose": {
+        "yaw": -0.46191683554404167,
+        "pitch": -0.029080888037989062,
+        "roll": 0.10264030629927721,
+        "x": -0.0686730006588658,
+        "y": 0.015151245887934248,
+        "z": 0.11999267917084815,
+        "focusX": -0.6098796137566531,
+        "focusY": 0.0710452248585213,
+        "field": 0.9998881777498945,
+        "fieldSide": -1,
+        "readProgress": 0.28035087719297536,
+        "toolPulse": 0,
+        "comparison": 0,
+        "writing": 0,
+        "contact": 0,
+        "contactPulse": 0,
+        "contactCount": 0
+      },
+      "active": {
+        "active": "search",
+        "id": "animation-11",
+        "pending": [
+          {
+            "id": "animation-11",
+            "name": "search",
+            "tool": ""
+          }
+        ]
+      },
+      "ringRotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "analyse": {
+      "pose": {
+        "yaw": 0.49441409726437957,
+        "pitch": 0.07738592486512502,
+        "roll": 0.0812161970357016,
+        "x": 0.07889040574279921,
+        "y": -0.04405926869294117,
+        "z": 0.23999451340119296,
+        "focusX": 0.6147283084319323,
+        "focusY": -0.17901437835483083,
+        "field": 0.9999999999068864,
+        "fieldSide": 1,
+        "readProgress": 0.1303478260869528,
+        "toolPulse": 0,
+        "comparison": 0,
+        "writing": 0,
+        "contact": 0,
+        "contactPulse": 0,
+        "contactCount": 0
+      },
+      "active": {
+        "active": "analyse",
+        "id": "animation-13",
+        "pending": [
+          {
+            "id": "animation-13",
+            "name": "analyse",
+            "tool": ""
+          }
+        ]
+      },
+      "ringRotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "compare": {
+      "pose": {
+        "yaw": 0.4783551223286718,
+        "pitch": 0.058968058920141564,
+        "roll": 0.044342615030041915,
+        "x": 0.0703250454603243,
+        "y": -0.02976370126382397,
+        "z": 0.14000457441983147,
+        "focusX": 0.5998823804678456,
+        "focusY": -0.11996667446431164,
+        "field": 1,
+        "fieldSide": 1,
+        "readProgress": 0.5291764705882346,
+        "toolPulse": 0,
+        "comparison": 1,
+        "writing": 0,
+        "contact": 0,
+        "contactPulse": 0,
+        "contactCount": 0
+      },
+      "active": {
+        "active": "compare",
+        "id": "animation-15",
+        "pending": [
+          {
+            "id": "animation-15",
+            "name": "compare",
+            "tool": ""
+          }
+        ]
+      },
+      "ringRotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "contact": {
+      "pose": {
+        "yaw": 0.3739074840473993,
+        "pitch": -0.05734959216989616,
+        "roll": -0.07898932422375683,
+        "x": 0.05747492725749985,
+        "y": 0.023777672471705102,
+        "z": 0.04089448203497163,
+        "focusX": 0.4800152662367147,
+        "focusY": 0.120017447098116,
+        "field": 0.000111744001920567,
+        "fieldSide": 1,
+        "readProgress": 0,
+        "toolPulse": 0.1829712984232538,
+        "comparison": 0,
+        "writing": 0,
+        "contact": 0.9998882559980795,
+        "contactPulse": 0.1829712984232538,
+        "contactCount": 1
+      },
+      "active": {
+        "active": "contact",
+        "id": "animation-17",
+        "pending": [
+          {
+            "id": "animation-17",
+            "name": "contact",
+            "tool": ""
+          }
+        ]
+      },
+      "ringRotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "summon": {
+      "pose": {
+        "yaw": -0.4844619716625906,
+        "pitch": -0.15894501728301502,
+        "roll": 0.10286271891885106,
+        "x": -0.07562140146760474,
+        "y": 0.03664436794756628,
+        "z": -0.07587123230501015,
+        "focusX": -0.6199848538863909,
+        "focusY": 0.31999724616115793,
+        "field": 6.2094097116727884e-9,
+        "fieldSide": -1,
+        "readProgress": 0,
+        "toolPulse": 0.653637557674514,
+        "comparison": 0,
+        "writing": 0,
+        "contact": 0.9999999937905902,
+        "contactPulse": 0.653637557674514,
+        "contactCount": 3
+      },
+      "active": {
+        "active": "summon",
+        "id": "animation-19",
+        "pending": [
+          {
+            "id": "animation-19",
+            "name": "summon",
+            "tool": ""
+          }
+        ]
+      },
+      "ringRotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "eventFlow": [
+    {
+      "type": "tool.start",
+      "id": "read-1",
+      "active": {
+        "active": "read",
+        "id": "event:read-1",
+        "pending": [
+          {
+            "id": "event:read-1",
+            "name": "read",
+            "tool": "read_file"
+          }
+        ]
+      }
+    },
+    {
+      "type": "subagent.start",
+      "id": "scout-1",
+      "active": {
+        "active": "summon",
+        "id": "event:scout-1",
+        "pending": [
+          {
+            "id": "event:read-1",
+            "name": "read",
+            "tool": "read_file"
+          },
+          {
+            "id": "event:scout-1",
+            "name": "summon",
+            "tool": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "speech.start",
+      "id": "tts-1",
+      "active": {
+        "active": "speak",
+        "id": "event:tts-1",
+        "pending": [
+          {
+            "id": "event:read-1",
+            "name": "read",
+            "tool": "read_file"
+          },
+          {
+            "id": "event:scout-1",
+            "name": "summon",
+            "tool": ""
+          },
+          {
+            "id": "event:tts-1",
+            "name": "speak",
+            "tool": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "tool.end",
+      "id": "read-1",
+      "active": {
+        "active": "speak",
+        "id": "event:tts-1",
+        "pending": [
+          {
+            "id": "event:scout-1",
+            "name": "summon",
+            "tool": ""
+          },
+          {
+            "id": "event:tts-1",
+            "name": "speak",
+            "tool": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "speech.end",
+      "id": "tts-1",
+      "active": {
+        "active": "summon",
+        "id": "event:scout-1",
+        "pending": [
+          {
+            "id": "event:scout-1",
+            "name": "summon",
+            "tool": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "subagent.end",
+      "id": "scout-1",
+      "active": {
+        "active": null,
+        "id": null,
+        "pending": []
+      }
+    }
+  ],
+  "persistence": 0.65,
+  "malformed": {
+    "message": "tempo doit être compris entre 0.25 et 2.5.",
+    "unchanged": true
+  },
+  "width": 390
+}

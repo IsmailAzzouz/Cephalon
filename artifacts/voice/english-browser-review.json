@@ -1,0 +1,405 @@
+{
+  "errors": [],
+  "defaultCatalog": {
+    "collection": "en",
+    "language": "en-US",
+    "counts": {
+      "en": 12,
+      "official": 4,
+      "fr": 12
+    }
+  },
+  "englishAudio": {
+    "src": "http://192.168.129.101:5173/audio/ordis-en/summon.mp3",
+    "voice": 0.6641060125581759,
+    "mic": 0,
+    "demo": false
+  },
+  "officialUI": {
+    "text": "Enregistrement du jeu · Digital Extremes / Warframe.",
+    "source": "https://wiki.warframe.com/w/File:DIdle080Ordis_en.ogg"
+  },
+  "trace": [
+    {
+      "time": 0,
+      "voice": 3.291987580431562e-8,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 0,
+      "output": true
+    },
+    {
+      "time": 0.129569,
+      "voice": 2.27858939437299e-8,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 0,
+      "output": true
+    },
+    {
+      "time": 0.246712,
+      "voice": 0.4368899816917342,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 0,
+      "output": true
+    },
+    {
+      "time": 0.365714,
+      "voice": 0.5256453179319182,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 0,
+      "output": true
+    },
+    {
+      "time": 0.481206,
+      "voice": 0.5773940066783827,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 0,
+      "output": true
+    },
+    {
+      "time": 0.600735,
+      "voice": 0.46325447816525706,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 0,
+      "output": true
+    },
+    {
+      "time": 0.715155,
+      "voice": 0.45357979642233986,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 0,
+      "output": true
+    },
+    {
+      "time": 0.824308,
+      "voice": 0.37012651828544413,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 0,
+      "output": true
+    },
+    {
+      "time": 0.940408,
+      "voice": 0.36428125137697037,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 0,
+      "output": true
+    },
+    {
+      "time": 1.05763,
+      "voice": 0.45041877271983194,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 0,
+      "output": true
+    },
+    {
+      "time": 1.1639,
+      "voice": 0.28800116042454876,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 0,
+      "output": true
+    },
+    {
+      "time": 1.282902,
+      "voice": 0.19416462465256074,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 0,
+      "output": true
+    },
+    {
+      "time": 1.474467,
+      "voice": 0.07395252252289126,
+      "state": "glitch",
+      "glitch": 0.731838074555693,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 1.602177,
+      "voice": 0.17138535040053848,
+      "state": "glitch",
+      "glitch": 0.46241134835117836,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 1.718277,
+      "voice": 0.2554674460756818,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 1.836167,
+      "voice": 0.30637912235446285,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 1.944671,
+      "voice": 0.38062772540761214,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 2.060429,
+      "voice": 0.2789638468316108,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 2.168163,
+      "voice": 0.19490223277894453,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 2.282528,
+      "voice": 0.14844855809773003,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 2.391655,
+      "voice": 0.23354279541402265,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 2.499048,
+      "voice": 0.27059026414668,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 2.615147,
+      "voice": 0.5507988952995887,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 2.732949,
+      "voice": 0.40585882799000034,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 2.838639,
+      "voice": 0.25460356691902947,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 2.946032,
+      "voice": 0.14562590066725678,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 3.053424,
+      "voice": 0.08120708010235841,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 3.169524,
+      "voice": 0.3714575905404087,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 3.288207,
+      "voice": 0.5985354423699975,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 3.393016,
+      "voice": 0.5403286536140482,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 3.510326,
+      "voice": 0.3916706564176803,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 3.61941,
+      "voice": 0.4545665666101002,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 3.7239,
+      "voice": 0.3817263197058808,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 3.831293,
+      "voice": 0.7338244567765627,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 3.947392,
+      "voice": 0.5752383622040018,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 4.063803,
+      "voice": 0.44146607938040416,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 4.173224,
+      "voice": 0.2909803431127915,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 4.278277,
+      "voice": 0.33486539439311763,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 4.385669,
+      "voice": 0.3296082697928159,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 4.493061,
+      "voice": 0.33934219905131646,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 4.600454,
+      "voice": 0.3031428607687344,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 4.714162,
+      "voice": 0.2272770465413291,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 4.823946,
+      "voice": 0.12629765967845277,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 4.931338,
+      "voice": 0.07016721894136663,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": 5.01,
+      "voice": 0.038996862757489294,
+      "state": "speaking",
+      "glitch": 0,
+      "fired": 1,
+      "output": true
+    },
+    {
+      "time": null,
+      "voice": 0.02165521000949194,
+      "state": "idle",
+      "glitch": 0,
+      "fired": 1,
+      "output": false
+    }
+  ],
+  "reduced": {
+    "state": "speaking",
+    "glitch": 0,
+    "fired": 1
+  },
+  "reducedStop": {
+    "state": "idle",
+    "output": false
+  },
+  "french": {
+    "src": "http://192.168.129.101:5173/audio/ordis/listen.mp3",
+    "collection": "fr"
+  }
+}

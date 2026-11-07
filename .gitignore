@@ -1,0 +1,16 @@
+node_modules/
+dist/
+test-results/
+.DS_Store
+.venv-voice/
+tooling/voice/models/
+tooling/voice/work/
+tooling/voice/ordis_robotic_voice_warframe_13875.zip
+__pycache__/
+.env
+.env.*
+!.env.example
+.local/
+.foundry/
+WorkingSessions/
+.impeccable/

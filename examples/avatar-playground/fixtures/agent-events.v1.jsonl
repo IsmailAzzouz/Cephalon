@@ -1,0 +1,11 @@
+{"version":1,"type":"listening.start","id":"request-1"}
+{"version":1,"type":"signals","signals":{"inputMicLevel":0.4,"inputFrequencyBands":[0.2,0.4,0.1]}}
+{"version":1,"type":"listening.end","id":"request-1"}
+{"version":1,"type":"tool.start","id":"read-1","tool":"read_file"}
+{"version":1,"type":"subagent.start","id":"scout-1","agentCount":2}
+{"version":1,"type":"speech.start","id":"reply-1"}
+{"version":1,"type":"signals","signals":{"outputVoiceLevel":0.6,"frequencyBands":[0.4,0.7,0.2]}}
+{"version":1,"type":"tool.end","id":"read-1"}
+{"version":1,"type":"speech.end","id":"reply-1"}
+{"version":1,"type":"subagent.end","id":"scout-1"}
+{"version":1,"type":"reset"}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "profiles": {
+    "review": {
+      "extends": "read",
+      "label": "Relire un document",
+      "tempo": 0.7,
+      "intensity": 0.85,
+      "focus": [-0.55, 0.2],
+      "duration": 8
+    },
+    "summon": {
+      "tempo": 0.85,
+      "tilt": 0.7
+    }
+  },
+  "tools": {
+    "filesystem.read": "read",
+    "filesystem.write": "write",
+    "document.review": "review",
+    "web.search": "search",
+    "agents.spawn": "summon",
+    "agents.message": "contact"
+  }
+}

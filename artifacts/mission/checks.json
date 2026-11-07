@@ -1,0 +1,26 @@
+{
+  "results": [
+    {
+      "nativeTimeline": true,
+      "result": "Relais E-17",
+      "packets": 200
+    },
+    {
+      "name": "small",
+      "ok": true
+    },
+    {
+      "name": "landscape",
+      "ok": true
+    },
+    {
+      "name": "desktop",
+      "ok": true
+    },
+    {
+      "name": "reduced",
+      "ok": true
+    }
+  ],
+  "errors": []
+}

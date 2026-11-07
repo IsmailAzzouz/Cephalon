@@ -1,0 +1,17 @@
+[
+  {
+    "id": "listen",
+    "expected": "À votre écoute, Opérateur.",
+    "transcribed": "à votre écoute ou bérateur."
+  },
+  {
+    "id": "summon",
+    "expected": "J’ouvre les canaux de liaison. Sous-agents, j’ai besoin de votre expertise.",
+    "transcribed": "Je vous ferai les canaux de l'île sous-agents, j'ai besoin de votre expertise."
+  },
+  {
+    "id": "report",
+    "expected": "Opérateur, l’analyse est terminée. Voici mes conclusions.",
+    "transcribed": "ou perateur, l'analy est terminé. Voici mes cocusures."
+  }
+]

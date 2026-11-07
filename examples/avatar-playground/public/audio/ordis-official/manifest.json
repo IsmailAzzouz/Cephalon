@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "voice": "Ordis — game recordings",
+  "language": "en",
+  "kind": "game-recording",
+  "source": "https://wiki.warframe.com/w/Ordis/Quotes",
+  "clips": [
+    {
+      "id": "glitch",
+      "animation": "speak",
+      "text": "Ordis is hap - angry. Hmm, I may require maintenance after all.",
+      "source": "https://wiki.warframe.com/images/DIdle080Ordis_en.ogg?c4648",
+      "sourcePage": "https://wiki.warframe.com/w/File:DIdle080Ordis_en.ogg",
+      "filename": "DIdle080Ordis_en.ogg",
+      "kind": "game-recording",
+      "duration": 5.01,
+      "mp3": "/audio/ordis-official/glitch.mp3",
+      "ogg": "/audio/ordis-official/glitch.ogg",
+      "sha256": "00f899aee391fdcbe89cd517c7005e0dcd0f0c97e134f1b7ee085410ee5bcb52",
+      "credit": "Digital Extremes / Warframe",
+      "cues": [
+        {
+          "time": 1.2,
+          "type": "glitch",
+          "intensity": 0.75,
+          "duration": 0.24
+        }
+      ]
+    },
+    {
+      "id": "view",
+      "animation": "idle",
+      "text": "Operator, are you enjoying the view?",
+      "source": "https://wiki.warframe.com/images/DIdle090Ordis_en.ogg?ba271",
+      "sourcePage": "https://wiki.warframe.com/w/File:DIdle090Ordis_en.ogg",
+      "filename": "DIdle090Ordis_en.ogg",
+      "kind": "game-recording",
+      "duration": 2.63,
+      "mp3": "/audio/ordis-official/view.mp3",
+      "ogg": "/audio/ordis-official/view.ogg",
+      "sha256": "1e1530276f0afe97567b1b3f8c2200a9508394c788c11678e20adc15b1fdddbb",
+      "credit": "Digital Extremes / Warframe"
+    },
+    {
+      "id": "welcome",
+      "animation": "listen",
+      "text": "Welcome back, Operator!",
+      "source": "https://wiki.warframe.com/images/DDayTrib0200Ordis_en.ogg?b4d4c",
+      "sourcePage": "https://wiki.warframe.com/w/File:DDayTrib0200Ordis_en.ogg",
+      "filename": "DDayTrib0200Ordis_en.ogg",
+      "kind": "game-recording",
+      "duration": 2.05,
+      "mp3": "/audio/ordis-official/welcome.mp3",
+      "ogg": "/audio/ordis-official/welcome.ogg",
+      "sha256": "8e5fd0ff2dedf6d870105af3ccbbcc9397fb02ab2182d82ddd85a3f08f30bcc2",
+      "credit": "Digital Extremes / Warframe"
+    },
+    {
+      "id": "support",
+      "animation": "summon",
+      "text": "Prepare for incoming support.",
+      "source": "https://wiki.warframe.com/images/DSupportIncoming00150Ordis_en.ogg?2a034",
+      "sourcePage": "https://wiki.warframe.com/w/File:DSupportIncoming00150Ordis_en.ogg",
+      "filename": "DSupportIncoming00150Ordis_en.ogg",
+      "kind": "game-recording",
+      "duration": 1.97,
+      "mp3": "/audio/ordis-official/support.mp3",
+      "ogg": "/audio/ordis-official/support.ogg",
+      "sha256": "da5c2423b6723d1fb0d47c80a93ee3d3bfc708a10f7e41f6054b27237df74266",
+      "credit": "Digital Extremes / Warframe"
+    }
+  ],
+  "providedReference": "https://static.wikia.nocookie.net/warframe/images/9/95/DIdle080Ordis_en.ogg/revision/latest?cb=20230422020951"
+}

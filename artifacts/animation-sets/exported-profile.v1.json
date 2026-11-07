@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "profiles": {
+    "idle": {
+      "label": "Repos",
+      "behavior": "idle",
+      "state": "idle",
+      "activity": "none",
+      "focus": [
+        0,
+        0.06
+      ],
+      "duration": 5,
+      "tempo": 1,
+      "intensity": 1,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    },
+    "read": {
+      "label": "Lire",
+      "behavior": "read",
+      "state": "thinking",
+      "activity": "analysing",
+      "focus": [
+        -0.65,
+        0.28
+      ],
+      "duration": 5,
+      "tempo": 1,
+      "intensity": 1,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    },
+    "write": {
+      "label": "Écrire",
+      "behavior": "write",
+      "state": "thinking",
+      "activity": "analysing",
+      "focus": [
+        0.54,
+        -0.12
+      ],
+      "duration": 5,
+      "tempo": 1,
+      "intensity": 1,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    },
+    "listen": {
+      "label": "Écouter",
+      "behavior": "listen",
+      "state": "listening",
+      "activity": "none",
+      "focus": [
+        0,
+        0.06
+      ],
+      "duration": 5,
+      "tempo": 1,
+      "intensity": 1,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    },
+    "speak": {
+      "label": "Parler",
+      "behavior": "speak",
+      "state": "speaking",
+      "activity": "none",
+      "focus": [
+        0,
+        0.04
+      ],
+      "duration": 5,
+      "tempo": 1,
+      "intensity": 1,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    },
+    "think": {
+      "label": "Réfléchir",
+      "behavior": "think",
+      "state": "thinking",
+      "activity": "planning",
+      "focus": [
+        -0.4,
+        0.36
+      ],
+      "duration": 5,
+      "tempo": 1,
+      "intensity": 1,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    },
+    "search": {
+      "label": "Chercher",
+      "behavior": "search",
+      "state": "thinking",
+      "activity": "searching",
+      "focus": [
+        -0.65,
+        0.28
+      ],
+      "duration": 5,
+      "tempo": 1,
+      "intensity": 1,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    },
+    "analyse": {
+      "label": "Analyser",
+      "behavior": "analyse",
+      "state": "thinking",
+      "activity": "analysing",
+      "focus": [
+        0.6,
+        -0.08
+      ],
+      "duration": 5,
+      "tempo": 1,
+      "intensity": 1,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    },
+    "compare": {
+      "label": "Comparer",
+      "behavior": "compare",
+      "state": "thinking",
+      "activity": "analysing",
+      "focus": [
+        -0.6,
+        0.22
+      ],
+      "duration": 5,
+      "tempo": 1,
+      "intensity": 1,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    },
+    "contact": {
+      "label": "Contacter",
+      "behavior": "contact",
+      "state": "thinking",
+      "activity": "none",
+      "focus": [
+        0.62,
+        0.18
+      ],
+      "duration": 6,
+      "tempo": 1,
+      "intensity": 1,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    },
+    "summon": {
+      "label": "Appeler des sous-agents",
+      "behavior": "summon",
+      "state": "thinking",
+      "activity": "none",
+      "focus": [
+        -0.62,
+        0.22
+      ],
+      "duration": 7,
+      "tempo": 0.85,
+      "intensity": 1,
+      "travel": 1,
+      "tilt": 0.7,
+      "lean": 1
+    },
+    "report": {
+      "label": "Rapporter",
+      "behavior": "report",
+      "state": "speaking",
+      "activity": "reporting",
+      "focus": [
+        0,
+        0.04
+      ],
+      "duration": 5,
+      "tempo": 1,
+      "intensity": 1,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    },
+    "review": {
+      "label": "Relire un document",
+      "behavior": "read",
+      "state": "thinking",
+      "activity": "analysing",
+      "focus": [
+        -0.55,
+        0.2
+      ],
+      "duration": 8,
+      "tempo": 0.7,
+      "intensity": 0.85,
+      "travel": 1,
+      "tilt": 1,
+      "lean": 1
+    }
+  },
+  "tools": {
+    "filesystem.read": "read",
+    "filesystem.write": "write",
+    "document.review": "review",
+    "web.search": "search",
+    "agents.spawn": "summon",
+    "agents.message": "contact"
+  }
+}

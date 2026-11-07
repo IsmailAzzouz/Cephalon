@@ -1,0 +1,46 @@
+{
+  "errors": [],
+  "pauseFrozen": true,
+  "reduced": {
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "release": 0,
+    "events": 0,
+    "paused": true
+  },
+  "reducedOptIn": {
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "release": 0
+  },
+  "oldV1Import": {
+    "pulse": 1,
+    "radiance": 1
+  },
+  "zeroPulse": {
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "release": 0
+  },
+  "parameters": [
+    "tempo",
+    "intensity",
+    "travel",
+    "tilt",
+    "lean",
+    "pulse",
+    "radiance",
+    "duration",
+    "focusX",
+    "focusY"
+  ]
+}

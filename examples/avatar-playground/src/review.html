@@ -1,0 +1,6 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>Reconstruction Céphalon</title>
+<style>html,body{margin:0;background:#010712;width:100%;height:100%;overflow:hidden}main{width:100%;height:100svh}canvas{display:block;width:100%;height:100%}</style>
+<main><canvas id="scene"></canvas></main>
+<script type="importmap">{"imports":{"#three":"/vendor/three/three.module.js"}}</script>
+<script type="module">import {CephalonAvatar} from '/packages/avatar/src/CephalonAvatar.js';const query=new URLSearchParams(location.search);window.avatar=new CephalonAvatar(document.querySelector('canvas'),{stage:Number(query.get('stage')||7)});if(query.has('state'))avatar.controller.setState(query.get('state'));if(query.has('emotion'))avatar.controller.setEmotion(query.get('emotion'));</script>
+</html>
