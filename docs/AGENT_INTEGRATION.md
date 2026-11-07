@@ -1,62 +1,87 @@
-# Relier un agent au Céphalon
+# Connecting an agent to Céphalon
 
-Cette page décrit le contrat visuel v1 existant. Le protocole du futur compagnon
-est décrit séparément dans [protocol.md](protocol.md).
+This page describes the existing visual v1 contract. The future companion
+protocol is documented separately in [protocol.md](protocol.md).
 
-Le rendu Three.js, le contrôleur et les événements de l’agent sont séparés. Le futur hôte choisira le transport : appel JavaScript, WebSocket, SSE ou relais IPC. Le Céphalon ne dépend d’aucun SDK d’agent et n’exécute pas les outils reçus. L’adaptateur anime leur activité.
+Three.js rendering, the controller and agent events are separate. The future
+host chooses the transport: JavaScript calls, WebSocket, SSE or IPC relay.
+Céphalon depends on no agent SDK and does not execute received tools. Its adapter
+animates their activity.
 
-## Essayer et personnaliser
+## Try and customize
 
-Sur la page, **Animations → Sets d’animation** propose douze sets :
+On the page, **Animations → Animation profiles** provides twelve profiles:
 
-| Identifiant | Gestuelle |
+| Identifier | Movement |
 | --- | --- |
-| `idle` | Présence calme, regards occasionnels |
-| `read` | Parcours de lignes, page gauche puis droite |
-| `write` | Gestes courts vers une zone de travail, lignes qui s’écrivent, pauses de relecture |
-| `listen` | Orientation vers l’Opérateur, inclinaison attentive et réaction au microphone |
-| `speak` | Orientation vers l’Opérateur et accents liés aux phrases / transitoires audio |
-| `think` | Regards décalés, pauses et retour de l’attention |
-| `search` | Lecture plus rapide et balayage de sources |
-| `analyse` | Rapprochement, inspection, recul pour réfléchir |
-| `compare` | Alternance entre deux sources |
-| `contact` | Orientation vers un contact, impulsion de liaison puis attente |
-| `summon` | Appel vers un ou plusieurs sous-agents, double impulsion et observation des liaisons |
-| `report` | Retour vers l’Opérateur, rapprochement et accents de présentation |
+| `idle` | Calm presence and occasional glances |
+| `read` | Scan lines, left page then right page |
+| `write` | Short gestures toward a work area, written lines and proofreading pauses |
+| `listen` | Face the Operator, attentive tilt and microphone response |
+| `speak` | Face the Operator with phrase and audio-transient accents |
+| `think` | Look away, pause and return attention |
+| `search` | Faster reading and source scanning |
+| `analyse` | Move closer, inspect and step back to think |
+| `compare` | Alternate between two sources |
+| `contact` | Face a contact, emit a link pulse and wait |
+| `summon` | Call one or more subagents, double pulse and observe links |
+| `report` | Return toward the Operator, move closer and present findings |
 
-Un set associe un comportement, un état audio, une activité lumineuse, une direction d’attention et des réglages de mouvement. Les transitions passent par les ressorts amortis du directeur de présence. Les anneaux restent horizontaux.
+A profile combines behavior, audio state, lighting activity, attention direction
+and motion settings. Transitions use the presence director’s damped springs.
+Rings remain horizontal.
 
-L’atelier permet de régler vitesse, intensité, déplacement, inclinaison, rapprochement, direction et durée de prévisualisation. On peut dupliquer un set, lier les noms d’outils et importer / exporter le fichier JSON v1. Les réglages restent dans le stockage local du navigateur ; l’application d’intégration doit importer ce fichier elle-même pour les autres appareils.
+The editor adjusts speed, intensity, travel, tilt, approach, direction and preview
+duration. Duplicate a profile, bind tool names and import/export v1 JSON. Settings
+remain in browser local storage; integrating applications must import the file
+on other devices themselves.
 
-`pulse` règle la pulsation physique du cube et ses décharges ; `radiance` règle l’émission énergétique associée. Le score commun synchronise corps, surfaces, noyau, ondes et rémanence. La parole conserve surtout son expressivité dans les ondes : seuls des accents de phrase espacés provoquent de petites tensions du cristal. Les nouveaux paramètres prennent la valeur 1 lorsqu’ils manquent dans une ancienne configuration v1.
+`pulse` controls physical cube pulsation and discharges; `radiance` controls the
+associated energy emission. A shared score synchronizes body, surfaces, core,
+waves and afterglow. Speech is expressed primarily through waves; only spaced
+phrase accents create small crystal tensions. New parameters default to 1 when
+missing from an older v1 configuration.
 
-Aperçu direct : `http://192.168.129.101:5173/?animation=summon`.
+Direct preview: `http://localhost:5173/?animation=summon`.
 
-## API d’actions
+## Action API
 
 ```js
-// Une action reste active jusqu’à sa fin explicite.
+// An action remains active until explicitly finished.
 const read = cephalon.actions.start('read', { id: 'read-42', record: 'README.md' });
-// ... le véritable outil lit le fichier ...
+// ... the real tool reads the file ...
 cephalon.actions.finish(read);
 
-// Un aperçu se termine après la durée du set (ou la durée fournie).
+// A preview ends after the profile duration, or the supplied duration.
 cephalon.actions.play('summon', { duration: 7, agentCount: 3 });
 cephalon.actions.snapshot();
 cephalon.actions.stopAll();
 ```
 
-`start(name, options)` renvoie un identifiant ; `finish(id)` et `cancel(id)` ne touchent qu’à cet identifiant. Un début répété avec le même identifiant est ignoré. L’identifiant est unique parmi toutes les actions en cours. Une fin inconnue est sans effet. Le paramètre `duration` de `start` est optionnel ; sans lui, l’action ne se termine pas automatiquement. `play` utilise la durée du profil.
+`start(name, options)` returns an identifier. `finish(id)` and `cancel(id)` affect
+only that identifier. Repeated starts with the same identifier are ignored.
+Identifiers are unique across all active actions. Finishing an unknown action
+has no effect. `start` accepts an optional `duration`; without it, the action
+never finishes automatically. `play` uses the profile’s duration.
 
-Les actions se superposent par priorité : parole / rapport 90, écoute 80, contact / summon 60, autres 40. À priorité égale, la plus récente dirige la posture. Une action qui se termine révèle l’action encore active en dessous ; la fin d’un ancien outil ne coupe donc pas la parole en cours. `priority` permet de changer ce choix, entre 0 et 100. Quand tout est terminé, le contrôleur retrouve son état antérieur. Le temps des actions continue pendant une interruption, et la pause globale suspend leur horloge.
+Actions overlap by priority: speech/report 90, listening 80, contact/summon 60,
+others 40. At equal priority, the newest controls posture. A finishing action
+reveals the still-active action underneath: finishing an old tool therefore
+does not cut off ongoing speech. `priority` overrides this choice from 0 to 100.
+When all actions end, the controller restores its previous state. Action time
+continues during interruption; global pause suspends their clocks.
 
-`agentCount` règle le nombre de points de liaison de 1 à 4. Plusieurs actions de contact actives alimentent aussi ce nombre. Ces points sont une représentation de présence ; aucun agent réel n’est créé par le Céphalon.
+`agentCount` controls one to four link points. Multiple active contact actions
+also contribute to that count. These points represent presence; Céphalon does
+not create real agents.
 
-`cephalon.actions` conserve la source audio sélectionnée. La démonstration utilise un signal simulé. Le volume ne décide jamais de l’émotion.
+`cephalon.actions` preserves the selected audio source. The demo uses a simulated
+signal. Volume never determines emotion.
 
-## Événements JSON v1
+## JSON v1 events
 
-Le point d’entrée est `cephalon.events.handle(event)`. Le contrat TypeScript est dans [`packages/contracts/src/avatar-events.d.ts`](../packages/contracts/src/avatar-events.d.ts).
+The entry point is `cephalon.events.handle(event)`. TypeScript definitions are in
+[`packages/contracts/src/avatar-events.d.ts`](../packages/contracts/src/avatar-events.d.ts).
 
 ```js
 const send = event => cephalon.events.handle({ version: 1, ...event });
@@ -64,36 +89,44 @@ const send = event => cephalon.events.handle({ version: 1, ...event });
 send({ type: 'tool.start', id: 'read-42', tool: 'read_file' });
 send({ type: 'subagent.start', id: 'researcher-1', agentCount: 2 });
 
-// La parole prend la priorité sur le travail de fond.
+// Speech takes priority over background work.
 send({ type: 'speech.start', id: 'reply-1' });
 send({ type: 'signals', signals: {
   outputVoiceLevel: 0.6,
   frequencyBands: [0.4, 0.7, 0.2]
 }});
-send({ type: 'tool.end', id: 'read-42' }); // la parole continue
-send({ type: 'speech.end', id: 'reply-1' }); // retour vers les sous-agents
+send({ type: 'tool.end', id: 'read-42' }); // speech continues
+send({ type: 'speech.end', id: 'reply-1' }); // return to subagents
 send({ type: 'subagent.end', id: 'researcher-1' });
 ```
 
-| Événement | Champs spécifiques | Effet |
+| Event | Specific fields | Effect |
 | --- | --- | --- |
-| `action.start` | `id`, `animation` | Démarre le set nommé, y compris une variante personnalisée |
-| `action.end` / `action.cancel` | `id` | Termine cette action |
-| `tool.start` | `id`, `tool` | Résout le nom d’outil dans la table de liaisons |
-| `tool.end` / `tool.error` | `id` | Termine cet outil ; erreur = petite rupture visuelle |
-| `subagent.start` | `id`, `agentCount?` | Démarre le set summon et maintient la présence de liaison |
-| `subagent.end` / `subagent.error` | `id` | Termine cette liaison |
-| `speech.start` / `speech.end` | `id?` | Début / fin de parole TTS |
-| `listening.start` / `listening.end` | `id?` | Début / fin d’écoute STT |
-| `signals` | `signals` | RMS et bandes d’entrée / sortie, séparés |
-| `emotion` | `emotion`, `intensity?` | Émotion explicite du système conversationnel |
-| `reset` | — | Annule les actions et remet les niveaux audio à zéro |
+| `action.start` | `id`, `animation` | Start a named profile, including a custom variant |
+| `action.end` / `action.cancel` | `id` | Finish this action |
+| `tool.start` | `id`, `tool` | Resolve a tool name through explicit bindings |
+| `tool.end` / `tool.error` | `id` | Finish the tool; an error causes a small visual glitch |
+| `subagent.start` | `id`, `agentCount?` | Start summon and maintain link presence |
+| `subagent.end` / `subagent.error` | `id` | Finish this link |
+| `speech.start` / `speech.end` | `id?` | TTS speech start/end |
+| `listening.start` / `listening.end` | `id?` | STT listening start/end |
+| `signals` | `signals` | Separate input/output RMS and frequency bands |
+| `emotion` | `emotion`, `intensity?` | Explicit emotion from the conversation system |
+| `reset` | — | Cancel visual actions and reset audio levels |
 
-Les événements de début acceptent aussi `focus: [x, y]`, `priority` et `agentCount`. Les coordonnées d’attention sont normalisées entre −1 et 1 (droite et haut positifs). Les identifiants doivent être uniques entre outils, sous-agents et parole. Sans `id`, les événements audio utilisent `audio:output` et `audio:input` ; fournir un identifiant distinct pour des sessions successives permet d’ignorer leurs fins tardives.
+Start events also accept `focus: [x, y]`, `priority` and `agentCount`. Attention
+coordinates are normalized from −1 to 1, positive right and up. Identifiers must
+be unique across tools, subagents and speech. Without `id`, audio events use
+`audio:output` and `audio:input`. Distinct identifiers for successive sessions
+allow their late endings to be ignored.
 
-Les événements réels désactivent le signal audio simulé. Un `speech.start` silencieux n’invente pas de voix. Il faut fournir les niveaux audio ou connecter le flux TTS réel. Le mouvement d’écoute utilise le niveau STT séparé. Une fin audio efface son niveau si aucune autre action du même canal n’est encore en cours.
+Real events disable the simulated audio signal. A silent `speech.start` does not
+invent voice activity. Supply audio levels or connect actual TTS output. Listening
+motion uses a separate STT level. An audio ending clears its level when no other
+action on the same channel remains active.
 
-Les événements ne déduisent pas le sens d’un outil depuis son nom : les liaisons sont explicites. Un outil non lié utilise `think`.
+Events do not infer tool meaning from names: bindings are explicit. An unbound
+tool uses `think`.
 
 ```js
 cephalon.animations.bindTools({
@@ -102,32 +135,33 @@ cephalon.animations.bindTools({
   'web.search': 'search',
   'agents.spawn': 'summon',
   'agents.message': 'contact'
-}); // remplace toute la table
+}); // replaces the entire table
 ```
 
-Pour brancher le transport fourni par le projet d’agent :
+Connect a transport supplied by the agent application:
 
 ```js
 const stream = new EventSource(agentEventsURL);
 stream.onmessage = message => {
   try { cephalon.events.handle(JSON.parse(message.data)); }
-  catch (error) { console.error('Événement Céphalon refusé', error); }
+  catch (error) { console.error('Céphalon event rejected', error); }
 };
 stream.onerror = () => {
-  // Selon la politique de reconnexion du projet hôte, arrêter les présences périmées.
+  // Clear stale visual presence according to the host’s reconnection policy.
   cephalon.events.handle({ version: 1, type: 'reset' });
 };
-// À la fermeture de l’intégration : stream.close();
+// When closing the integration: stream.close();
 ```
 
-L’agent hôte gère l’authentification, les origines autorisées et la reconnexion de son propre transport. Aucun serveur WebSocket ou endpoint réseau n’est ajouté ici.
+The host handles authentication, allowed origins and reconnection for its own
+transport. No WebSocket server or network endpoint is added here.
 
-## Définir et partager une variante
+## Define and share a variant
 
 ```js
 cephalon.animations.configure('review', {
   extends: 'read',
-  label: 'Relire un document',
+  label: 'Review a document',
   tempo: 0.7,
   intensity: 0.8,
   focus: [-0.55, 0.15],
@@ -135,24 +169,30 @@ cephalon.animations.configure('review', {
 });
 cephalon.animations.configure('summon', { tempo: 0.8, tilt: 0.65 });
 const configuration = cephalon.animations.export();
-// Sauvegarder dans le dépôt de l’application d’intégration.
+// Save in the integrating application’s repository.
 cephalon.animations.import(configuration);
 ```
 
-Les comportements disponibles restent les douze comportements natifs ; un nouveau nom crée une variante déclarative de l’un d’eux. Une nouvelle chorégraphie nécessite d’ajouter un comportement dans `ActionChoreography.js`. Le JSON ne contient jamais de JavaScript exécutable.
+Available behaviors remain the twelve native behaviors; a new name creates a
+declarative variant of one of them. New choreography requires adding a behavior
+to `ActionChoreography.js`. JSON never contains executable JavaScript.
 
-| Paramètre | Valeurs |
+| Parameter | Values |
 | --- | --- |
-| `tempo` | 0,25 à 2,5 |
-| `intensity`, `travel`, `tilt`, `lean` | 0 à 2 |
-| `pulse` | 0 à 2 ; 0 supprime les nouvelles pulsations physiques et décharges |
-| `radiance` | 0 à 2 ; émission des arêtes, du noyau et des effets énergétiques |
-| `focus` | Deux nombres entre −1 et 1 |
-| `duration` | 0,3 à 120 secondes, utilisée par `play` |
+| `tempo` | 0.25–2.5 |
+| `intensity`, `travel`, `tilt`, `lean` | 0–2 |
+| `pulse` | 0–2; 0 suppresses new physical pulses and discharges |
+| `radiance` | 0–2; edge, core and energy-effect emission |
+| `focus` | Two numbers between −1 and 1 |
+| `duration` | 0.3–120 seconds, used by `play` |
 
-L’import est validé avant de remplacer la bibliothèque active. Un fichier incorrect conserve les réglages précédents. `configure` modifie un seul set ; `import` repart des sets fournis puis applique la configuration. `reset(name)` rétablit un set natif ; `reset()` rétablit toute la bibliothèque et les liaisons. Les gestes courts de l’API historique `cue` et la mission restent disponibles.
+Imports are validated before replacing the live library. An invalid file preserves
+previous settings. `configure` changes one profile; `import` starts from supplied
+profiles and applies configuration. `reset(name)` restores a native profile;
+`reset()` restores the whole library and bindings. Short gestures from the
+historical `cue` API and the mission remain available.
 
-## Réutiliser le contrôleur sans la page de démonstration
+## Reuse the controller without the demo page
 
 ```js
 import { AvatarAnimationController } from './packages/avatar/src/AvatarAnimationController.js';
@@ -161,17 +201,41 @@ import { AgentEventBridge } from './packages/avatar/src/AgentEventBridge.js';
 const controller = new AvatarAnimationController({ demo: false });
 const events = new AgentEventBridge(controller);
 events.handle({ version: 1, type: 'tool.start', id: 'job-1', tool: 'read_file' });
-// L’hôte appelle controller.update(deltaSeconds) depuis sa boucle.
+// The host calls controller.update(deltaSeconds) from its loop.
 ```
 
-`AnimationLibrary`, `ActionAnimations`, `ActionChoreography` et `AgentEventBridge` n’importent ni Three.js ni le DOM. `PresenceDirector` transforme leurs intentions en posture. `ContactLinks` et `AttentionField` assurent les représentations spatiales dans la scène.
+`AnimationLibrary`, `ActionAnimations`, `ActionChoreography` and `AgentEventBridge`
+import neither Three.js nor the DOM. `PresenceDirector` translates their intentions
+into posture. `ContactLinks` and `AttentionField` provide spatial representations.
 
-L’avatar fournit la couche de présence et d’analyse audio. La reconnaissance STT, la génération TTS et l’exécution des agents restent à implémenter dans le compagnon et le runtime.
+The avatar provides presence and audio analysis. STT recognition, TTS generation
+and agent execution remain to be implemented in the companion and runtime.
 
-Pour essayer une voix réelle sans fournisseur TTS, douze clips originaux anglais et douze français sont générés hors ligne avec le modèle Ordis fourni. L’anglais est le défaut. `await cephalon.playVoice('en:summon')` ou `cephalon.playVoice('fr:summon')` lit le fichier local et anime le vrai RMS / les bandes audio. Une collection `official` contient quatre courts enregistrements du jeu avec leur provenance Wiki ; `cephalon.playVoice('official:glitch')` joue l’extrait de référence et sa réaction visuelle synchronisée. Les générations ne sont pas présentées comme des citations officielles.
+To try actual audio without a TTS provider, twelve original English and twelve
+French clips were generated offline using the supplied Ordis model. English is
+the default. `await cephalon.playVoice('en:summon')` or
+`cephalon.playVoice('fr:summon')` plays a local file and drives actual RMS/frequency
+bands. The `official` collection contains four short game recordings with Wiki
+provenance. `cephalon.playVoice('official:glitch')` plays the reference clip and its
+synchronized reaction. Generated lines are not presented as official quotations.
 
-`cephalon.voices.clips` décrit la collection courante ; `cephalon.voices.setCollection('en' | 'fr' | 'official')` change celle affichée. Sans préfixe, `playVoice` cherche dans la collection courante, puis dans les clips générés anglais. Ces aperçus utilisent l’état de parole et interrompent la démonstration en cours ; leur champ `animation` décrit le contexte de la réplique. La chaîne de génération et les fichiers sont décrits dans [`tooling/voice/README.md`](../tooling/voice/README.md). Ils ne constituent pas un moteur TTS à la demande.
+`cephalon.voices.clips` describes the current collection;
+`cephalon.voices.setCollection('en' | 'fr' | 'official')` changes it. Without a prefix,
+`playVoice` searches the current collection then generated English clips. These
+previews use speech state and interrupt the current demo. Their `animation` field
+describes context. See [voice tooling](../tooling/voice/README.md); these files are
+not an on-demand TTS engine and retain their explicit license exclusions.
 
-Pour présenter les profils sans journal de mission : `cephalon.startShowcase()` et `cephalon.stopShowcase()`. La démo utilise les mêmes sets que les événements externes et un signal audio simulé. Une interaction manuelle ou un événement externe l’interrompt. La pause suspend sa progression ; les préférences de mouvement réduit restent appliquées.
+`cephalon.startShowcase()` and `cephalon.stopShowcase()` present profiles without
+the mission log. The showcase uses the same profiles as external events and a
+simulated audio signal. Manual interaction or an external event interrupts it.
+Pause suspends progression; reduced-motion preferences remain respected.
 
-La mission d’investigation utilise désormais sa propre narration anglaise via `MissionNarration.js`. Son démarrage requiert un appui pour activer Web Audio. Les clips sont décodés en buffers pour enchaîner les phases sans autre geste ; la pause reprend au même offset et l’arrêt annule aussi les lectures en attente. `controller.setSpeechActive(true)` permet d’activer la réactivité TTS tout en conservant un état de travail tel que `thinking` ; la mission le désactive à la fin de chaque intervention. L’audio réel reste séparé du microphone et ne détermine pas l’émotion. `cephalon.missionNarration` expose le lecteur de démonstration ; il ne constitue pas un service TTS à la demande.
+The investigation mission uses dedicated English narration via `MissionNarration.js`.
+A start-button press unlocks Web Audio. Clips are decoded to buffers so phases
+continue without another gesture. Pause resumes at the same offset; stop also
+cancels pending playback. `controller.setSpeechActive(true)` enables TTS reactivity
+while preserving a work state such as `thinking`. The mission disables it after
+each line. Actual audio remains separate from the microphone and never determines
+emotion. `cephalon.missionNarration` exposes the demo player, not an on-demand
+TTS service. Without a voice pack, the mission runs without narration.

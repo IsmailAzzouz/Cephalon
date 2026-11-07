@@ -5,5 +5,7 @@ Generated locally with Piper en_US-ryan-high and the user-supplied Ordis RVC v2 
 
 The manifest contains scripts, durations, conversion settings and hashes. Models are not included. Official game excerpts are kept in a separate catalog with their Wiki sources.
 
-Preview: http://192.168.129.101:5173/?voice=en
-Generator: voice/generate.py --language en
+Preview: http://localhost:5173/?voice=en
+Generator: tooling/voice/generate.py --language en
+
+License: these recordings and archives are excluded from the project MIT License. See NOTICE.md and THIRD_PARTY_NOTICES.md. No unrestricted reuse permission is asserted.

@@ -11,9 +11,9 @@ export class ActionAnimations {
   start(name,{id,priority,focus,agentCount=1,tool='',record='',duration=null}={}){
     const profile=this.library.get(name);
     if(id!==undefined&&(typeof id!=='string'||!id||id.length>200))throw new Error('Identifiant d’action invalide.');
-    if(duration!==null&&(!Number.isFinite(duration)||duration<.1||duration>3600))throw new Error('Durée d’action invalide.');
+    if(duration!==null&&(!Number.isFinite(duration)||duration<.1||duration>3600))throw new Error('Invalid action duration.');
     if(focus!==undefined&&(!Array.isArray(focus)||focus.length!==2||focus.some(v=>!Number.isFinite(v)||Math.abs(v)>1)))throw new Error('Direction d’attention invalide.');
-    if(priority!==undefined&&(!Number.isFinite(priority)||priority<0||priority>100))throw new Error('Priorité invalide.');
+    if(priority!==undefined&&(!Number.isFinite(priority)||priority<0||priority>100))throw new Error('Invalid priority.');
     if(!Number.isFinite(agentCount))throw new Error('Nombre de contacts invalide.');
     const actionId=id??'animation-'+(++this.counter);
     if(this.entries.has(actionId))return actionId; // repeated start is idempotent

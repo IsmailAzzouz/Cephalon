@@ -1,6 +1,6 @@
 # Linux
 
-À implémenter après choix de l’environnement graphique cible. Les capacités
-requises sont l’activation globale et la présence au-dessus des applications.
-Le choix de la coque et les contraintes du compositeur doivent être vérifiés
-sur la session visée avant de promettre ce comportement.
+To implement after choosing the target graphical environment. Required capabilities
+are global activation and presence above applications. The shell choice and
+compositor constraints must be verified on the intended session before promising
+this behavior.

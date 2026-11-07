@@ -1,5 +1,5 @@
-# Réglages du compagnon
+# Companion settings
 
-À implémenter : activation vocale ou manuelle, microphone, voix, écran et
-comportement de présence. L’Opérateur doit pouvoir désactiver l’écoute et savoir
-si elle est active. Les réglages de l’atelier navigateur restent distincts.
+To implement: voice/manual activation, microphone, voice, display and presence
+behavior. The Operator must be able to disable listening and know whether it is
+active. Browser-playground settings remain separate. Profile selection is planned.

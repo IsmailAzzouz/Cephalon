@@ -1,8 +1,8 @@
-# Hôte résident
+# Resident host
 
-À implémenter. Possède l’activation, les flux audio et la présence à l’écran.
-Il assemble les adaptateurs système de `platform/` et se connecte au runtime.
-Il ne dépend pas d’une boucle de rendu active ni de la disponibilité d’un modèle.
+To implement. Owns activation, audio streams and screen presence. Assembles
+system adapters from `platform/` and connects to the runtime. It must not depend
+on an active render loop or model availability.
 
-Modules prévus : `activation/`, `audio/`, `presence/`, `session/`, `connection/`.
-Leurs responsabilités sont décrites dans leurs README.
+Planned modules: `activation/`, `audio/`, `presence/`, `session/` and `connection/`.
+Their responsibilities are described in their READMEs.

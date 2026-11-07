@@ -27,7 +27,7 @@ async function request(url,method='GET'){
 }
 
 test('The entry point and both Three.js modules are served as browser-readable files',async()=>{
-  for(const path of ['/','/src/main.js','/src/atelier/AvatarDebug.js','/packages/avatar/src/CephalonAvatar.js','/packages/avatar/src/AvatarAnimationController.js','/examples/signal-mission/src/AgentSequence.js','/src/style.css','/vendor/three/three.module.js','/vendor/three/three.core.js','/fonts/Barlow-Regular.ttf','/fonts/BarlowCondensed-Regular.ttf']){
+  for(const path of ['/','/src/main.js','/src/studio/AvatarDebug.js','/packages/avatar/src/CephalonAvatar.js','/packages/avatar/src/AvatarAnimationController.js','/examples/signal-mission/src/AgentSequence.js','/src/style.css','/vendor/three/three.module.js','/vendor/three/three.core.js','/fonts/Barlow-Regular.ttf','/fonts/BarlowCondensed-Regular.ttf']){
     const response=await request(path);
     assert.equal(response.status,200,path);
     assert.ok(response.body.length>0,path);
@@ -42,4 +42,12 @@ test('HEAD returns headers without a body; unsupported methods and missing files
   assert.equal((await request('/','POST')).status,405);
   assert.equal((await request('/src/missing.js')).status,404);
   assert.equal((await request('/src/')).status,404);
+});
+
+test('Voice packs and redistribution notices resolve in both development and export',async()=>{
+  assert.equal(requestFile('/audio/ordis-en/manifest.json',root),root+'/examples/avatar-playground/public/audio/ordis-en/manifest.json');
+  assert.equal(requestFile('/audio/ordis-en/manifest.json',root,true),root+'/audio/ordis-en/manifest.json');
+  for(const path of ['/LICENSE','/THIRD_PARTY_NOTICES.md','/fonts/OFL.txt','/vendor/three/LICENSE']){
+    assert.equal((await request(path)).status,200,path);
+  }
 });

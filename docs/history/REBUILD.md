@@ -1,17 +1,24 @@
-# Reconstruction de l’avatar
+# Avatar reconstruction
 
-Le cahier des charges du 7 novembre 2026 remplace les précédents choix géométriques et l’orientation des anneaux. Les quatre références et l’image comparative annoncées ne sont pas jointes au message ; aucune fidélité à des images non reçues n’est revendiquée.
+The November 7, 2026 brief replaces previous geometry and ring-orientation choices.
+Four reference images and a comparison image mentioned in the request were not
+attached; no fidelity to unseen images is claimed.
 
-Ordre de construction et de contrôle visuel :
+Construction and visual-check order:
 
-1. Hexaèdre cohérent, sans fragmentation permanente.
-2. Trois couches d’ondes en XZ, indépendantes de l’inclinaison du cristal.
-3. Verre, Fresnel, fissures et profondeur interne.
-4. Noyau et arêtes HDR, bloom sélectif à plusieurs échelles.
-5. Dispersion chromatique locale et effets de lentille liés au noyau.
-6. Contrôleur indépendant, états, émotions et signaux audio séparés.
-7. Fragments temporaires pendant les réactions.
+1. Coherent hexahedron without permanent fragmentation.
+2. Three XZ wave layers, independent of crystal tilt.
+3. Glass, Fresnel, fractures and internal depth.
+4. HDR core/edges and selective multiscale bloom.
+5. Chromatic dispersion and core-linked lens effects.
+6. Independent controller with separate states, emotions and audio signals.
+7. Temporary reaction fragments.
 
-Les sept étapes ont été construites et inspectées successivement. Les captures sont conservées dans `artifacts/rebuild/01.png` à `07.png`. L’interface principale utilise désormais cette reconstruction.
+All seven stages were built and inspected in sequence. Captures remain in the
+root `artifacts/rebuild/01.png` through `07.png`. The main interface uses this
+reconstruction.
 
-La silhouette fermée, le repère horizontal des ondes, le pipeline HDR, les signaux réels et les réactions temporaires sont vérifiés. Les réglages sont accessibles dans l’atelier optique, et le contrôleur indépendant est documenté dans `README.md`.
+The closed silhouette, horizontal wave reference, HDR pipeline, actual signals
+and temporary reactions were checked. Settings are in the optical editor; the
+independent controller is documented in the avatar guide. This report describes
+the historical construction pass, not a new validation run.

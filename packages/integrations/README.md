@@ -1,6 +1,5 @@
-# Intégrations
+# Integrations
 
-À implémenter : adaptateurs des modèles de langage, STT, TTS, navigateurs et
-services externes. L’hôte et le runtime les assemblent selon leurs besoins.
-Les comportements d’Ordis et du cerveau restent dans `agents/`.
-La génération vocale hors ligne existante reste dans `tooling/voice/`.
+To implement: language-model, STT, TTS, browser and external-service adapters.
+The host and runtime assemble them as needed. Conversation and brain behaviors
+remain in `agents/`. Existing offline voice generation stays in `tooling/voice/`.

@@ -3,7 +3,7 @@
   "profiles": {
     "review": {
       "extends": "read",
-      "label": "Relire un document",
+      "label": "Review a document",
       "tempo": 0.7,
       "intensity": 0.85,
       "focus": [-0.55, 0.2],

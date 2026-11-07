@@ -4,6 +4,14 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./avatar-events": { "types": "./src/avatar-events.d.ts" }
+    "./avatar-events": {
+      "types": "./src/avatar-events.d.ts"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsmailAzzouz/Cephalon.git",
+    "directory": "packages/contracts"
   }
 }

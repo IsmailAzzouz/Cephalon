@@ -1,5 +1,5 @@
-# Connexion au runtime
+# Runtime connection
 
-À implémenter : transport, état de connexion et récupération de l’état courant
-après reconnexion. Une perte de connexion n’est pas une confirmation d’annulation.
-Le protocole est à définir dans `docs/protocol.md`.
+To implement: transport, connection state and recovery of current state after
+reconnection. Losing the connection is not confirmation of cancellation.
+The protocol will be defined in `docs/protocol.md` at the repository root.

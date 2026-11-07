@@ -1,11 +1,21 @@
-# Bibliothèque de sets d’animation — observation du navigateur
+# Animation profiles — browser observation
 
-`action-library.webm` parcourt dix comportements dans la vue mobile 390 × 844 ; les images correspondantes permettent d’en inspecter les poses. Repos et rapport réutilisent les états déjà observés dans `artifacts/presence/`.
+`action-library.webm` visits ten behaviors at 390 × 844; corresponding images
+allow pose inspection. Idle and report reuse states observed in `artifacts/presence/`.
 
-`browser-review.json` relève les poses, la progression des événements corrélés, la conservation d’un réglage de vitesse après rechargement et le refus d’un import invalide. La séquence outil → sous-agent → parole → fin d’ancien outil → fin de parole → fin de sous-agent revient correctement à la liaison puis au repos. Aucune erreur navigateur n’est remontée.
+`browser-review.json` records poses, correlated-event progression, speed-setting
+persistence after reload and invalid-import rejection. The tool → subagent → speech
+→ old-tool end → speech end → subagent end sequence correctly returns to the link
+then idle. No browser error was reported.
 
-`roundtrip-review.json` documente l’import depuis le fichier exemple, l’export téléchargé, la création d’une variante et sa prévisualisation avec fermeture de l’atelier. Il contient aussi le cadrage 320 × 640, la conservation de la pause par défaut en mouvement réduit et la fin de deux sessions TTS : terminer la première conserve le niveau de la seconde ; terminer la dernière remet le niveau à zéro.
+`roundtrip-review.json` records fixture import, downloaded export, variant creation
+and preview with editor closure. It also covers 320 × 640 framing, default pause
+under reduced motion and two TTS sessions: ending the first preserves the second’s
+level; ending the last clears it.
 
-`exported-profile.v1.json` est le fichier réellement téléchargé depuis l’atelier. `summon-desktop.png`, `summon-narrow.png` et les vues de l’atelier montrent les configurations inspectées. Ces vérifications sont des parcours de navigateur, pas des tests unitaires.
+`exported-profile.v1.json` is the file actually downloaded from the editor.
+`summon-desktop.png`, `summon-narrow.png` and editor views show inspected configurations.
+These are browser workflows, not unit tests. Summon displays simulated contacts;
+no external subagent is created.
 
-La démonstration de summon affiche des contacts simulés. Aucun sous-agent externe n’est créé.
+Historical captures and exported values retain their original interface language.

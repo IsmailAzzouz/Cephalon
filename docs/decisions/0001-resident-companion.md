@@ -1,33 +1,34 @@
-# 0001 — Compagnon résident et séparation des agents
+# 0001 — Resident companion and separate agent roles
 
-Statut : adopté pour l’organisation du dépôt.
+Status: adopted for repository organization.
 
-## Contexte
+## Context
 
-Le dépôt initial livrait une page Three.js avec ateliers, voix et mission locale.
-Le produit visé est un compagnon invocable par son nom depuis une autre application.
-Une structure centrée sur une page web confondrait la présence visible et l’hôte
-qui doit rester en veille.
+The original repository delivered a Three.js page with editors, voices and a local
+mission. The intended product is a companion invoked by name from another application.
+A page-centered structure would confuse visible presence with the host that must
+continue listening for activation.
 
-## Décision
+## Decision
 
-Préparer `apps/companion/` pour l’hôte résident, la surcouche et les réglages ;
-`apps/runtime/` pour l’exécution des agents ; `agents/` pour Ordis, le cerveau et
-les spécialistes. L’avatar existant devient un package réutilisable. La page
-actuelle devient `examples/avatar-playground/` et la mission fictive est séparée
-dans `examples/signal-mission/`.
+Prepare `apps/companion/` for the resident host, overlay and settings;
+`apps/runtime/` for agent execution; and `agents/` for the conversation role,
+brain and specialists. The existing avatar becomes a reusable package. The current
+page becomes `examples/avatar-playground/`; the fictional mission is separated
+into `examples/signal-mission/`.
 
-La présence, la conversation, la parole et la tâche ont des cycles de vie distincts.
-Le format d’avatar v1 est conservé dans `packages/contracts/`. Les adaptations
-du système ont leur frontière dans `platform/`. L’outillage vocal est déplacé
-dans `tooling/voice/`.
+Presence, conversation, speech and tasks have distinct lifecycles. Preserve the
+avatar v1 format in `packages/contracts/`. System adaptations have their boundary
+in `platform/`. Move voice tooling into `tooling/voice/`.
 
-## Conséquences
+The conversation role is `agents/companion/`. Ordis is the draft’s default profile,
+with profile boundaries described in `presets/`, rather than the role’s fixed identity.
 
-Les commandes npm historiques restent des commandes de l’atelier navigateur.
-Le serveur et l’export utilisent une même liste explicite de ressources.
-Les composants futurs ont une responsabilité documentée, sans simulation de
-fonctionnement ni dépendance native choisie prématurément.
+## Consequences
 
-Le choix de la coque, du premier OS, de l’IPC, du SDK d’agent et des fournisseurs
-reste ouvert. L’arborescence n’impose pas une architecture distribuée.
+Existing npm commands continue to run the browser playground. Server and export
+share an explicit resource list. Future components have documented responsibilities
+without simulated functionality or a prematurely chosen native dependency.
+
+Desktop shell, first target OS, IPC, agent SDK and providers remain open choices.
+The directory structure does not require a distributed architecture.

@@ -413,7 +413,7 @@
   },
   "localFile": {
     "output": true,
-    "src": "blob:http://192.168.129.101:5173/370a3086-9922-4384-bac7-ece95ca7532b",
+    "src": "blob:http://localhost:5173/370a3086-9922-4384-bac7-ece95ca7532b",
     "voice": 0.490568812716632
   }
 }

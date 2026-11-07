@@ -1,47 +1,53 @@
 # Céphalon
 
-## Produit
+## Product
 
-Compagnon de bureau résident pour un Opérateur. L’appel « Hey Ordis » ou une
-activation manuelle fait apparaître Ordis au-dessus de l’application en cours.
-L’Opérateur peut lui parler, lui confier du travail, demander son avancement,
-l’interrompre et le masquer sans perdre la tâche en cours.
+An early draft of a resident desktop companion for an Operator. Ordis is the
+current default profile. The name, wake phrase, voice, personality and visual
+style are intended to be customizable; the profile system is not implemented.
 
-## Deux agents principaux
+Calling the chosen name (“Hey Ordis” for the default profile) or activating the
+companion manually brings it above the current application. The Operator can
+speak to it, assign work, request progress, interrupt it and hide it without
+losing the task in progress.
 
-Ordis porte la personnalité et la conversation avec l’Opérateur. Le cerveau
-possède le plan et l’exécution du travail. Il délègue des missions délimitées à
-des spécialistes, dont computer use, recherche ou code. Les résultats reviennent
-au cerveau ; Ordis les présente et relaie les demandes de clarification.
+## Two main agents
 
-## Présence
+The conversation agent carries the selected personality and talks to the
+Operator. The brain owns planning and execution. It delegates bounded missions
+to specialists such as computer use, research or coding. Results return to the
+brain; the conversation agent presents them and relays clarification requests.
 
-L’hôte du compagnon gère l’activation, les flux audio, les écrans, la visibilité
-et la connexion au runtime. La veille continue quand le rendu est masqué ou
-suspendu. La détection d’activation ne dépend pas d’un appel au modèle.
-Visibilité, conversation, parole et tâche ont des cycles de vie indépendants.
+## Presence
 
-L’Opérateur contrôle l’écoute et peut la désactiver. L’état du microphone et le
-mode d’activation doivent être compréhensibles dans les réglages et la présence.
+The companion host manages activation, audio streams, screens, visibility and
+the runtime connection. Listening remains available while rendering is hidden
+or suspended. Detecting activation does not depend on a model call. Visibility,
+conversation, speech and tasks have independent lifecycles.
 
-## Identité visuelle
+The Operator controls listening and can disable it. Microphone state and the
+activation mode must be understandable in settings and in the companion’s presence.
 
-Ordis est représenté par un cristal holographique inspiré du personnage de
-Warframe : volume cohérent, noyau lumineux, ondes horizontales, expressivité sans
-visage. Les événements sémantiques guident la posture. Le signal audio réel guide
-les ondes ; le volume ne détermine pas l’émotion. Les préférences de réduction
-du mouvement restent prises en compte.
+## Visual identity
 
-## État de réalisation
+The default Ordis profile uses a holographic crystal inspired by the Warframe
+character: a coherent volume, luminous core, horizontal waves and expression
+without a face. Semantic events guide posture. Actual audio guides the waves;
+volume never determines emotion. Respect reduced-motion preferences.
 
-Disponibles : avatar Three.js / JavaScript, contrôleur, animation, événements
-v1, analyse audio navigateur, atelier visuel, clips vocaux hors ligne et mission
-fictive locale. L’atelier utilise un serveur HTTP Node.js 20+ et des ressources locales.
+## Implementation status
 
-À construire : application native résidente, activation vocale, surcouche de
-bureau, STT / TTS à la demande, agents et orchestration, outils et persistance.
-La coque de bureau, les fournisseurs et le premier environnement graphique
-ciblé restent à choisir. La prise en charge des autres systèmes n’est pas acquise.
+Available: the Three.js / JavaScript avatar, controller, animation, v1 events,
+browser audio analysis, visual playground, offline voice tooling and fictional
+local mission. The playground uses Node.js 20+ and local resources. Demo voice
+packs remain in the repository and export with provenance and explicit exclusions
+from MIT. Model weights are excluded. These demo voices do not constrain future
+companion profiles. The mission also runs without narration if its pack is absent.
 
-Les enregistrements du jeu et les répliques générées conservent leurs collections
-et provenances distinctes. Les données de mission sont explicitement fictives.
+To build: resident native application, voice activation, desktop overlay,
+on-demand STT / TTS, agents and orchestration, tools and persistence. The desktop
+shell, providers and first target graphical environment are still to be selected.
+Support for other systems is not established.
+
+Game recordings and generated dialogue retain distinct collections and provenance.
+Mission data is explicitly fictional.

@@ -8,8 +8,11 @@ export class MissionNarration {
     this.ready=this.load();
   }
   async load(){
+    this.unavailable=false;
     try{
-      const response=await fetch('/audio/ordis-mission/manifest.json');if(!response.ok)throw new Error('English mission audio is unavailable. Reload and try again.');
+      const response=await fetch('/audio/ordis-mission/manifest.json');
+      if(response.status===404){this.unavailable=true;return false;}
+      if(!response.ok)throw new Error('English mission audio is unavailable. Reload and try again.');
       const manifest=await response.json();
       if(manifest.language!=='en-US'||manifest.status!=='generated')throw new Error('The English voice pack is not ready.');
       for(const clip of manifest.clips){
@@ -21,12 +24,17 @@ export class MissionNarration {
     }catch(error){this.loadError=error;return false;}
   }
   async prime(){
+    if(this.unavailable)return null;
     if(!this.audio.context||this.audio.context.state==='closed')this.audio.context=new AudioContext();this.context=this.audio.context;
     // Resume is called synchronously from the Start button, before any fetch/decoding awaits.
     const resume=this.context.resume();
     await Promise.race([resume,new Promise(resolve=>setTimeout(resolve,350))]);
     if(this.context.state!=='running')throw new Error('Tap Start mission to enable its English voice.');
-    if(!await this.ready){this.ready=this.load();if(!await this.ready)throw this.loadError;}
+    if(!await this.ready){
+      if(this.unavailable)return null;
+      this.ready=this.load();
+      if(!await this.ready){if(this.unavailable)return null;throw this.loadError;}
+    }
     await Promise.all([...this.clips].map(async([id,clip])=>{
       if(this.buffers.has(id))return;
       const response=await fetch(clip.mp3);if(!response.ok)throw new Error('Could not load the English voice. Please try again.');

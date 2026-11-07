@@ -14,3 +14,10 @@ __pycache__/
 .foundry/
 WorkingSessions/
 .impeccable/
+
+# Machine-specific credentials, agent state and virtual environments
+.aws/
+.codex/
+.agents/
+.venv*/
+*.log

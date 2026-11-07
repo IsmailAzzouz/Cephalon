@@ -1,6 +1,6 @@
-# Intégrations système
+# System integrations
 
-À implémenter. Adapte le compagnon au système et à l’environnement graphique :
-fenêtres, focus, raccourcis globaux, audio et intégration de bureau.
-Les sous-dossiers ne représentent pas une prise en charge déjà disponible.
-Choisir et valider un premier système avant d’implémenter les autres.
+To implement. Adapts the companion to its OS and graphical environment: windows,
+focus, global shortcuts, audio and desktop integration. Subdirectories do not
+represent already available platform support. Select and validate one target
+system before implementing the others.

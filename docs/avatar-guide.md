@@ -1,41 +1,58 @@
-# Ordis — Céphalon
+# Ordis avatar playground
 
-Avatar Three.js : cristal holographique cohérent, ondes horizontales, noyau volumétrique stylisé, bloom HDR et expressivité sans visage.
+Three.js avatar: a coherent holographic crystal, horizontal waves, stylized
+volumetric core, HDR bloom and expression without a face.
 
-Ce guide décrit l’atelier navigateur existant. Le produit cible est présenté
-dans le [README principal](../README.md). Les agents et le compagnon résident
-restent à implémenter.
+This guide describes the existing browser playground. See the [main README](../README.md)
+for the target product. Real agents and the resident companion remain to be built.
+Ordis is the draft’s default profile, not the project’s required identity.
 
-## Lancer sur le réseau local
+## Run on a local network
 
-Node.js 20+ suffit. Three.js et les polices sont inclus.
+Node.js 20+ is sufficient. Three.js and fonts are included.
 
 ```bash
-cd /home/nemesis/src/cephalon
+cd Cephalon
 npm run dev -- --host 0.0.0.0
 ```
 
-Sur le téléphone connecté au même réseau, ouvrir **http://192.168.129.101:5173/** (ou l’adresse affichée par le serveur). Le service utilisateur `cephalon-preview.service` conserve le serveur actif :
+On this computer, open **http://localhost:5173/**. On a phone on the same network,
+use the local address printed by the server. No system service is installed
+automatically; keep the terminal open for the preview. Avoid a second instance
+on the same port. To choose another: `npm run dev -- --host 0.0.0.0 --port 5174`.
 
-```bash
-systemctl --user status cephalon-preview.service
-journalctl --user -u cephalon-preview.service -f
-systemctl --user stop cephalon-preview.service
-```
+## Optional local voices
 
-Ne pas lancer une seconde instance sur le même port. Pour choisir un autre port : `npm run dev -- --host 0.0.0.0 --port 5174`.
+Demo voices and game excerpts are included with attribution and license exclusions.
+They are not MIT-licensed. Model weights are not included. The mission also runs
+without narration when its pack is absent.
 
-## Mission d’essai de l’agent
+## Agent demo mission
 
-Ouvrir **http://192.168.129.101:5173/?mission=1**, puis appuyer sur **Start mission**. Cet appui autorise la voix dans le navigateur du téléphone ; aucune piste ne démarre automatiquement au chargement.
+Open **http://localhost:5173/?mission=1**, then press **Start mission**. This gesture
+unlocks audio in a phone browser; no track starts automatically on page load.
 
-En environ 40 secondes, Ordis reçoit une demande de l’Opérateur, prépare un plan, cherche dans les transmissions, repère une source, analyse ses paquets, recoupe ses observations et présente son rapport. **La mission et sa narration sont en anglais uniquement.** Il accuse réception par une inclinaison, regarde de côté pour réfléchir, parcourt les transmissions de gauche à droite et de haut en bas, se rapproche du résultat, compare deux sources, puis revient vers l’Opérateur. Des accents de posture accompagnent les phrases.
+In about 40 seconds, Ordis receives an Operator request, prepares a plan, searches
+transmissions, locates a source, analyzes its packets, cross-checks observations
+and presents a report. The mission text and narration are English only. Ordis
+acknowledges with a tilt, looks away to think, scans left to right and top to
+bottom, approaches the result, compares two sources and returns to the Operator.
+Posture accents accompany phrases.
 
-Chaque étape possède une réplique dédiée, générée avec le modèle Ordis fourni. Les ondes et le noyau suivent le **vrai signal audio** ; Ordis conserve ses gestes de travail pendant ses commentaires. Le rapport annonce la source et les valeurs calculées du scénario. Les phases attendent la fin de leur réplique, sans couper le rapport. Des silences laissent place au travail entre les interventions.
+Each phase has a dedicated line generated using the supplied Ordis model. Waves
+and core follow actual audio while work gestures remain active. The report names
+the source and computed scenario values. Phases wait for their lines to finish;
+silences leave room for work between remarks.
 
-Le scénario utilise **12 transmissions locales fictives**, clairement indiquées dans l’interface. Le filtrage par fréquence et signature, l’agrégation des paquets, les mesures et la vérification des observations sont exécutés dans le navigateur. Le rapport est généré à partir des résultats ; il ne provient pas d’une recherche Internet ou d’un modèle distant. Aucune recommandation n’est exécutée sur le PC ou le réseau.
+The scenario uses **12 fictional local transmissions**, labeled in the interface.
+Frequency/signature filtering, packet aggregation, measurements and verification
+execute in the browser. The report derives from results, not web search or a
+remote model. No recommendation is executed on the computer or network.
 
-La mission dispose d’un journal, d’une pause, d’un arrêt et d’un bouton de reprise après pause ou de rejeu après la fin. **La pause suspend la voix au même endroit**, puis la reprend ; l’arrêt coupe aussi l’audio. Le masquage de l’onglet met la mission en pause. Les changements manuels d’état ou de source interrompent la séquence. Le toucher du cristal permet aussi de l’interrompre pour revenir à l’écoute. Le glissement continue simplement à orienter le cristal.
+The mission provides a log, pause, stop, resume and replay. Pause freezes voice
+at its current offset, then resumes; stop also cuts audio. Hiding the tab pauses
+the mission. Manual state or source changes interrupt it. Tapping the crystal
+returns it to listening; dragging only changes orientation.
 
 ```js
 cephalon.startMission();
@@ -45,50 +62,89 @@ cephalon.mission.snapshot();
 cephalon.stopMission();
 ```
 
-Le scénario et ses données sont dans `examples/signal-mission/src/SignalScenario.js`. L’ordonnanceur `AgentSequence.js` est indépendant du rendu et du DOM ; sa vue s’adapte au téléphone et à l’ordinateur. `MissionNarration.js` gère les buffers audio, leur pause et leur reprise. Les annonces chiffrées sont réservées aux résultats correspondants ; une autre recherche reçoit des répliques prudentes, sans inventer les données du scénario. Les captures et contrôles de la version parlée sont dans `artifacts/voiced-mission/`.
+Scenario and data live in `examples/signal-mission/src/SignalScenario.js`.
+`AgentSequence.js` is independent of rendering and the DOM; its view adapts to
+phone and desktop. `MissionNarration.js` manages buffers, pause and resume.
+Specific numeric announcements are reserved for matching results. Other searches
+receive cautious fallback lines without invented scenario data. Voiced-mission
+captures and checks are in `artifacts/voiced-mission/`.
 
-## Explorer
+## Explore
 
-Le bouton **Animations** ouvre la bibliothèque de douze sets : repos, lecture, écriture, écoute, parole, réflexion, recherche, analyse, comparaison, contact, appel de sous-agents et rapport. **Jouer le set** ferme l’atelier pour observer le mouvement. Chaque set peut être réglé, dupliqué et exporté en JSON ; les noms d’outils se lient aux sets depuis le même atelier. Les réglages sont conservés sur cet appareil.
+**Animations** opens twelve profiles: idle, read, write, listen, speak, think,
+search, analyze, compare, contact, summon and report. **Play profile** closes the
+editor so the movement is visible. Adjust, duplicate and export profiles as JSON,
+and bind tool names in the same editor. Settings are stored on this device.
 
-**Voir les enchaînements**, ou **http://192.168.129.101:5173/?showcase=1**, présente une séquence visuelle d’environ 23 secondes : écoute, réflexion, écriture, appel de sous-agents, analyse et rapport. Aucun texte de mission ne recouvre la projection. Le signal vocal reste simulé, sans son généré.
+**Play sequence**, or **http://localhost:5173/?showcase=1**, presents an approximately
+23-second visual sequence: listening, thinking, writing, summoning, analysis and
+report. No mission text covers the projection. The voice signal is simulated;
+no generated sound is played.
 
-Le cube respire et se contracte selon l’action. Un score énergétique commun synchronise sa déformation, les fissures, le noyau, les caustiques sur les faces, les rémanences d’arêtes et les ondes de décharge horizontales. Le summon concentre l’énergie avant deux décharges ; les liaisons montrent des paquets en circulation. Les paramètres **Pulsation du cristal** et **Rayonnement énergétique** se règlent indépendamment pour chaque set. Les anciens fichiers JSON v1 restent importables.
+The cube breathes and contracts with each action. A shared energy score synchronizes
+deformation, fractures, core, face caustics, edge afterglow and horizontal discharge
+waves. Summon concentrates energy before two discharges; links show moving packets.
+**Crystal pulsation** and **Energy radiance** are independent profile settings.
+Older v1 JSON files remain importable.
 
-La couche d’intégration reçoit des événements JSON v1, sans dépendance à un framework d’agent. Elle suit les débuts et fins des outils, la parole, l’écoute et les sous-agents, avec identifiants corrélés et reprise de l’action sous-jacente après interruption. Le contrat, les exemples et les limites sont dans **[docs/AGENT_INTEGRATION.md](AGENT_INTEGRATION.md)**.
+The integration layer receives JSON v1 events without an agent framework. It
+tracks tool starts/ends, speech, listening and subagents, with correlated identifiers
+and resumption of underlying actions after interruption. See
+[AGENT_INTEGRATION.md](AGENT_INTEGRATION.md) for contract, examples and limitations.
 
 ```js
 const action = cephalon.actions.start('write', { id: 'edit-42' });
-// À la fin de l’outil réel :
+// When the real tool finishes:
 cephalon.actions.finish(action);
-
 cephalon.events.handle({ version: 1, type: 'subagent.start', id: 'researcher-1' });
 cephalon.events.handle({ version: 1, type: 'subagent.end', id: 'researcher-1' });
 ```
 
-Repos, Écoute, Réflexion et Parole utilisent par défaut un **signal audio simulé**, indiqué sous les commandes. Les émotions se choisissent dans l’atelier optique. L’icône éclair déclenche une rupture brève.
+Idle, Listening, Thinking and Speaking use a labeled **simulated audio signal**
+by default. Choose emotion in the optical settings. The lightning icon triggers
+a short glitch.
 
-Glisser fait tourner le cristal ; pincer ou utiliser la molette règle le zoom ; double appui / double clic ou touche Début recentre. Les ondes restent horizontales lorsque le cristal tourne. Espace bascule entre repos et parole ; les flèches orientent le cristal. Échap ferme l’atelier ou quitte l’immersion.
+Drag to rotate; pinch or scroll to zoom; double tap/click or Home to recenter.
+Waves stay horizontal as the crystal rotates. Space toggles idle/speaking; arrow
+keys change orientation. Escape closes the editor or leaves immersion.
 
-L’atelier s’ouvre avec l’icône de réglages, ou directement via **http://192.168.129.101:5173/?debug**. Il permet de régler la matière, le Fresnel, les arêtes, le bloom, la dispersion, le noyau, les ondes et les réactions ; d’isoler chaque couche ; de désactiver les post-effets ; et de consulter les sept étapes de reconstruction.
+The settings icon or **http://localhost:5173/?debug** opens material, Fresnel,
+edges, bloom, dispersion, core, waves and reactions. Isolate layers, disable
+post-processing and inspect seven reconstruction stages.
 
-## Audio réel
+## Actual audio
 
-L’anglais est la collection vocale par défaut : **douze répliques originales générées avec le modèle RVC fourni**. L’atelier distingue les collections English / Français générées et **quatre courts enregistrements du jeu provenant du WARFRAME Wiki**. Les répliques créées pour l’agent ne sont pas présentées comme des citations officielles.
+English is the default voice collection: twelve original lines generated with
+the supplied RVC model. The editor separates generated English/French collections
+from four short game recordings sourced from the WARFRAME Wiki. Created dialogue
+is not presented as official quotations.
 
-Ouvrir **http://192.168.129.101:5173/?voice=en** pour les répliques de l’agent, ou **http://192.168.129.101:5173/?voice=official** pour les extraits du jeu, dont la rupture de personnalité fournie en référence. Choisir une réplique puis **Écouter avec l’avatar**. Les ondes suivent le vrai signal audio ; une brève réaction glitch accompagne le passage correspondant de l’extrait de référence. Le français reste accessible dans le sélecteur de collection. Les MP3 sont téléchargeables et les sources des enregistrements du jeu sont indiquées.
+Open **http://localhost:5173/?voice=en** for generated lines or
+**http://localhost:5173/?voice=official** for game excerpts, including the supplied
+personality-glitch reference. Choose a line and **Play with avatar**. Waves follow
+actual audio; a brief glitch follows the reference clip’s relevant passage. French
+remains available in the collection selector. MP3 downloads and game-source links
+are provided.
 
-Le [lot anglais WAV / MP3](http://192.168.129.101:5173/audio/ordis-en/ordis-en-pack.zip), le [lot français](http://192.168.129.101:5173/audio/ordis/ordis-fr-pack.zip) et les instructions de régénération sont décrits dans [tooling/voice/README.md](../tooling/voice/README.md).
+The [English WAV/MP3 pack](http://localhost:5173/audio/ordis-en/ordis-en-pack.zip),
+[French pack](http://localhost:5173/audio/ordis/ordis-fr-pack.zip) and regeneration
+instructions are described in [voice tooling](../tooling/voice/README.md).
 
-Dans l’atelier, charger un MP3, WAV ou autre fichier compatible avec le navigateur. Le fichier est lu et analysé sur l’appareil ; il n’est pas envoyé au serveur. Le RMS et trois bandes de fréquences pilotent l’état de parole, avec attaque de 50 ms et relâchement de 170 ms.
+Load a local MP3, WAV or another browser-supported file in the editor. Playback
+and analysis occur on the device; the file is not uploaded. RMS and three
+frequency bands drive speech with 50 ms attack and 170 ms release.
 
-Le microphone utilise une analyse distincte et n’est jamais connecté aux haut-parleurs. Son accès nécessite **HTTPS ou localhost**. Sur l’adresse LAN en HTTP, la commande est désactivée avec une explication ; un fichier audio ou des niveaux fournis par l’application restent utilisables.
+The microphone uses separate analysis and is never connected to speakers. Access
+requires **HTTPS or localhost**. On a LAN HTTP address, its control is disabled
+with an explanation; files and application-supplied levels remain usable.
 
-Le projet prépare les événements TTS / STT. Les clips livrés sont générés hors ligne avec `tooling/voice/generate.py` ; le site n’implémente ni reconnaissance de texte ni service de génération vocale à la demande.
+The project prepares TTS/STT events. Included clips are generated offline through
+`tooling/voice/generate.py`; the site has no speech recognition or on-demand TTS service.
 
-## API pour le système conversationnel
+## Conversation-system API
 
-Le contrôleur est indépendant du rendu, dans `packages/avatar/src/AvatarAnimationController.js`. L’instance de démonstration expose `window.cephalon` :
+The rendering-independent controller is in `packages/avatar/src/AvatarAnimationController.js`.
+The demo exposes `window.cephalon`:
 
 ```js
 cephalon.setState('speaking');
@@ -96,64 +152,86 @@ cephalon.setEmotion('happy', 0.8);
 cephalon.setSignals({
   outputVoiceLevel: 0.6,
   inputMicLevel: 0,
-  frequencyBands: [0.4, 0.65, 0.2], // basses, médiums, aigus
+  frequencyBands: [0.4, 0.65, 0.2], // bass, mids, treble
 });
 
-// Pour écouter : utiliser un signal microphone distinct.
+// Listening uses a separate microphone signal.
 cephalon.setState('listening');
 cephalon.setSignals({
   inputMicLevel: 0.35,
   inputFrequencyBands: [0.2, 0.3, 0.1],
   outputVoiceLevel: 0
 });
-
 cephalon.triggerGlitch(0.8, 0.26);
 cephalon.useDemo();
 ```
 
-Les gestes peuvent aussi suivre les événements d’un agent externe. `focus` indique une direction d’attention normalisée, avec X positif vers la droite et Y positif vers le haut. Les rotations et déplacements sont amortis ; le noyau précède légèrement le corps.
+Gestures may follow external agent events. `focus` is a normalized attention
+direction, positive X right and positive Y up. Rotation and travel are damped;
+the core slightly leads the body.
 
 ```js
 cephalon.setState('thinking');
-cephalon.cue('tool-call', {focus: [-0.7, 0.25], duration: 0.5, tool: 'Recherche'});
-// À l’arrivée d’une donnée :
+cephalon.cue('tool-call', {focus: [-0.7, 0.25], duration: 0.5, tool: 'Search'});
+// When data arrives:
 cephalon.cue('read', {focus: [-0.6, -0.1], duration: 0.6, record: 'source-004'});
-// Pour comparer les résultats :
+// To compare results:
 cephalon.cue('compare', {duration: 3});
-// Au début du compte rendu :
+// At the start of a report:
 cephalon.setState('speaking');
 cephalon.cue('report', {duration: 2});
 ```
 
-Gestes disponibles : `acknowledge, consider, tool-call, read, inspect, compare, found, report, settle`. Un geste ne change pas l’état ni l’émotion. Les projections de données restent secondaires et disparaissent quand il revient parler à l’Opérateur. Le glissement au doigt prend temporairement la priorité sur les mouvements autonomes.
+Available gestures: `acknowledge, consider, tool-call, read, inspect, compare,
+found, report, settle`. A gesture changes neither state nor emotion. Data
+projections remain secondary and disappear when the avatar returns to address
+the Operator. Manual dragging temporarily takes priority over autonomous movement.
 
-États : `idle, listening, thinking, speaking, glitch`. Émotions : `neutral, happy, curious, concerned, sad, angry, surprised`. Les niveaux et intensités sont normalisés entre 0 et 1. Le volume ne détermine jamais l’émotion.
+States: `idle, listening, thinking, speaking, glitch`. Emotions: `neutral, happy,
+curious, concerned, sad, angry, surprised`. Levels and intensities are normalized
+between 0 and 1. Volume never determines emotion.
 
-Les propriétés `state, emotion, emotionIntensity, outputVoiceLevel, inputMicLevel, frequencyBands, glitchIntensity` sont aussi exposées ; `time` est consultable. `setSignals` désactive la simulation. Les paramètres optiques sont accessibles par `cephalon.config`.
+Properties `state, emotion, emotionIntensity, outputVoiceLevel, inputMicLevel,
+frequencyBands, glitchIntensity` are exposed; `time` is readable. `setSignals`
+disables simulation. Optical parameters are accessible through `cephalon.config`.
 
-Pour analyser une sortie Web Audio déjà en cours :
+To analyze Web Audio output already playing:
 
 ```js
-await cephalon.connectOutput(ttsGainNode); // analyse seule, sans doubler le son
-// audible:true route aussi l’analyseur vers la destination si nécessaire.
+await cephalon.connectOutput(ttsGainNode); // analysis only, without doubling sound
+// audible:true also routes the analyzer to the destination if needed.
 await cephalon.connectMicrophone(sttMediaStream);
 ```
 
-Un flux microphone fourni par l’appelant reste sa propriété : `stopAudio()` déconnecte son analyseur sans arrêter les pistes STT. Le microphone demandé depuis l’atelier est arrêté à la fermeture de sa capture.
+A caller-supplied microphone stream remains its property. `stopAudio()` disconnects
+analysis without stopping STT tracks. A microphone requested by the editor is
+stopped when its capture closes.
 
 ## Architecture
 
-`packages/avatar/src/` contient la composition, le contrôleur, l’interaction, le cristal, les fractures, le noyau, les filaments, les trois couches d’ondes et le pipeline optique. Le rig de position est séparé du rig d’orientation du cristal.
+`packages/avatar/src/` contains composition, controller, interaction, crystal,
+fractures, core, filaments, three wave layers and the optical pipeline. Position
+and crystal-orientation rigs are separate.
 
-`PresenceDirector.js` traduit les états et les gestes sémantiques en directions d’attention et postures amorties. `AttentionField.js` affiche les petites projections consultées pendant le travail. Le rendu ne dépend pas du texte affiché dans le journal. La séquence filmée et ses poses sont dans `artifacts/presence/`.
+`PresenceDirector.js` maps semantic states/gestures to attention and damped posture.
+`AttentionField.js` displays small work projections. Rendering does not depend on
+log text. The recorded sequence and poses are in `artifacts/presence/`.
 
-`AnimationLibrary.js` contient les profils déclaratifs et les liaisons d’outils. `ActionAnimations.js` suit leur cycle de vie, `ActionChoreography.js` décrit les comportements et `packages/avatar/src/AgentEventBridge.js` traduit les événements externes. Ces modules ne dépendent ni du DOM ni de Three.js. Le contrat TypeScript est dans `packages/contracts/src/avatar-events.d.ts`. `ContactLinks.js` affiche les points de liaison temporaires ; il ne crée pas de vrais sous-agents.
+`AnimationLibrary.js` holds declarative profiles and tool bindings.
+`ActionAnimations.js` tracks their lifecycle; `ActionChoreography.js` defines
+behavior; `AgentEventBridge.js` maps external events. These modules import neither
+DOM nor Three.js. Types live in `packages/contracts/src/avatar-events.d.ts`.
+`ContactLinks.js` shows temporary link points; it creates no real subagents.
 
-`EnergyDynamics.js` produit les impulsions et la déformation amortie. `CrystalResonance.js` dessine les caustiques et les échos cohérents du volume ; `EnergyWake.js` rend les fronts d’onde XZ et les traces d’ions. Le rig des anneaux reste séparé de la déformation du cube.
+`EnergyDynamics.js` generates pulses and damped deformation. `CrystalResonance.js`
+draws caustics and coherent volume echoes. `EnergyWake.js` renders XZ wavefronts
+and ion trails. The ring rig stays separate from cube deformation.
 
-Le bloom utilise un render target HalfFloat, une extraction des parties émissives et trois niveaux de flou. La dispersion s’applique aux hautes lumières. Si le navigateur ne peut pas rendre en HDR, l’atelier indique le rendu de secours.
+Bloom uses a HalfFloat target, emissive extraction and three blur levels.
+Dispersion affects highlights. The editor reports fallback rendering when HDR
+is unavailable.
 
-## Vérifier et exporter
+## Verify and export
 
 ```bash
 npm test
@@ -161,12 +239,22 @@ npm run build
 npm run preview -- --host 0.0.0.0
 ```
 
-`dist/` est un export statique autonome à servir en HTTP. Les captures des sept étapes et des contrôles navigateur sont dans `artifacts/rebuild/`. `src/review.html?stage=1` à `stage=7` permet de consulter les étapes.
+`dist/` is a standalone static HTTP export. Construction stages and browser
+captures are in `artifacts/rebuild/`. `/src/review.html?stage=1` through `stage=7`
+show the stages.
 
-Les préférences de réduction des animations suspendent les mouvements par défaut et suppriment les sursauts et flashes. La pause suspend les mouvements autonomes ; les signaux et changements d’état restent exploitables. Le rendu est suspendu quand l’onglet est masqué.
+Reduced-motion preferences pause default movement and suppress jolts/flashes.
+Pause freezes autonomous motion; signals and state changes remain available.
+Rendering suspends while the tab is hidden.
 
-## Références et licences
+## References and licenses
 
-Les quatre images prioritaires et l’image comparative annoncées dans le cahier des charges ne sont pas jointes. La reconstruction suit ce cahier des charges et le GIF de [la publication officielle d’Ordis](https://forums.warframe.com/topic/1202015-cephalon-joke-a-thon-contest-winners-announced/), inspecté pendant le travail. La compilation vidéo précédemment identifiée n’a pas été visionnée.
+Four priority reference images and a comparison image mentioned in the original
+brief were not attached. Reconstruction followed that brief and the GIF from
+[the official Ordis post](https://forums.warframe.com/topic/1202015-cephalon-joke-a-thon-contest-winners-announced/),
+inspected during development. A previously identified video compilation was not viewed.
 
-Géométrie originale, étude de fan, sans modèle extrait du jeu. Three.js **r182**, licence MIT dans `public/vendor/three/LICENSE`. Barlow / Barlow Condensed, licence OFL dans `public/fonts/OFL.txt`.
+Original geometry, a fan study, with no extracted game model. Three.js **r182**
+uses MIT in `packages/avatar/vendor/three/LICENSE`. Barlow/Barlow Condensed use
+OFL in `examples/avatar-playground/public/fonts/OFL.txt`. See the root
+[third-party notices](../THIRD_PARTY_NOTICES.md) for media exclusions.

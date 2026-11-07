@@ -1,4 +1,4 @@
-# Présence à l’écran
+# Screen presence
 
-À implémenter : apparition, masquage, placement, écran et focus de la surcouche.
-S’appuie sur `platform/`. Masquer Ordis ne termine ni sa session ni ses tâches.
+To implement: showing, hiding, placement, display selection and overlay focus.
+Uses `platform/`. Hiding the companion does not end its session or tasks.

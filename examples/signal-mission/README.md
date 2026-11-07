@@ -1,9 +1,11 @@
-# Mission fictive de signal
+# Fictional signal mission
 
-Scénario local existant : recherche, analyse et vérification sur douze
-transmissions fictives. L’ordonnanceur et la narration pilotent l’avatar de
-démonstration ; ils ne constituent pas le futur cerveau.
+Existing local scenario: search, analysis and verification across twelve fictional
+transmissions. The scheduler and narration drive the demo avatar; they are not
+the future brain.
 
-La mission est montée dans l’atelier via `?mission=1`. Sa narration est en anglais.
-Les clips restent dans `../avatar-playground/public/audio/ordis-mission/`.
-Ses tests sont dans `tests/` et sont inclus dans `npm test` à la racine.
+The playground mounts the mission through `?mission=1`. Narration is in English.
+Clips remain in `../avatar-playground/public/audio/ordis-mission/`, with their
+notices and explicit exclusion from MIT. Without a voice pack, the mission runs
+with the same data and results, without narration. Tests in `tests/` are included
+in the root `npm test` command.

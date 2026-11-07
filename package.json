@@ -3,13 +3,28 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Compagnon de bureau Ordis, agents spécialisés et atelier d’avatar",
-  "workspaces": ["apps/*", "packages/*", "examples/avatar-playground"],
+  "description": "A resident desktop companion with an expressive avatar and specialized agents.",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "examples/avatar-playground"
+  ],
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
     "preview": "node scripts/serve.mjs --dist",
     "test": "node --test packages/avatar/tests/*.test.mjs examples/signal-mission/tests/*.test.mjs tests/integration/*.test.mjs"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsmailAzzouz/Cephalon.git"
+  },
+  "homepage": "https://github.com/IsmailAzzouz/Cephalon#readme",
+  "bugs": {
+    "url": "https://github.com/IsmailAzzouz/Cephalon/issues"
+  }
 }

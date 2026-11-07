@@ -1,6 +1,7 @@
-# Historique de l’avatar
+# Avatar history
 
-Documents conservés de la phase de construction du prototype visuel.
-Les chemins et observations internes correspondent à cette phase ; ils ne
-constituent pas le contrat actuel du compagnon. Les captures restent dans
-`artifacts/` à la racine. Pour l’architecture courante, lire `../architecture.md`.
+Documents preserved from the visual-prototype construction phase. Internal paths
+and observations refer to that phase; they are not the current companion contract.
+Captures remain in the root `artifacts/` directory. Historical screenshots and
+captured logs may contain the original French interface. For current architecture,
+read `../architecture.md`.

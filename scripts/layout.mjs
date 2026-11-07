@@ -2,6 +2,8 @@
 // Companion host code, agent instructions and local models are never included.
 export const browserFiles = [
   ['index.html', 'examples/avatar-playground/index.html'],
+  ['LICENSE', 'LICENSE'],
+  ['THIRD_PARTY_NOTICES.md', 'THIRD_PARTY_NOTICES.md'],
 ];
 export const browserDirectories = [
   ['src/', 'examples/avatar-playground/src/'],

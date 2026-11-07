@@ -1,28 +1,31 @@
-# Rôles des agents
+# Agent roles
 
-Ces rôles décrivent la cible ; aucun agent connecté à un modèle n’est encore livré.
+Ordis is the conversation role’s default profile. Name, voice and style may
+change without changing the responsibilities below. The role lives in
+`agents/companion/`; profiles are described in `presets/`.
 
-| Agent | Responsabilité | Résultat attendu |
+These roles describe the target; no model-connected agent is delivered yet.
+
+| Agent | Responsibility | Expected output |
 | --- | --- | --- |
-| Ordis | Accueillir, clarifier, dialoguer, transmettre la demande et présenter les résultats | Échange compréhensible avec l’Opérateur |
-| Cerveau | Définir le plan, choisir les moyens, déléguer, vérifier et synthétiser | Résultat étayé et état exact du travail |
-| Computer use | Conduire une mission sur une interface informatique | Actions réalisées, observations, limites et résultat |
-| Recherche | Chercher, croiser et attribuer les informations | Réponse accompagnée de sources et d’incertitudes |
-| Code | Inspecter, modifier et vérifier un projet dans le périmètre confié | Changements, validation et limites |
+| Conversation agent | Welcome, clarify, converse, relay requests and present results | An understandable exchange with the Operator |
+| Brain | Plan, choose capabilities, delegate, verify and synthesize | An evidenced result and accurate work status |
+| Computer use | Conduct a mission through a computer interface | Actions, observations, limitations and result |
+| Research | Find, cross-check and attribute information | A response with sources and uncertainty |
+| Coding | Inspect, change and verify a project within the assigned scope | Changes, validation and limitations |
 
-Ordis et le cerveau sont les deux rôles principaux d’une session. Cela n’impose
-pas deux boucles LLM permanentes. Les spécialistes sont sollicités selon la tâche.
+The conversation agent and brain are the two principal roles in a session. This
+does not require two permanently running LLM loops. Specialists are called as needed.
 
-Ordis est un agent conversationnel ; son cristal est un composant de rendu.
-Le cerveau détient l’état du travail. Ordis peut parler à l’Opérateur pendant une
-mission et lui demander une précision sans réinitialiser ce travail.
+The conversation agent talks to the Operator; its crystal is a rendering component.
+The brain owns work state. The companion may talk and request clarification during
+a mission without resetting that work.
 
-Une délégation contient un objectif, le contexte utile, les capacités autorisées,
-les contraintes, un critère de fin et une référence à la tâche parente.
-Le spécialiste renvoie son résultat, les éléments qui l’étayent et les éventuels
-blocages. Le cerveau décide de la suite et relaie par Ordis les questions humaines.
+A delegation includes an objective, useful context, allowed capabilities,
+constraints, a completion criterion and a reference to its parent task. A
+specialist returns its result, supporting evidence and any blockers. The brain
+decides what happens next and relays human questions through the conversation agent.
 
-Les instructions de rôle prendront place à côté de leur implémentation dans
-`agents/<rôle>/`. Les mécanismes communs appartiennent à `packages/agent-runtime/`,
-les outils à `packages/tools/` et les adaptateurs de fournisseurs à
-`packages/integrations/`.
+Role instructions will live beside their implementation in `agents/<role>/`.
+Shared mechanisms belong in `packages/agent-runtime/`, tools in `packages/tools/`
+and provider adapters in `packages/integrations/`.

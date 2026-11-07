@@ -1,9 +1,9 @@
-# Contrats partagés
+# Shared contracts
 
-Disponible : `src/avatar-events.d.ts`, contrat d’avatar v1 conservé sans changement.
-L’export `@cephalon/contracts/avatar-events` contient uniquement des types.
+Available: `src/avatar-events.d.ts`, the unchanged avatar v1 contract.
+The `@cephalon/contracts/avatar-events` export contains types only.
 
-À définir : messages de session, activation, présence, tâches et délégation.
-Voir [protocol.md](../../docs/protocol.md). Ces contrats ne dépendront ni d’un SDK
-d’agent, ni du rendu, ni de la coque de bureau. Le bridge d’avatar ne valide pas
-encore un protocole de runtime.
+To define: session, activation, presence, task and delegation messages.
+See [protocol.md](../../docs/protocol.md). These contracts will not depend on an
+agent SDK, renderer or desktop shell. The avatar bridge does not yet validate a
+runtime protocol.

@@ -10,7 +10,7 @@
     }
   },
   "englishAudio": {
-    "src": "http://192.168.129.101:5173/audio/ordis-en/summon.mp3",
+    "src": "http://localhost:5173/audio/ordis-en/summon.mp3",
     "voice": 0.6641060125581759,
     "mic": 0,
     "demo": false
@@ -399,7 +399,7 @@
     "output": false
   },
   "french": {
-    "src": "http://192.168.129.101:5173/audio/ordis/listen.mp3",
+    "src": "http://localhost:5173/audio/ordis/listen.mp3",
     "collection": "fr"
   }
 }

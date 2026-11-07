@@ -1,4 +1,4 @@
-# Spécialiste recherche
+# Research specialist
 
-À implémenter. Recherche et croise les informations dans le périmètre confié.
-Retourne les sources, les résultats et les incertitudes au cerveau.
+To implement. Finds and cross-checks information within the assigned scope.
+Returns sources, findings and uncertainties to the brain.

@@ -1,20 +1,24 @@
-# Suite de la préparation
+# Next steps
 
-1. Choisir le premier système et environnement graphique ciblés, puis la coque
-   de bureau. Vérifier apparition au-dessus d’une application, placement sur
-   plusieurs écrans, focus clavier et interaction avec la souris.
-2. Construire l’hôte résident avec activation manuelle, réglages et surcouche
-   utilisant `packages/avatar/`. Vérifier qu’un masquage ne ferme pas l’hôte.
-3. Définir le contrat hôte / runtime, la reconnexion et la récupération d’état.
-   Relier une session Ordis au cerveau avec un premier modèle.
-4. Ajouter la chaîne audio : capture possédée par l’hôte, détection du nom,
-   STT, TTS, interruption et prévention des réactivations par la propre voix d’Ordis.
-   L’activation manuelle reste disponible lorsque l’écoute est désactivée.
-5. Introduire une première tâche réelle, puis computer use comme spécialiste.
-   Vérifier délégation, résultat, demande de précision et annulation.
-6. Ajouter la persistance nécessaire pour retrouver les tâches après redémarrage,
-   puis valider les parcours complets sur le système choisi.
+1. Choose the first target OS and graphical environment, then the desktop shell.
+   Verify appearance above another application, placement across screens,
+   keyboard focus and mouse interaction.
+2. Build the resident host with manual activation, settings and an overlay using
+   `packages/avatar/`. Verify that hiding the overlay does not close the host.
+3. Define the host/runtime contract, reconnection and state recovery. Connect
+   a conversation session to the brain with an initial model.
+4. Add host-owned audio capture, wake-phrase detection, STT, TTS and interruption.
+   Prevent the companion’s own voice from activating it. Keep manual activation
+   available when listening is disabled.
+5. Introduce a real task, then computer use as a specialist. Verify delegation,
+   results, clarification requests and cancellation.
+6. Add persistence needed to recover tasks after a restart, then validate the
+   complete workflow on the chosen system.
 
-Le critère produit est de pouvoir appeler Ordis depuis une autre application,
-lui confier une tâche, le masquer, le rappeler et retrouver un état exact du
-travail. Les autres plateformes seront ajoutées après validation de ce parcours.
+The product criterion is to call the companion from another application, assign
+work, hide it, call it again and recover an accurate task state. Add other
+platforms after validating this workflow.
+
+Customization remains to be built: separate the chosen profile’s name, wake
+phrase, voice, conversational tone and visual style from agent roles. Ordis is
+the draft’s default profile, not the product’s required identity.

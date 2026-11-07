@@ -11,4 +11,4 @@ for(const [target,source] of [...browserFiles,...browserDirectories]){
   await mkdir(join(dist,target,'..'),{recursive:true});
   await cp(join(root,source),join(dist,target),{recursive:true});
 }
-console.log('Atelier d’avatar exporté dans dist/. Lancez npm run preview pour le servir.');
+console.log('Avatar playground exported to dist/. Run npm run preview to serve it.');

@@ -1,95 +1,222 @@
-# Vérification — reconstruction du 7 novembre 2026
+# Verification — November 7, 2026 reconstruction
 
-Le serveur reste actif dans `cephalon-preview.service`, lancé avec `npm run dev -- --host 0.0.0.0 --log-requests`. L’adresse LAN est `http://192.168.129.101:5173/`.
+This is the translated record of historical construction passes. Paths and
+service references describe those passes; they are not new verification claims.
+Historical screenshots and raw observations retain their original language.
 
-## Tests automatisés
+At the time of the pass, `cephalon-preview.service` kept the server running with
+`npm run dev -- --host 0.0.0.0 --log-requests`; the preview used port 5173.
 
-La passe précédente avait validé **34 tests**. Ils couvrent le RMS PCM, les bandes de fréquences à plusieurs taux d’échantillonnage, la séparation microphone / sortie, les annulations audio et la propriété des pistes STT ; les temps d’attaque / relâchement ; les états et émotions ; le retour après glitch ; l’absence de fragmentation permanente ; le contrôle de mouvement et du zoom ; la géométrie fermée de l’hexaèdre ; l’horizontalité des trois couches d’ondes ; le service des fichiers ; et la mission d’essai. Cette suite n’a pas été relancée lors de la passe de gestuelle ; aucun test unitaire n’a été ajouté, conformément à la demande.
+## Automated tests
 
-Le cristal repose sur huit coins partagés, douze arêtes et six faces. Les bords triangulés ont chacun deux voisins. Les normales et positions sont finies. Les ondes ne sont pas attachées au rig d’inclinaison du cristal.
+The preceding pass validated **34 tests**. Coverage included PCM RMS, frequency
+bands at multiple sample rates, microphone/output separation, audio cancellation,
+STT-track ownership, attack/release times, states/emotions, glitch recovery,
+absence of permanent fragmentation, motion/zoom, closed hexahedron geometry,
+three horizontal wave layers, file serving and the demo mission. The suite was
+not rerun during the gesture pass and no unit tests were added, as requested.
 
-## Navigateur
+The crystal has eight shared corners, twelve edges and six faces. Each triangulated
+edge has two neighbors. Normals and positions are finite. Waves are not attached
+to the crystal’s tilt rig.
 
-Chromium avec WebGL logiciel, cinq configurations : 390 × 844, 320 × 640, 844 × 390, 1440 × 900 et réduction des animations. Aucune erreur JavaScript / shader ni débordement horizontal détecté. Le render target est réellement HalfFloat et le support HDR est confirmé.
+## Browser
 
-Le parcours vérifie les états, le toucher et la rotation, l’horizontalité après rotation, le retour complet après glitch, les émotions, les curseurs optiques, la désactivation des post-effets, l’isolation des couches, la réinitialisation, la pause, l’immersion et le clavier.
+Chromium with software WebGL was checked at 390 × 844, 320 × 640, 844 × 390,
+1440 × 900 and with reduced motion. No JavaScript/shader error or horizontal
+overflow was detected. The render target was actually HalfFloat and HDR support
+was confirmed.
 
-Un fichier WAV multibande est lu par Web Audio : le niveau de sortie et les bandes sont non nuls, le niveau microphone reste nul, et le signal simulé est désactivé. Un microphone de test Chromium sur localhost fournit séparément un niveau d’entrée ; aucun niveau TTS n’est inventé. Les pistes du microphone détenu par l’atelier sont arrêtées correctement. Un flux externe reste la propriété de son appelant.
+The workflow checked states, touch/rotation, horizontality after rotation,
+full glitch recovery, emotions, optical sliders, disabled post-effects, layer
+isolation, reset, pause, immersion and keyboard controls.
 
-Les résultats détaillés sont dans `artifacts/rebuild/browser-checks.json`. Les captures de construction et des écrans mobile / ordinateur sont inspectées. Un pic de surexposition dans le verre pendant un glitch a été corrigé : la distance optique est bornée et le verre reste sous le seuil d’extraction du bloom ; les émissions fortes appartiennent aux arêtes, aux ondes et au noyau.
+A multiband WAV played through Web Audio produced nonzero output/bands while
+microphone level stayed zero and simulation was disabled. A Chromium test
+microphone on localhost supplied separate input without invented TTS levels.
+Editor-owned microphone tracks stopped correctly; external streams remained
+owned by their callers.
 
-## Mission d’essai de l’agent
+Details are in the root `artifacts/rebuild/browser-checks.json`. Construction,
+mobile and desktop images were inspected. Glass overexposure during glitch was
+corrected by bounding optical distance and keeping glass below the bloom
+extraction threshold. Strong emission belongs to edges, waves and core.
 
-La séquence de 29,6 secondes est vérifiée de bout en bout dans Chromium avec émulation tactile : lancement automatique, pause réelle du chronomètre, recherche progressive, rapport final fondé sur les résultats, journal des preuves, rejeu et annulation. Les configurations 320 × 640, 844 × 390, 1440 × 900 et mouvement réduit sont aussi vérifiées, sans erreur JavaScript détectée. Résultats dans `artifacts/mission/checks.json`.
+## Agent demo mission
 
-Le scénario examine 12 transmissions fictives, recoupe TR-004 et TR-008 et analyse 200 paquets ; le pic d’énergie de +34 % et l’intégrité de 98 % sont calculés, puis incorporés au rapport. Un test de recherche infructueuse vérifie qu’aucune découverte ou conclusion n’est inventée. Les tests couvrent également les doublons de preuve, la pause, l’arrêt, le rejeu et la séparation entre tâche, parole et émotion.
+The 29.6-second sequence was checked end to end in Chromium with touch emulation:
+automatic launch, actual clock pause, progressive search, result-derived report,
+evidence log, replay and cancellation. Sizes 320 × 640, 844 × 390 and 1440 × 900,
+plus reduced motion, were also checked without reported JavaScript errors.
+Results are in `artifacts/mission/checks.json` at the root.
 
-## Passe de présence et gestuelle
+The scenario examines 12 fictional transmissions, cross-checks TR-004/TR-008 and
+analyzes 200 packets. The +34% power peak and 98% integrity are computed then
+incorporated into the report. An unsuccessful-search test checks that discoveries
+and conclusions are not invented. Tests also cover duplicate evidence, pause,
+stop, replay and separation between task, speech and emotion.
 
-La mission entière a été enregistrée dans Chromium en vue téléphone 390 × 844, avec neuf captures de posture et sans erreur JavaScript ou shader remontée. Les captures de lecture gauche, de lecture droite et de rapport ont été inspectées visuellement : l’orientation du corps change nettement, ses faces révèlent des profondeurs différentes et les anneaux conservent leur ellipse horizontale.
+## Presence and gesture pass
 
-Le suivi de la séquence observe une orientation latérale de −32,5° à +32,2°, une inclinaison verticale de −16,1° à +13,4° et un rapprochement allant jusqu’à 0,23 unité. Ces mesures documentent le mouvement exécuté ; l’appréciation artistique repose sur les vues rendues. La recherche suit les enregistrements effectivement parcourus, la comparaison alterne entre les sources et la parole revient vers l’Opérateur. La rotation manuelle conserve la priorité temporaire.
+The entire mission was recorded in Chromium at 390 × 844 with nine pose captures
+and no reported JavaScript/shader errors. Left/right reading and report images
+were visually inspected: body orientation changes clearly, faces reveal different
+depths and rings retain a horizontal ellipse.
 
-Film : `artifacts/presence/ordis-live.webm`. Poses et relevés : `artifacts/presence/`. Vérification de syntaxe des modules et export statique effectués ; aucun test unitaire exécuté pour cette passe.
+Recorded lateral orientation ranged from −32.5° to +32.2°, vertical tilt from
+−16.1° to +13.4°, with approach up to 0.23 units. These measurements document
+executed motion; artistic assessment relies on rendered views. Search follows
+actual records, comparison alternates sources and speech returns to the Operator.
+Manual rotation retains temporary priority.
 
-La lecture est également inspectée à 1440 × 900 (`10-desktop-reading.png`), sans erreur JavaScript ni débordement horizontal. La pause conserve exactement la posture pendant l’observation. Le service est actif et l’URL LAN renvoie HTTP 200.
+Video: `artifacts/presence/ordis-live.webm`. Poses and measurements:
+`artifacts/presence/`. Module syntax and static export were checked; no unit tests
+were run for this pass.
 
-## Bibliothèque de sets et événements d’agent
+Reading was also inspected at 1440 × 900 (`10-desktop-reading.png`) without
+JavaScript errors or horizontal overflow. Pause preserved the exact pose during
+observation. The service was active and its LAN endpoint returned HTTP 200.
 
-Douze profils déclaratifs, leurs chorégraphies et les liaisons d’outils sont ajoutés. Le parcours navigateur observe dix sets à 390 × 844 et inspecte écriture, summon, atelier mobile, atelier ordinateur et cadrage étroit à 320 × 640. Les vues d’ordinateur sont à 1440 × 900. Les anneaux observés conservent leur rotation horizontale pendant les changements de posture. La démonstration de contacts ne crée pas de sous-agent réel.
+## Profile library and agent events
 
-Le cycle d’événements corrélés est exécuté dans la page : un outil de lecture commence, un appel de sous-agent prend la priorité, puis la parole l’interrompt ; terminer l’ancien outil conserve la parole ; terminer la parole rétablit la liaison ; terminer le sous-agent retrouve le repos. La fin d’une ancienne session TTS conserve le niveau d’une autre session en cours, et la fin de la dernière remet ce niveau à zéro.
+Twelve declarative profiles, choreography and tool bindings were added. Browser
+checks observed ten profiles at 390 × 844 and inspected writing, summon, mobile
+and desktop editors, and narrow 320 × 640 framing. Desktop views were 1440 × 900.
+Rings retained horizontal rotation through posture changes. Contact demonstrations
+created no real subagents.
 
-Les contrôles de l’atelier importent le fichier exemple, exportent un JSON effectivement téléchargé, créent une variante et la prévisualisent en fermant le panneau. Un réglage de vitesse est conservé après rechargement. Un import incorrect est refusé sans modifier la bibliothèque. En mouvement réduit, la posture reste figée par défaut. Les parcours ne remontent aucune erreur JavaScript. Relevés, captures et film : `artifacts/animation-sets/`.
+The correlated-event lifecycle ran in the page: reading tool starts, subagent call
+takes priority, speech interrupts; ending the old tool preserves speech; ending
+speech restores the link; ending the subagent restores idle. Ending an old TTS
+session preserved another active session’s level; ending the last cleared it.
 
-Les nouveaux modules passent la vérification de syntaxe et l’export statique. Aucun test unitaire n’a été ajouté ni exécuté pendant cette passe. Le transport externe et les vrais services STT / TTS ne sont pas connectés : le contrat et les exemples sont dans `docs/AGENT_INTEGRATION.md`.
+Editor controls imported the fixture, downloaded actual JSON, created a variant
+and previewed it with the panel closed. A speed setting persisted after reload.
+Invalid import was rejected without changing the library. Reduced motion froze
+posture by default. No browser errors were reported. Logs, captures and video:
+`artifacts/animation-sets/`.
 
-## Résonance et pulsation du cristal
+New modules passed syntax and static-export checks. No unit tests were added or
+run in this pass. External transport and real STT/TTS services were not connected;
+see the integration contract and examples in `docs/AGENT_INTEGRATION.md`.
 
-Une démo complète de 23 secondes est enregistrée en vue mobile 390 × 844. Elle atteint sa fin sans erreur JavaScript ou shader remontée. Les postures relevées pendant cette démo montrent une contraction latérale jusqu’à 0,921 et une expansion jusqu’à 1,066 ; la capture d’inspection de décharge sur ordinateur atteint 1,085. Ces facteurs concernent le cube ; les anneaux ne reçoivent pas cette déformation.
+## Crystal resonance and pulsation
 
-Les vues de charge, décharge et rémanence sont inspectées, ainsi que le summon à 1440 × 900. Le volume reste cohérent, les fronts extérieurs sont horizontaux, le noyau concentre puis libère sa lumière, et les rémanences disparaissent. La pause fige le score énergétique. Les paramètres `pulse` et `radiance` sont présents dans l’atelier. Un ancien fichier v1 s’importe avec ces deux paramètres à 1 ; `pulse: 0` ramène le volume à une échelle neutre après extinction des effets précédents.
+A complete 23-second showcase was recorded at 390 × 844 and reached completion
+without reported JavaScript/shader errors. Recorded cube scaling contracted to
+0.921 and expanded to 1.066; the desktop discharge inspection reached 1.085.
+These factors apply to the cube, not rings.
 
-Film et relevés : `artifacts/resonance/energy-showcase.webm`, `showcase-review.json` et `controls-review.json`. Les images numérotées sont les études intermédiaires de matière ; les images `*-live.png` et `summon-desktop.png` présentent le réglage d’amplitude final. Syntaxe et export statique vérifiés. Aucun test unitaire ajouté ni exécuté.
+Charge, discharge and afterglow were inspected, including summon at 1440 × 900.
+Volume remained coherent, outer wavefronts horizontal, core light concentrated
+then released, and afterglow faded. Pause froze the energy score. `pulse` and
+`radiance` were available in the editor. Older v1 JSON imported both at 1;
+`pulse: 0` restored neutral volume scale after preceding effects faded.
 
-## Clips Ordis avec le modèle fourni
+Video and logs: `artifacts/resonance/energy-showcase.webm`, `showcase-review.json`
+and `controls-review.json`. Numbered images are intermediate material studies;
+`*-live.png` and `summon-desktop.png` show the final amplitude setting. Syntax
+and static export were checked. No unit tests were added or run.
 
-L’archive `ordis_robotic_voice_warframe_13875.zip`, fournie à la racine du dépôt, est extraite dans `voice/models/ordis/`. Le checkpoint et l’index sont identifiés ; leurs empreintes sont enregistrées dans `voice/model-provenance.json`. Le checkpoint annonce RVC v2, 40 kHz, F0 actif et 1000 epochs. La chaîne CPU isolée utilise Piper pour la parole française source, puis ce modèle et son index pour convertir les douze répliques.
+## Ordis clips using the supplied model
 
-Le lot généré contient douze WAV et douze MP3, pour 47,48 secondes de parole. Les WAV ont des valeurs finies, un niveau non nul et des crêtes inférieures à 1. Les MP3 sont décodés pour inspecter leurs métadonnées et niveaux. `public/audio/ordis/manifest.json` conserve textes, durées, paramètres de conversion et empreintes. Le ZIP de livraison contient les clips et leurs métadonnées, sans les poids des modèles.
+The supplied `ordis_robotic_voice_warframe_13875.zip` was originally extracted
+under `voice/models/ordis/`. Checkpoint/index hashes were recorded in the original
+`voice/model-provenance.json`. The checkpoint reported RVC v2, 40 kHz, F0 enabled
+and 1000 epochs. The isolated CPU pipeline used Piper for French source speech,
+then the model and index to convert twelve lines. Current paths live under
+`tooling/voice/`.
 
-Le parcours Chromium à 390 × 844 charge les douze choix, télécharge le MP3 d’invocation et observe une lecture réelle. Le niveau vocal atteint 0,939 ; le canal microphone reste nul. La simulation est désactivée, le panneau se ferme et les ondes suivent la sortie. L’arrêt supprime l’élément et l’analyseur, ramène l’état au repos et le signal à zéro. Un WAV importé via le sélecteur de fichiers reste lisible après la refonte du lecteur. Les vues à 390 × 844 et 320 × 640 sont inspectées. Aucune erreur JavaScript remontée.
+The generated pack contained twelve WAVs and twelve MP3s, totaling 47.48 seconds.
+WAV values were finite, nonzero and peaked below 1. MP3s were decoded to inspect
+metadata and levels. The original `public/audio/ordis/manifest.json` recorded
+text, duration, conversion parameters and hashes. The delivery ZIP included clips
+and metadata without model weights.
 
-Une transcription automatique de trois extraits reconnaît une grande partie du contenu, avec des erreurs de mots ; la source Piper produit aussi certaines de ces erreurs dans le même transcripteur. Ce relevé est indicatif et ne constitue ni une écoute humaine ni une validation de ressemblance à Ordis. Les fichiers restent à apprécier à l’écoute par l’utilisateur. Résultats et captures : `artifacts/voice/`.
+Chromium at 390 × 844 loaded twelve choices, downloaded the summon MP3 and showed
+actual playback. Voice level reached 0.939; microphone stayed zero. Simulation
+was disabled, the panel closed and waves followed output. Stop removed the media
+element/analyzer, restored idle and cleared the signal. A WAV loaded via the file
+picker still played after the player change. Views at 390 × 844 and 320 × 640
+were inspected. No JavaScript error was reported.
 
-L’export statique contient uniquement les clips nécessaires à leur lecture ; Python et les modèles restent locaux. Le serveur est redémarré pour servir `/audio/` avec les types audio corrects. Aucun test unitaire ajouté ni exécuté.
+Automatic transcription of three clips recognized much of the content with word
+errors. Piper source also produced some of those errors in the same transcriber.
+This is indicative, neither human listening nor a validation of resemblance to
+Ordis. The user still needs to judge by listening. Results: `artifacts/voice/`.
 
-## Anglais et références du jeu
+The static export contained playback clips only; Python/models stayed local.
+The server was restarted to serve `/audio/` with correct MIME types. No unit
+tests were added or run.
 
-La page Ordis/Quotes du WARFRAME Wiki est consultée. Quatre courts enregistrements sont récupérés par leurs liens audio, dont le fichier `DIdle080Ordis_en.ogg` fourni en référence, disponible sur le wiki actuel. Leurs OGG et transcodages MP3 représentent 11,66 secondes. Le manifeste conserve la source, le nom original, la durée, le SHA-256 et le crédit Digital Extremes / Warframe.
+## English and game references
 
-Douze textes originaux pour les actions sont générés en anglais avec Piper Ryan high puis le même modèle Ordis RVC v2 et son index : 34,7 secondes, WAV et MP3, sans écraser le lot français. Le ZIP anglais contient uniquement ces créations et leur provenance ; les extraits du jeu constituent un catalogue distinct. Une transcription automatique indicative de trois répliques anglaises est conservée, avec ses erreurs, sans revendiquer une écoute humaine ni une ressemblance validée.
+The WARFRAME Wiki Ordis/Quotes page was consulted. Four short recordings were
+retrieved through its audio links, including the supplied `DIdle080Ordis_en.ogg`
+reference available on the wiki. OGGs and MP3 conversions total 11.66 seconds.
+The manifest records source, original filename, duration, SHA-256 and Digital
+Extremes / Warframe credit.
 
-Le parcours navigateur confirme l’anglais par défaut et les collections 12 anglais / 4 extraits du jeu / 12 français. La lecture anglaise active le vrai RMS (0,664 observé), désactive la simulation et laisse le microphone à zéro. L’extrait de référence déclenche sa réaction visuelle vers 1,2 seconde, repère approximatif obtenu par alignement automatique. L’événement se déclenche une fois ; la réaction est observée dans le rendu. En mouvement réduit, le passage audio reste lisible et le glitch reste à zéro. L’arrêt termine correctement la lecture et ramène l’état au repos. La lecture française reste accessible par son identifiant explicite. Aucune erreur navigateur remontée.
+Twelve original action scripts were generated in English using Piper Ryan high,
+the same Ordis RVC v2 model and index: 34.7 seconds in WAV/MP3 without overwriting
+French. The English ZIP contains only these creations and provenance; game
+recordings remain a separate catalog. Indicative automatic transcripts of three
+English lines retain their errors without claiming human listening or verified likeness.
 
-Les vues de la collection du jeu sont inspectées à 390 × 844 et 320 × 640. Les sources sont visibles dans l’atelier. Résultats : `artifacts/voice/english-browser-review.json`, `english-transcription.json` et `official-cue-timing.json`. Aucun test unitaire ajouté ni exécuté.
+The browser workflow confirmed English by default and collections of 12 English,
+4 game and 12 French clips. English playback activated actual RMS (0.664 observed),
+disabled simulation and kept the microphone zero. The reference clip’s reaction
+fired around 1.2 seconds, an approximate automatic-alignment marker. It fired
+once and was observed in rendering. Under reduced motion, audio remained playable
+and glitch stayed zero. Stop ended playback and restored idle. French remained
+accessible by explicit identifier. No browser errors were reported.
 
-## Mission narrée en anglais
+Game-collection views were inspected at 390 × 844 and 320 × 640. Source links were
+visible in the editor. Results: `artifacts/voice/english-browser-review.json`,
+`english-transcription.json` and `official-cue-timing.json`. No unit tests were
+added or run.
 
-Dix clips originaux dédiés sont générés avec le modèle Ordis fourni : sept interventions de mission et trois réponses prudentes. Le rapport principal dure 14,1 secondes et annonce les résultats du scénario : Relay E-17, Europa, +34 % et 98 %. La durée des phases est adaptée aux buffers décodés ; une barrière de fin de lecture empêche une transition de couper une intervention. Les annonces spécifiques sont sélectionnées uniquement pour le résultat correspondant.
+## English narrated mission
 
-Le parcours complet à 390 × 844 observe les sept étapes et les sept clips, jusqu’au rapport terminé, sans erreur JavaScript. Avant l’appui de démarrage, il n’y a ni contexte audio ni sortie active. Un seul appui suffit pour précharger, décoder et jouer la mission. Le niveau vocal réel atteint 0,857 dans ce relevé ; le signal microphone reste nul à la précision numérique. Le mouvement de travail et l’activation vocale sont distincts : la recherche peut parler tout en lisant. Le rapport et les messages de mission sont en anglais.
+Ten original dedicated clips were generated with the supplied Ordis model:
+seven mission lines and three cautious fallbacks. The main report lasts 14.1
+seconds and states Relay E-17, Europa, +34% and 98%. Phase durations follow decoded
+buffers; an end-of-playback barrier prevents transitions from cutting a line.
+Specific announcements are selected only for matching results.
 
-Une pause pendant la recherche conserve exactement le chronomètre de mission et la position audio, puis la mission reprend et se termine. Un rejeu suivi d’un arrêt coupe la sortie, l’activation vocale et toute attente de narration. À 320 × 640 avec réduction du mouvement, l’audio joue tandis que le cube reste à son échelle neutre ; le microphone est à zéro. L’absence de source choisit la réplique `not-found`. Des données différentes choisissent `report-generic`, sans réciter les mesures du scénario. L’arrêt demandé pendant la préparation ne provoque pas de démarrage tardif.
+The complete 390 × 844 workflow observed seven phases/clips through completed
+report without JavaScript errors. Before Start, there was no audio context or
+active output. One press unlocked preload, decoding and the entire mission.
+Actual voice level reached 0.857 in this recording; microphone remained zero to
+numerical precision. Work movement and speech activation are separate, allowing
+search to speak while reading. Report and messages were English.
 
-Résultats et captures : `artifacts/voiced-mission/browser-review.json`, `edge-review.json`, vues de préparation, recherche parlée, rapport et petit écran. `mission-visual.webm` est une capture du rendu navigateur, sans piste sonore ; la sortie audio réelle est contrôlée par les analyseurs Web Audio et les relevés. Syntaxe et build statique passent. Le service LAN est actif, HTTP 200. Aucun test unitaire ajouté ni exécuté.
+Pausing during search preserved the mission clock and audio position exactly,
+then resumed to completion. Replay followed by stop cut output, speech activation
+and narration waits. At 320 × 640 with reduced motion, audio played while the cube
+stayed at neutral scale and microphone zero. No source selected `not-found`.
+Changed data selected `report-generic` without reciting scenario measurements.
+Stopping during preparation did not trigger a late start.
 
-## Limites précises
+Results: `artifacts/voiced-mission/browser-review.json`, `edge-review.json` and
+ready/search/report/small-screen captures. `mission-visual.webm` is browser video
+without audio; actual sound was checked through Web Audio analyzers and logs.
+Syntax and static build passed. The LAN service was active, HTTP 200. No unit
+tests were added or run.
 
-Les quatre images de référence et l’image comparative annoncées dans le message ne sont pas jointes. La reconstruction a suivi le cahier des charges et un GIF officiel accessible, sans prétendre comparer les quatre images absentes.
+## Specific limitations
 
-Les tests tactiles utilisent une émulation navigateur ; la nouvelle version reste à apprécier sur le téléphone réel et sur Safari. Le microphone sur l’adresse LAN en HTTP n’est pas disponible : HTTPS ou localhost est nécessaire. L’atelier l’indique ; les fichiers audio et signaux externes fonctionnent sur HTTP.
+Four reference images and a comparison image mentioned in the request were not
+attached. Reconstruction followed the brief and an accessible official GIF,
+without claiming comparisons against absent images.
 
-Le projet prépare l’intégration TTS / STT et l’analyse audio. Les clips livrés disposent d’un générateur hors ligne ; le site ne contient ni moteur de reconnaissance de texte ni service TTS à la demande.
+Touch checks used browser emulation. A physical phone and Safari still require
+user review. Microphone access on LAN HTTP is unavailable; HTTPS or localhost is
+required. The editor explains this; audio files and external signals work over HTTP.
 
-État : `systemctl --user status cephalon-preview.service`. Journaux : `journalctl --user -u cephalon-preview.service`.
+The project prepares TTS/STT integration and audio analysis. Delivered clips have
+an offline generator; the site has neither speech recognition nor on-demand TTS.
+
+Historical service commands: `systemctl --user status cephalon-preview.service`
+and `journalctl --user -u cephalon-preview.service`. No service is installed by
+current repository setup.

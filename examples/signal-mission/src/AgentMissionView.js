@@ -31,18 +31,19 @@ export class AgentMissionView {
     document.querySelector('#mission-meter').setAttribute('aria-valuenow','0');document.querySelector('#mission-progress').style.transform='scaleX(0)';
     document.querySelector('#mission-history').open=false;document.querySelector('#mission-log').replaceChildren();document.querySelector('#mission-log-count').textContent='0';
     document.querySelector('#mission-dismiss').hidden=false;this.button.querySelector('span').textContent='Start mission';this.button.classList.remove('mission-running');
-    this.voiceNotice('Tap Start mission to enable Ordis’s English voice.');this.onStatusChange();
+    this.voiceNotice('Start the mission. Narration is available when a local voice pack is installed.');this.onStatusChange();
   }
   async start(){
     if(this.starting||this.sequence.running)return false;
     const serial=++this.startSerial;this.starting=true;
     this.avatar.controller.animations.stopAll();this.avatar.audio.stop();
     // Prime starts/resumes Web Audio within this click, before the asynchronous decoding work.
-    const priming=this.narration.prime();this.prepare();this.button.disabled=true;this.voiceNotice('Preparing English voice…');
+    const priming=this.narration.prime();this.prepare();this.button.disabled=true;this.voiceNotice('Preparing mission…');
     try{
       const durations=await priming;if(serial!==this.startSerial)return false;
-      this.sequence.configureDurations(durations);this.previousLogLength=-1;this.voiceNotice('');
-      document.querySelector('#mission-dismiss').hidden=true;this.narration.enabled=true;this.sequence.start({demo:false});if(document.hidden)this.sequence.setPaused(true);return true;
+      this.sequence.configureDurations(durations??Object.fromEntries(missionPhases.map(phase=>[phase.id,phase.duration])));
+      this.previousLogLength=-1;this.voiceNotice(durations?'':'Voice pack not installed. Running without narration.');
+      document.querySelector('#mission-dismiss').hidden=true;this.narration.enabled=Boolean(durations);this.sequence.start({demo:false});if(document.hidden)this.sequence.setPaused(true);return true;
     }catch(error){if(serial===this.startSerial)this.voiceNotice(error.message||'Voice unavailable. Please try again.');return false;}
     finally{if(serial===this.startSerial){this.starting=false;this.button.disabled=false;}}
   }

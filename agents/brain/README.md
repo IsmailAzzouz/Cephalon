@@ -1,6 +1,6 @@
-# Agent cerveau
+# Brain agent
 
-À implémenter. Possède le plan et l’exécution : choisir les moyens, déléguer,
-vérifier les résultats et préparer une synthèse pour Ordis. Conserve les références
-aux tâches enfants et traite les annulations explicites. Les questions à
-l’Opérateur passent par Ordis. Les instructions et le code du rôle prendront place ici.
+To implement. Owns planning and execution: choose capabilities, delegate, verify
+results and prepare a summary for the conversation agent. Tracks child tasks and
+handles explicit cancellation. Questions to the Operator go through the conversation
+agent. Role instructions and code will live here.

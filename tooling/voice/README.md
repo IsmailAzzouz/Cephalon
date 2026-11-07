@@ -1,35 +1,65 @@
-# Voix anglaises et françaises d’Ordis
+# Ordis English and French voices
 
-Les **12 répliques anglaises originales** de `phrases.en.json` sont la collection par défaut. Les **12 françaises** de `phrases.fr.json` restent accessibles. Elles sont générées avec le modèle fourni dans `tooling/voice/ordis_robotic_voice_warframe_13875.zip` dans ce dossier. Le ZIP contient `Ordis.pth` et `added_IVF108_Flat_nprobe_1_Ordis_v2.index` ; le checkpoint annonce RVC v2, 40 kHz, F0 actif et 1000 epochs. Le locuteur utilisé est 0.
+Optional tooling for local experiments. Demo packs, catalogs and game excerpts
+are included with attribution and explicit license exclusions. Model weights
+are not included. The playground and unnarrated mission do not require Python.
+Provenance records historical experiments; it is not a license to redistribute
+voices. See [third-party notices](../../THIRD_PARTY_NOTICES.md). Each media
+collection has its own notice and is excluded from the code’s MIT License.
 
-Les commandes ci-dessous se lancent depuis la racine du dépôt. L’environnement
-`.venv-voice/` reste à la racine.
+The **12 original English lines** in `phrases.en.json` are the default collection.
+The **12 French lines** in `phrases.fr.json` remain available. They were generated
+using the supplied `tooling/voice/ordis_robotic_voice_warframe_13875.zip`, which is
+not distributed. It contains `Ordis.pth` and
+`added_IVF108_Flat_nprobe_1_Ordis_v2.index`. The checkpoint reports RVC v2, 40 kHz,
+F0 enabled and 1000 epochs. Speaker ID is 0.
 
-La chaîne locale produit d’abord la parole avec Piper `en_US-ryan-high` pour l’anglais ou `fr_FR-tom-medium` pour le français, puis la convertit avec **Ordis.pth et son index** via RVC / RMVPE. La voix finale passe bien par le modèle Ordis fourni. Une normalisation de volume et un filtre à 55 Hz précèdent les exports. Aucun effet robotique supplémentaire ne remplace le modèle.
+Run the commands below from the repository root. `.venv-voice/` stays at the root.
 
-## Extraits du jeu et textes originaux
+The pipeline first synthesizes speech using Piper `en_US-ryan-high` for English
+or `fr_FR-tom-medium` for French, then converts it through **Ordis.pth and its
+index** using RVC / RMVPE. The final voice actually passes through the supplied
+model. Volume normalization and a 55 Hz high-pass precede export; no additional
+robotic effect substitutes for the model.
 
-Quatre courts enregistrements anglais sont récupérés depuis les liens audio de la [page Ordis/Quotes du WARFRAME Wiki](https://wiki.warframe.com/w/Ordis/Quotes). Ils sont dans `examples/avatar-playground/public/audio/ordis-official/`, avec les OGG d’origine, une conversion MP3 pour la lecture et un manifeste d’attribution. La sélection est décrite dans `official-selection.json`.
+## Game excerpts and original scripts
 
-L’extrait `DIdle080Ordis_en.ogg`, fourni en référence par l’utilisateur, est récupéré sur le wiki actuel. Son passage colérique déclenche une rupture visuelle vers 1,2 seconde ; ce repère approximatif est fondé sur un alignement automatique des mots et suit le temps de l’élément audio. Il ne se redéclenche pas pendant la même lecture et est désactivé en pause ou en mouvement réduit. Les enregistrements appartiennent à Digital Extremes / Warframe ; ils ne sont pas présentés comme des générations du modèle ou comme des fichiers sous la licence du code.
+Four short English recordings were retrieved through audio links on the
+[WARFRAME Wiki Ordis/Quotes page](https://wiki.warframe.com/w/Ordis/Quotes).
+They are in `examples/avatar-playground/public/audio/ordis-official/`, with original
+OGGs, MP3 conversions and an attribution manifest. Selection is documented in
+`official-selection.json`.
 
-Les douze textes écrits pour les actions sont **originaux**, inspirés du ton poli, hésitant et parfois instable du personnage. Ils ne sont pas étiquetés comme des citations officielles. Les enregistrements du jeu sont dans une collection distincte et sont exclus du ZIP des répliques générées.
+The supplied `DIdle080Ordis_en.ogg` reference is available on the wiki. Its angry
+passage triggers a visual glitch around 1.2 seconds, an approximate marker based
+on automatic word alignment and the audio element’s time. It fires once per
+playback and is disabled while paused or under reduced motion. These recordings
+belong to Digital Extremes / Warframe; they are neither model generations nor
+files under the code license.
 
-## Écouter et récupérer les fichiers
+The twelve action scripts are original, inspired by the character’s polite,
+hesitant and occasionally unstable tone. They are not labeled as official quotes.
+Game recordings remain in a separate collection and outside generated-dialogue ZIPs.
 
-- Anglais généré : **http://192.168.129.101:5173/?voice=en**.
-- Extraits du jeu : **http://192.168.129.101:5173/?voice=official**.
-- Français : **http://192.168.129.101:5173/?voice=fr**. Choisir une réplique, puis **Écouter avec l’avatar**. L’atelier se ferme pour voir la projection et les ondes réagissent au vrai RMS / aux bandes audio.
-- Exemple anglais généré : **http://192.168.129.101:5173/audio/ordis-en/summon.mp3**.
-- Exemple de jeu : **http://192.168.129.101:5173/audio/ordis-official/glitch.mp3**.
-- Lot anglais généré : **http://192.168.129.101:5173/audio/ordis-en/ordis-en-pack.zip**.
-- Lot français généré : **http://192.168.129.101:5173/audio/ordis/ordis-fr-pack.zip**.
+## Listen and download
 
-Les sorties générées sont dans `examples/avatar-playground/public/audio/ordis-en/` et `examples/avatar-playground/public/audio/ordis/` : WAV mono 40 kHz, MP3 mono 44,1 kHz / 160 kb/s, manifeste des textes, durées, niveaux et empreintes SHA-256. La lecture n’envoie rien à un service distant et nécessite un appui de l’utilisateur pour autoriser l’audio du navigateur.
+- Generated English: **http://localhost:5173/?voice=en**.
+- Game recordings: **http://localhost:5173/?voice=official**.
+- French: **http://localhost:5173/?voice=fr**. Choose a line, then **Play with avatar**.
+  The editor closes and waves respond to actual RMS/frequency bands.
+- Generated English example: **http://localhost:5173/audio/ordis-en/summon.mp3**.
+- Game example: **http://localhost:5173/audio/ordis-official/glitch.mp3**.
+- English pack: **http://localhost:5173/audio/ordis-en/ordis-en-pack.zip**.
+- French pack: **http://localhost:5173/audio/ordis/ordis-fr-pack.zip**.
+
+Generated output lives in `examples/avatar-playground/public/audio/ordis-en/` and
+`examples/avatar-playground/public/audio/ordis/`: mono 40 kHz WAV, mono 44.1 kHz
+160 kb/s MP3, with scripts, durations, levels and SHA-256 in the manifest. Playback
+does not send data to a remote service and requires a gesture to unlock browser audio.
 
 ```js
 await cephalon.voices.ready;
-cephalon.voices.clips; // la collection actuellement sélectionnée
+cephalon.voices.clips; // currently selected collection
 cephalon.voices.setCollection('official');
 await cephalon.playVoice('en:summon');
 await cephalon.playVoice('official:glitch');
@@ -37,35 +67,56 @@ await cephalon.playVoice('fr:summon');
 cephalon.stopAudio();
 ```
 
-La lecture d’un clip est un aperçu vocal : elle interrompt la mission / la présentation et utilise l’état de parole. Les métadonnées `animation` indiquent le contexte associé à la réplique ; elles ne forcent pas simultanément l’état de lecture ou d’écoute pendant la parole. Le STT et la génération TTS à la demande d’un agent externe restent des intégrations distinctes.
+Playing a clip is a voice preview: it interrupts the mission/showcase and uses
+speech state. `animation` metadata describes context; it does not simultaneously
+force reading/listening state during speech. STT and on-demand TTS from an external
+agent remain separate integrations.
 
-## Régénérer sur ce PC
+## Regenerate locally
 
-La mission possède un script anglais dédié, `mission.en.json`, et dix clips dans `examples/avatar-playground/public/audio/ordis-mission/` : sept étapes et trois répliques de repli. Le rapport principal cite le relais E-17, +34 % et 98 % uniquement si ces valeurs correspondent au résultat courant. Les cas sans source ou avec d’autres données sélectionnent un message prudent. Ces textes sont originaux, pas des enregistrements du jeu.
+The mission has a dedicated English script, `mission.en.json`, and ten clips in
+`examples/avatar-playground/public/audio/ordis-mission/`: seven phases and three
+fallbacks. The main report names Relay E-17, +34% and 98% only when those values
+match the current result. No source or different data selects a cautious line.
+These are original scripts, not game recordings.
 
 ```bash
 .venv-voice/bin/python tooling/voice/generate.py --script mission --language en
 ```
 
-`MissionNarration.js` précharge et décode les clips au premier appui de démarrage, puis utilise des sources Web Audio : toute la mission fonctionne après ce seul geste, sans nouvelle demande de lecture à chaque phase. La pause mémorise l’offset, et la reprise recrée la source à cet endroit. L’activité vocale est distincte de la posture de travail ; la simulation est désactivée pendant la mission. La préférence de réduction du mouvement ne suspend pas sa narration.
+`MissionNarration.js` preloads and decodes clips on the first Start press, then
+uses Web Audio sources. One gesture unlocks the entire mission. Pause stores the
+offset; resume recreates a source there. Speech activity is separate from work
+posture; simulation is disabled during the mission. Reduced motion does not
+suspend narration.
 
-L’environnement isolé `.venv-voice` et les modèles locaux sont déjà préparés. Node.js et le site ne dépendent pas de Python pour lire les clips.
+Prepare `.venv-voice` and models locally; neither is bundled. Node.js and the site
+do not require Python for playback.
 
 ```bash
 .venv-voice/bin/python tooling/voice/generate.py --language en
-# Après une modification des textes :
+# After changing scripts:
 .venv-voice/bin/python tooling/voice/generate.py --language en --force
-# Une seule réplique :
+# One line:
 .venv-voice/bin/python tooling/voice/generate.py --language en --ids summon --force
 ```
 
-`--language en` est le défaut ; `--language fr` régénère le français sans écraser les clips anglais. `--stage source` produit seulement la voix source ; `--stage convert` effectue la conversion Ordis. `--pitch` et `--index-rate` règlent la transposition et le poids de l’index ; le lot livré utilise 0 demi-ton et 0,65. Pour changer ces paramètres dans le lot entier, régénérer toutes les répliques avec `--force`. Les fichiers intermédiaires français restent dans `tooling/voice/work/` ; les anglais utilisent `tooling/voice/work/en/`.
+`--language en` is the default; `--language fr` regenerates French without
+overwriting English. `--stage source` generates source speech only; `--stage convert`
+performs Ordis conversion. `--pitch` and `--index-rate` adjust transposition and
+index weight. The delivered pack uses 0 semitones and 0.65. To change these for
+the whole pack, regenerate all lines with `--force`. French intermediates stay
+in `tooling/voice/work/`; English uses `tooling/voice/work/en/`.
 
-Le manifeste est écrit quand la conversion se termine et précise `generated` uniquement lorsque les douze répliques sont présentes. Les clips existants sont réutilisés sauf avec `--force`.
+The manifest is written after conversion and reports `generated` only when all
+twelve lines are present. Existing clips are reused unless `--force` is supplied.
 
-## Réinstaller l’environnement
+## Install the optional environment
 
-Python **3.10** est utilisé pour les dépendances anciennes de RVC. `uv`, un compilateur C/C++ et FFmpeg sont nécessaires pour préparer la chaîne. La version PyPI de Fairseq 0.12.2 omet un fichier C++ ; la source officielle au tag v0.12.2 a été compilée à la place. PyWorld est fixé à 0.3.2 pour rester compatible avec Cython 0.29.37.
+Python **3.10** was used for older RVC dependencies. `uv`, a C/C++ compiler and
+FFmpeg are needed. The PyPI Fairseq 0.12.2 package omits a C++ file, so the official
+v0.12.2 source was built instead. PyWorld is pinned to 0.3.2 for Cython 0.29.37
+compatibility. These instructions record the local pipeline used for this experiment.
 
 ```bash
 uv venv --python 3.10 --seed .venv-voice
@@ -75,18 +126,38 @@ uv venv --python 3.10 --seed .venv-voice
 MAX_JOBS=2 .venv-voice/bin/python -m pip install --no-build-isolation -r tooling/voice/requirements.txt
 ```
 
-Placer les fichiers de l’archive dans `tooling/voice/models/ordis/`. Les autres fichiers nécessaires sont :
+Place archive contents in `tooling/voice/models/ordis/`. Other required files:
 
-- `tooling/voice/models/piper-en/en_US-ryan-high.onnx` et son `.onnx.json`, depuis [Piper Ryan](https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/ryan/high).
-- `tooling/voice/models/piper/fr_FR-tom-medium.onnx` et son `.onnx.json`, depuis [Piper Tom](https://huggingface.co/rhasspy/piper-voices/tree/main/fr/fr_FR/tom/medium).
-- `tooling/voice/models/rvc-base/hubert_base.pt` et `rmvpe.pt`, depuis [les modèles de base indiqués par rvc-python](https://huggingface.co/Daswer123/RVC_Base).
+- `tooling/voice/models/piper-en/en_US-ryan-high.onnx` and its `.onnx.json`, from
+  [Piper Ryan](https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/ryan/high).
+- `tooling/voice/models/piper/fr_FR-tom-medium.onnx` and its `.onnx.json`, from
+  [Piper Tom](https://huggingface.co/rhasspy/piper-voices/tree/main/fr/fr_FR/tom/medium).
+- `tooling/voice/models/rvc-base/hubert_base.pt` and `rmvpe.pt`, from
+  [the base models listed by rvc-python](https://huggingface.co/Daswer123/RVC_Base).
 
-Le générateur valide la présence de ces fichiers et relie les modèles de base à l’environnement Python. Il évite le téléchargement automatique du modèle RMVPE ONNX, inutile pour cette conversion CPU avec Torch. `runtime.lock.txt` conserve les versions effectivement utilisées. Les modèles, l’archive et l’environnement sont exclus du suivi Git ; ils ne sont pas copiés dans le build du site.
+The generator validates these files and links base models into the Python
+environment. It avoids automatically downloading the unnecessary RMVPE ONNX
+model for CPU/Torch conversion. `runtime.lock.txt` records the versions used.
+Models, archive and environment are ignored by Git and omitted from the site build.
 
-## Provenance et contrôles
+## Provenance and checks
 
-`model-provenance.json` consigne les empreintes de l’archive, de ses deux fichiers et des modèles de support. Source Ordis : [101soundboards](https://www.101soundboards.com/tts/1033939-ordis-robotic-voice-warframe-sq-tts-text-to-speech), archive téléchargée par l’utilisateur. Aucune licence n’est incluse dans cette archive. [rvc-python](https://github.com/daswer123/rvc-python) est publié sous MIT ; [Piper](https://github.com/OHF-Voice/piper1-gpl) sous GPL-3.0. La fiche de Piper Ryan indique CC BY-NC-SA 4.0 pour son jeu de données ; celle de Piper Tom indique AGPLv3. Ces fichiers de modèle ne sont pas redistribués dans le lot des clips.
+`model-provenance.json` records archive, contained-file and support-model hashes.
+Ordis source: [101soundboards](https://www.101soundboards.com/tts/1033939-ordis-robotic-voice-warframe-sq-tts-text-to-speech),
+a user-supplied archive with no included license. The experiment’s documentation
+records MIT for [rvc-python](https://github.com/daswer123/rvc-python), GPL-3.0 for
+[Piper](https://github.com/OHF-Voice/piper1-gpl), CC BY-NC-SA 4.0 for the Ryan dataset
+and AGPLv3 on the Tom model card. Consult upstream terms independently; none of
+these statements grant a license to the generated voice. Model files are not
+redistributed in the clip packs.
 
-Les fichiers sont décodés et contrôlés pour leur durée, les valeurs finies, le niveau non nul et les crêtes. Le parcours navigateur observe une lecture réelle, des bandes audio / RMS non nuls, un canal microphone nul, l’arrêt, le téléchargement et la lecture d’un WAV importé. Les captures et relevés sont dans `artifacts/voice/`.
+Files were decoded and checked for duration, finite values, nonzero levels and
+peaks. Browser workflows observed actual playback, nonzero RMS/bands, zero microphone
+level, stop, download and imported WAV playback. Captures and measurements are in
+`artifacts/voice/` at the root.
 
-Une transcription automatique de trois extraits est conservée comme contrôle indicatif : elle reconnaît l’essentiel mais commet des erreurs, notamment sur « Opérateur ». Elle ne remplace pas une écoute humaine. Aucune écoute humaine ni validation de ressemblance vocale n’est revendiquée ici. Aucun test unitaire n’a été ajouté ni exécuté.
+Automatic transcription of three excerpts is retained as an indicative check.
+It recognizes most content but makes errors, notably on the French word for
+Operator. It does not replace human listening. No human listening or verified
+voice-likeness evaluation is claimed. No unit tests were added or run for that
+historical voice-generation pass.

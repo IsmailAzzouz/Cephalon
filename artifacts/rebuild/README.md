@@ -1,30 +1,34 @@
-# Contrôles de reconstruction
+# Reconstruction checks
 
-Les images 01 à 07 correspondent aux étapes construites dans l’ordre du cahier des charges.
+Images 01–07 correspond to stages built in brief order.
 
-| Capture | Contrôle |
+| Capture | Check |
 | --- | --- |
-| 01.png | Hexaèdre fermé, pointes lisibles, sans plaques écartées |
-| 02.png | Onde principale, oscillogramme et 96 graduations sur le plan horizontal |
-| 03.png | Transparence, Fresnel, fissures et reflets |
-| 04.png | Noyau volumétrique et bloom HDR |
-| 05.png | Diffusion colorée, dispersion locale et particules |
-| 06.png | Réactivité à un signal de parole simulé |
-| 07.png | Rupture brève, dispersion renforcée et micro-fragments |
+| 01.png | Closed hexahedron, readable points, no separated plates |
+| 02.png | Main wave, waveform and 96 ticks on the horizontal plane |
+| 03.png | Transparency, Fresnel, fractures and reflections |
+| 04.png | Volumetric core and HDR bloom |
+| 05.png | Colored diffusion, local dispersion and particles |
+| 06.png | Response to simulated speech |
+| 07.png | Brief glitch, increased dispersion and micro-fragments |
 
-`final-mobile.png`, `final-speaking.png` et `final-desktop.png` montrent la composition complète avec les commandes. `final-debug.png` montre l’atelier. Les détails du parcours navigateur et des signaux réels figurent dans `browser-checks.json`.
+`final-mobile.png`, `final-speaking.png` and `final-desktop.png` show the complete
+composition with controls. `final-debug.png` shows the editor. Browser workflow
+and actual-signal details are in `browser-checks.json`.
 
-- [x] Silhouette cohérente et géométrie fermée.
-- [x] Matière sombre et transparente, distincte des émissions lumineuses.
-- [x] Arêtes et noyau HDR, bloom multi-échelle sélectif.
-- [x] Onde principale horizontale, oscillogramme central et couronne secondaire.
-- [x] Rotation du cristal indépendante du plan des ondes.
-- [x] RMS et bandes de fréquences sur un fichier audio réellement lu.
-- [x] Analyse microphone séparée, sans retour vers les haut-parleurs.
-- [x] États de parole et d’écoute distincts.
-- [x] Émotions fournies séparément du volume.
-- [x] Fragments absents au repos et restaurés après réaction.
-- [x] Couches isolables et paramètres optiques indépendants.
-- [x] API prête pour recevoir des événements TTS / STT.
-- [ ] Comparaison avec les quatre images non jointes au message.
-- [ ] Appréciation finale de la nouvelle version sur le téléphone réel.
+- [x] Coherent silhouette and closed geometry.
+- [x] Dark transparent material distinct from light emission.
+- [x] HDR edges/core and selective multiscale bloom.
+- [x] Horizontal main wave, central waveform and secondary crown.
+- [x] Crystal rotation independent of the wave plane.
+- [x] RMS and frequency bands from an actually played file.
+- [x] Separate microphone analysis without speaker feedback.
+- [x] Separate speaking and listening states.
+- [x] Emotions supplied independently of volume.
+- [x] Fragments absent at rest and restored after reaction.
+- [x] Isolatable layers and independent optical parameters.
+- [x] API ready to receive TTS/STT events.
+- [ ] Comparison with four images not attached to the request.
+- [ ] Final review of the new version on a physical phone.
+
+This is historical evidence. Captures retain the original interface language.

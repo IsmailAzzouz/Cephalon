@@ -1,5 +1,5 @@
-# Audio du compagnon
+# Companion audio
 
-À implémenter : propriété du microphone, routage vers activation et STT, lecture
-TTS et interruption. Le rendu reçoit des niveaux dérivés et ne possède pas la
-veille. Les adaptateurs STT / TTS seront dans `packages/integrations/`.
+To implement: microphone ownership, routing to activation and STT, TTS playback
+and interruption. Rendering receives derived levels and does not own wake-word
+listening. STT / TTS adapters will live in `packages/integrations/`.

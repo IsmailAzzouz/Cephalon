@@ -1,14 +1,14 @@
 import { CephalonAvatar } from '/packages/avatar/src/CephalonAvatar.js';
-import { AvatarDebug } from './atelier/AvatarDebug.js';
+import { AvatarDebug } from './studio/AvatarDebug.js';
 import { AgentMissionView } from '/examples/signal-mission/src/AgentMissionView.js';
-import { AnimationStudio } from './atelier/AnimationStudio.js';
+import { AnimationStudio } from './studio/AnimationStudio.js';
 import { AgentEventBridge } from '/packages/avatar/src/AgentEventBridge.js';
 import { EnergyShowcase } from './EnergyShowcase.js';
-import { VoiceLibrary } from './atelier/VoiceLibrary.js';
+import { VoiceLibrary } from './studio/VoiceLibrary.js';
 
 const $=selector=>document.querySelector(selector);
 const states=['idle','listening','thinking','speaking'];
-const names={idle:'Au repos',listening:'À l’écoute',thinking:'En réflexion',speaking:'En train de parler',glitch:'Rupture du signal'};
+const names={idle:'Idle',listening:'Listening',thinking:'Thinking',speaking:'Speaking',glitch:'Signal glitch'};
 let avatar,debug,mission,studio,showcase,voices,immersed=false;
 function manualAction(){showcase?.stop();mission?.cancelForManual();avatar?.controller.animations.stopAll({restore:false});}
 function showError(message){
@@ -24,10 +24,10 @@ function refresh(){
   });
   $('#state-announcement').textContent=active?controller.animations.library.get(active.name).label:names[controller.state];
   const paused=mission?.sequence.running?mission.sequence.paused:controller.paused;
-  const label=mission?.sequence.running?(paused?'Resume mission':'Pause mission'):(paused?'Reprendre le mouvement':'Suspendre le mouvement');
+  const label=mission?.sequence.running?(paused?'Resume mission':'Pause mission'):(paused?'Resume motion':'Pause motion');
   $('#pause').setAttribute('aria-pressed',String(paused));$('#pause').setAttribute('aria-label',label);$('#pause').title=label;
   $('#glitch').classList.toggle('signal-break',controller.state==='glitch');
-  $('#gesture-hint').textContent=(active?controller.animations.library.get(active.name).label+' · ':'')+(controller.demo?'Signal simulé':avatar.audio.output?'Audio de sortie':avatar.audio.input?'Microphone actif':'Signal externe')+' · Glissez pour orienter';
+  $('#gesture-hint').textContent=(active?controller.animations.library.get(active.name).label+' · ':'')+(controller.demo?'Simulated signal':avatar.audio.output?'Audio output':avatar.audio.input?'Microphone active':'External signal')+' · Drag to rotate';
   debug?.refresh();
 }
 try{
@@ -77,7 +77,7 @@ try{
     }});
   }
   Object.defineProperty(api,'time',{get:()=>avatar.controller.time});window.cephalon=api;refresh();
-}catch(error){console.error(error);showError('La projection WebGL 2 est indisponible. Essayez Chrome ou Safari à jour avec l’accélération graphique activée.');}
+}catch(error){console.error(error);showError('WebGL 2 is unavailable. Try an updated Chrome or Safari with graphics acceleration enabled.');}
 
 document.querySelectorAll('[data-state]').forEach(button=>button.addEventListener('click',()=>{manualAction();avatar?.controller.setState(button.dataset.state);}));
 $('#pause').addEventListener('click',()=>{if(mission?.sequence.running)mission.setPaused(!mission.sequence.paused);else avatar?.controller.setPaused(!avatar.controller.paused);});

@@ -1,8 +1,8 @@
-# Compagnon de bureau
+# Desktop companion
 
-À implémenter. Application résidente composée d’un `host/`, d’une surcouche
-`overlay/` et de `settings/`. L’hôte reste actif lorsque la surcouche est masquée.
-La coque native reste à choisir. Aucun script de lancement du compagnon n’existe
-encore ; `npm run dev` lance uniquement l’atelier navigateur.
+Planned resident application with a `host/`, an `overlay/` and `settings/`.
+The host remains active while the overlay is hidden. The native shell is still
+to be chosen. No companion launcher exists yet; `npm run dev` starts only the
+browser playground.
 
-Architecture : [docs/architecture.md](../../docs/architecture.md).
+See [the architecture](../../docs/architecture.md).

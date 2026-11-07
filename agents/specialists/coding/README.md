@@ -1,4 +1,4 @@
-# Spécialiste code
+# Coding specialist
 
-À implémenter. Inspecte, modifie et vérifie un projet dans le périmètre confié.
-Retourne les changements, les vérifications effectuées et les limites au cerveau.
+To implement. Inspects, changes and verifies a project within the assigned scope.
+Returns changes, performed checks and limitations to the brain.

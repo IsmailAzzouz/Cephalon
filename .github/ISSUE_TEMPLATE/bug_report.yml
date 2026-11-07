@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a reproducible problem in the current prototype.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please write reports in English. Do not post secrets or security vulnerabilities here; see SECURITY.md.
+  - type: input
+    id: revision
+    attributes:
+      label: Commit or version
+      description: The commit you tested, or when you cloned the repository.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the command, URL and actions needed to see the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, browser, Node.js version and relevant logs or screenshots. Remove personal information.

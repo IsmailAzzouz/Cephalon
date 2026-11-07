@@ -1,9 +1,13 @@
-# Présence d’Ordis — observation du rendu
+# Ordis presence — rendering observation
 
-`ordis-live.webm` enregistre la mission complète en vue tactile 390 × 844 dans Chromium avec WebGL logiciel. Les neuf images capturent l’écoute, la réflexion, la lecture à gauche et à droite, la découverte, l’inspection, le recoupement, le rapport et le début du retour au repos.
+`ordis-live.webm` records the full mission at 390 × 844 with Chromium touch
+emulation and software WebGL. Nine images capture listening, thinking, left/right
+reading, discovery, inspection, cross-checking, reporting and the start of settling.
 
-`visual-review.json` contient les postures relevées pendant ce rendu, leurs amplitudes et les erreurs navigateur (aucune remontée). Il s’agit d’une observation visuelle et d’un enregistrement, sans suite de tests unitaires.
+`visual-review.json` contains recorded poses, ranges and browser errors (none
+reported). These are visual observations and a recording, not a unit-test suite.
 
-`10-desktop-reading.png` montre la lecture à 1440 × 900. La pause a également été observée : elle fige la posture.
-
-La mission utilise des transmissions locales fictives. Les gestes de lecture suivent le parcours effectif des données. Le scénario se relance à `http://192.168.129.101:5173/?mission=1`.
+`10-desktop-reading.png` shows reading at 1440 × 900. Pause was also observed to
+freeze posture. The mission uses fictional local transmissions; reading gestures
+follow actual data traversal. Replay at `http://localhost:5173/?mission=1`.
+Historical captures retain the original interface language.

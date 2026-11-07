@@ -1,5 +1,4 @@
-# Session interactive
+# Interactive session
 
-À implémenter : rattacher une activation à la conversation, transmettre les
-interruptions et afficher l’état des travaux connus. Le runtime reste propriétaire
-des tâches et de leur persistance.
+To implement: attach activation to a conversation, relay interruptions and display
+known work state. The runtime remains responsible for tasks and their persistence.

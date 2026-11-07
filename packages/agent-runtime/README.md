@@ -1,5 +1,5 @@
-# Mécanismes d’exécution
+# Execution mechanisms
 
-À implémenter : cycle de vie des agents, délégation et annulation des travaux.
-Le code commun restera indépendant des rôles dans `agents/` et de la composition
-applicative dans `apps/runtime/`. Aucun faux moteur d’orchestration n’est livré.
+To implement: agent lifecycle, delegation and work cancellation. Shared code
+will remain independent of roles in `agents/` and application assembly in
+`apps/runtime/`. No simulated orchestration engine is delivered.

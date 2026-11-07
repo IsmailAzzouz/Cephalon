@@ -1,63 +1,140 @@
-# Ordis — cristal holographique vivant
+# Ordis — living holographic crystal
 
-Le cahier des charges du 7 novembre 2026 est l’autorité visuelle. La silhouette reste entière : un hexaèdre à huit coins légèrement asymétriques et douze arêtes, incliné pour former un losange avec des pointes hautes et basses lisibles. Les fissures sont surtout lumineuses ; elles ne séparent pas le corps en grandes plaques.
+The November 7, 2026 brief is the visual authority for the default draft profile.
+The silhouette remains whole: a hexahedron with eight slightly asymmetric corners
+and twelve edges, tilted into a diamond with readable upper and lower points.
+Fractures are mainly luminous; they do not split the body into large plates.
 
-Fond #010712, verre bleu nuit / violet, énergie #67DEFF, blanc froid #E4FBFF, accents violets et dispersion RGB discrète. La typographie et l’interface périphérique restent sobres, avec les polices locales Barlow.
+Background #010712, midnight-blue/violet glass, energy #67DEFF, cold white #E4FBFF,
+violet accents and subtle RGB dispersion. Typography and peripheral controls stay
+restrained, using locally served Barlow fonts.
 
-Le rendu par défaut est épuré à la demande de l’utilisateur : fissures et micro-fragments désactivés, intensité de fragmentation à zéro, filaments internes et filaments du noyau masqués. Les commandes de l’atelier permettent de les réactiver.
+At the user’s request, defaults are simplified: fractures and micro-fragments
+disabled, fragment intensity zero, internal and core filaments hidden. The editor
+can re-enable them.
 
-## Structure et profondeur
+## Structure and depth
 
-Le repère de position de l’avatar contient deux branches indépendantes : le cristal incliné et les ondes horizontales. La rotation au doigt ne modifie que le cristal. Les anneaux restent parallèles au sol XZ et suivent le centre de l’avatar, avec une ellipse projetée dont le grand axe reste horizontal.
+The avatar’s position rig has independent branches for the tilted crystal and
+horizontal waves. Dragging rotates only the crystal. Rings remain parallel to
+XZ ground and follow the avatar center, with the projected ellipse’s major axis
+remaining horizontal.
 
-Trois couches : bande énergétique principale presque fermée, oscillogramme central plus nerveux, couronne de 96 graduations secondaires. Le segment arrière de l’onde est atténué lorsqu’un rayon visuel traverse le volume cristallin. Les pulsations d’écoute et les rémanences restent discrètes.
+Three layers: an almost closed main energy band, a more active central waveform
+and a crown of 96 secondary ticks. The rear wave segment dims where a view ray
+passes through the crystal. Listening pulses and afterglow remain subtle.
 
-## Matière et optique
+## Material and optics
 
-Les faces transparentes ont des variations de transmission stylisée, un Fresnel, une épaisseur près des bords, quelques reflets diagonaux et des motifs internes discrets. Les fissures sont des tracés anguleux, distincts des filaments internes plus fluides.
+Transparent faces have stylized transmission variation, Fresnel, edge thickness,
+a few diagonal reflections and restrained internal patterns. Angular fracture
+paths remain distinct from more fluid internal filaments.
 
-Les arêtes principales émettent davantage que les arêtes arrière. Leur épaisseur et leur émission se règlent séparément. Le noyau est un volume raymarché, avec une densité irrégulière et des filaments, sans carré central.
+Primary edges emit more strongly than rear edges. Width and emission are independent.
+The core is a raymarched volume with irregular density and filaments, without a
+central square.
 
-La scène est calculée dans un render target HDR 16 bits lorsque le navigateur le permet. Une extraction des hautes lumières alimente trois niveaux de flou séparables, avec une diffusion proche blanche / cyan et une diffusion large bleutée. Les faces sombres restent sous le seuil du bloom. La dispersion chromatique de 1 à 3 pixels environ est masquée sur les hautes lumières ; elle augmente brièvement pendant les ruptures. Les effets de lentille sont liés au noyau et disparaissent quand sa couche est masquée.
+Where supported, the scene uses a 16-bit HDR render target. Highlight extraction
+feeds three separable blur levels: near white/cyan diffusion and broader blue
+diffusion. Dark faces stay below the bloom threshold. Chromatic dispersion of
+roughly 1–3 pixels is masked to highlights and briefly increases during glitches.
+Core-linked lens effects disappear when the core layer is hidden.
 
-## Expressivité
+## Expression
 
-Idle : flottement et reflets très lents. Listening : silhouette attentive, activité microphone modérée et pulsations sortantes. Thinking : noyau lent, filaments et balayage des graduations. Speaking : niveau de sortie RMS lissé, transitoires et bandes basses / médiums / aigus pilotent les ondes, sans faire grossir le cristal.
+Idle: slow floating and reflections. Listening: attentive silhouette, restrained
+microphone activity and outward pulses. Thinking: slow core, filaments and tick
+scanning. Speaking: smoothed output RMS, transients and bass/mid/treble bands drive
+the waves without enlarging the crystal.
 
-La présence se lit d’abord dans la posture. Un directeur d’attention indépendant des matériaux fait pivoter le cristal vers des cibles explicites, avec anticipation, amortissement et retour. Le noyau mène légèrement le déplacement. Écouter produit une inclinaison attentive et un petit acquiescement ; réfléchir déplace l’attention en haut et sur les côtés ; parler ramène le cristal face à l’Opérateur avec des accents de phrase. Le corps ne tourne pas en boucle.
+Presence reads through posture first. A material-independent attention director
+turns the crystal toward explicit targets with anticipation, damping and return.
+The core leads slightly. Listening brings an attentive tilt and small nod;
+thinking shifts attention upward and sideways; speech faces the Operator with
+phrase accents. The body does not spin in a loop.
 
-L’émotion vient du système conversationnel et reste indépendante du volume. L’enthousiasme augmente l’activité ; la tristesse réduit modérément la lumière et ralentit le temps ambiant ; la curiosité incline légèrement la forme. La surprise est une impulsion brève. La colère provoque des ruptures espacées, généralement 240 à 300 ms, avec désalignement minime et retour complet. Les micro-fragments sont invisibles au repos.
+Emotion comes from the conversation system and is independent of volume. Happiness
+increases activity; sadness moderately dims light and slows ambient time; curiosity
+slightly tilts the shape. Surprise is a short impulse. Anger creates spaced glitches,
+usually 240–300 ms, with minimal misalignment and full recovery. Micro-fragments
+are invisible at rest.
 
 ## Interface
 
-Quatre états accessibles en bas : Repos, Écoute, Réflexion, Parole. Le signal simulé est indiqué. Glitch, atelier optique, pause et immersion restent en périphérie. Les émotions, l’audio réel, les couches et les réglages avancés sont regroupés dans l’atelier, sans envahir la projection.
+Four bottom controls: Idle, Listening, Thinking and Speaking. Label the simulated
+signal. Glitch, optical settings, pause and immersion remain peripheral. Group
+emotions, actual audio, layers and advanced settings in the editor without covering
+the projection unnecessarily.
 
-## Mission d’essai
+## Demo mission
 
-Un bouton lance une séquence de travail lisible. Pendant la mission, le contrôle manuel des quatre états cède la place au journal et à une seule commande d’arrêt / rejeu. Le cristal se décale doucement pour laisser de la place au compte rendu : panneau latéral sur ordinateur et panneau sous le volume sur téléphone. Les anneaux suivent sa position en conservant leur horizontalité.
+One button starts a readable work sequence. During the mission, manual state
+controls give way to a log and a stop/replay control. The crystal moves gently to
+make room for findings: a side panel on desktop, a panel below the volume on phone.
+Rings follow position while remaining horizontal.
 
-La recherche accélère le balayage de la couronne ; l’analyse active davantage les filaments ; la découverte provoque une surprise brève ; le rapport utilise l’état de parole. Les vitesses de balayage s’intègrent dans le temps pour éviter les sauts angulaires pendant les transitions. La mission s’achève sur un cristal au repos et un rapport persistant, avec les preuves consultables dans le journal. La mention « données locales simulées » reste visible.
+Search speeds up crown scanning; analysis increases filament activity; discovery
+causes brief surprise; reporting uses speech state. Integrate scanning speed over
+time to avoid angular jumps at transitions. Finish with a resting crystal and a
+persistent report, with evidence available in the log. Keep the simulated-local-data
+label visible.
 
-Chaque lecture réelle d’une transmission déclenche une direction d’attention : six lignes à gauche, puis six à droite. De petites projections matérialisent les sources consultées. Il se rapproche pour inspecter le signal, lève son attention pour réfléchir et alterne entre deux sources pendant le recoupement. La découverte produit un recul bref suivi d’un rapprochement ; le rapport revient vers l’Opérateur. Le texte en cours de mission est discret et sans cadre, pour laisser la gestuelle porter l’action. Les anneaux restent dans XZ pendant toute cette chorégraphie.
+Every actual transmission read triggers an attention direction: six lines left,
+then six right. Small projections represent inspected sources. The avatar approaches
+to inspect, looks up to think and alternates between sources when cross-checking.
+Discovery produces brief recoil followed by approach; reporting returns to the
+Operator. Mission text stays discreet and unframed so gestures carry the action.
+Rings remain in XZ throughout this choreography.
 
-## Sets d’action réutilisables
+## Reusable action profiles
 
-Les états audio restent distincts des actions : lire et écrire utilisent tous deux la réflexion, mais leur chorégraphie diffère. Lire parcourt des lignes et change de source ; écrire produit des gestes brefs vers la zone de travail, compose des lignes et marque des pauses de relecture. Chaque set possède une vitesse, une intensité, une direction et des amplitudes réglables. Le mouvement conserve son amortissement lors d’un changement d’action.
+Audio states are distinct from actions: reading and writing both use thinking,
+but with different choreography. Reading scans lines and switches sources;
+writing makes short work-area gestures, composes lines and pauses to proofread.
+Each profile has adjustable speed, intensity, direction and amplitudes. Damping
+is preserved when actions change.
 
-Contact et summon ouvrent temporairement des points de liaison autour du cristal. L’appel comprend une orientation, un léger recul et une impulsion ; summon émet une seconde impulsion et peut afficher plusieurs contacts. Pendant l’attente, Ordis consulte ces directions. Les points et leurs lignes disparaissent à la fin de la liaison. Ce sont des présences distantes, pas des fragments du corps.
+Contact and summon temporarily open link points around the crystal. A call includes
+orientation, slight recoil and a pulse. Summon emits a second pulse and may show
+multiple contacts. While waiting, the avatar attends to these directions. Points
+and lines disappear when links end. These are remote presences, not body fragments.
 
-Le bouton Animations donne accès au catalogue dans l’atelier existant. La prévisualisation ferme l’atelier pour rendre l’avatar visible. Les réglages détaillés, les liaisons d’outils et l’import / export sont repliables. Les actions externes se maintiennent jusqu’à leur fin explicite ; la parole et l’écoute prennent temporairement la priorité sur les outils. Aucune interface de journal n’est requise par le moteur d’animation.
+Animations opens the catalog inside the existing editor. Preview closes the editor
+so the avatar remains visible. Detailed settings, tool bindings and import/export
+are collapsible. External actions persist until explicitly finished; speech and
+listening temporarily take priority over tools. The animation engine requires no log UI.
 
-## Résonance du volume
+## Volume resonance
 
-L’énergie déforme le corps de façon cohérente : respiration lente en réflexion, impulsions courtes pendant l’écriture, concentration vers l’intérieur avant un appel, détente amortie à la décharge. Les accents de parole sont espacés ; le cube ne suit pas chaque échantillon de volume. La silhouette reste entière.
+Energy coherently deforms the body: slow breathing while thinking, short writing
+impulses, inward concentration before a call and damped release on discharge.
+Speech accents are spaced; the cube does not follow every volume sample.
+The silhouette remains whole.
 
-Le même événement déclenche une convergence du noyau, l’illumination des fissures, un front de caustique sur les six faces, une brève rémanence du contour et une onde extérieure sur XZ. Les petits traits d’ions partent de la surface du cristal, puis disparaissent. Les accents violets accompagnent la charge ; le cœur de la décharge reste blanc / cyan. Le bloom et la dispersion augmentent localement avec ces sources, sans flash de tout l’écran.
+One event triggers core convergence, fracture illumination, a caustic front on six
+faces, brief contour afterglow and an outer XZ wave. Small ion trails leave the
+crystal surface and fade. Violet accents accompany charge; the discharge center
+stays white/cyan. Bloom and dispersion increase locally around these sources
+without flashing the entire screen.
 
-Le summon est le moment le plus expressif : contraction, double émission, liaisons et paquets en circulation. Les autres actions ménagent les temps calmes. La démo d’enchaînements expose ces contrastes en conservant l’interface en périphérie. Pulsation et rayonnement sont des paramètres séparés par set, conservés dans le format JSON v1.
+Summon is the most expressive moment: contraction, double emission, links and
+moving packets. Other actions leave quiet intervals. The sequence demo exposes
+these contrasts while keeping controls peripheral. Pulsation and radiance are
+separate per-profile parameters retained in v1 JSON.
 
-La mission parlée utilise une narration anglaise liée aux étapes. La lecture, l’analyse et la recherche conservent leur posture pendant les commentaires ; une activation vocale distincte alimente les ondes et de petits accents de phrase. Le rapport revient face à l’Opérateur et sa phase dure assez longtemps pour entendre les conclusions. La scène ménage des silences plutôt que de remplir toutes les étapes de parole. Un appui explicite sur Start mission autorise l’audio du téléphone. La pause conserve la position de lecture de la voix, l’arrêt coupe la narration et le retour au repos ne laisse pas de parole simulée.
+The voiced mission uses phase-linked English narration. Reading, analysis and
+search preserve work posture during remarks; separate speech activation drives
+waves and small phrase accents. Reporting returns to the Operator and lasts long
+enough for the conclusion. Leave silences instead of filling every phase with
+speech. An explicit Start mission press unlocks mobile audio. Pause preserves
+voice position, stop cuts narration and returning to idle leaves no simulated speech.
 
-## Aperçus vocaux
+## Voice previews
 
-La section Voix d’Ordis ouvre par défaut les répliques anglaises générées avec le modèle fourni. Un choix de collection distingue English, extraits du jeu et Français ; l’origine générée ou enregistrée est explicite. Les extraits du jeu disposent d’un lien vers leur source Wiki. Le sélecteur de réplique nomme le contexte et la durée ; le texte accompagne le choix et le MP3 est téléchargeable. L’appui sur Écouter ferme l’atelier pour laisser voir l’avatar. Le signal simulé cède alors la place à la lecture locale et à son analyse RMS réelle. La réaction glitch de l’extrait de référence suit son temps audio, se déclenche une seule fois et respecte la pause et le mouvement réduit. Aucun nouveau panneau ne recouvre le cristal pendant la parole.
+Ordis voice opens generated English dialogue by default. The collection selector
+separates English, game recordings and French; generated/recorded provenance is
+explicit. Game excerpts link to their Wiki sources. The line selector names context
+and duration; text accompanies the selection and MP3 is downloadable. Play with
+avatar closes the editor. Simulated input yields to local playback and actual RMS
+analysis. The reference clip’s glitch follows audio time, fires once and respects
+pause and reduced motion. No new panel covers the crystal during speech.

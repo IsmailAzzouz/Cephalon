@@ -1,0 +1,21 @@
+name: Feature proposal
+description: Discuss an improvement or an architecture decision.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would this help you do?
+      description: Please write in English. Describe the use case.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: How does this fit the companion, agents or avatar boundaries?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or open questions

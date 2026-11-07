@@ -43,7 +43,7 @@ export class CephalonAvatar {
     this.wake=new EnergyWake();this.positionRoot.add(this.wake.group);
     this.bindInput();
     this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(canvas.parentElement);this.resize();
-    canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();this.renderer.setAnimationLoop(null);onError('La projection a été interrompue. Rechargez la page.');});
+    canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();this.renderer.setAnimationLoop(null);onError('The projection was interrupted. Reload the page.');});
     this.lastTime=performance.now();
     this.renderer.setAnimationLoop(now=>this.render(now));
   }

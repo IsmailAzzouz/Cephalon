@@ -1,14 +1,14 @@
 import { defaults } from '/packages/avatar/src/settings.js';
 
 const ranges=[
-  ['crystalOpacity','Opacité du cristal',0,.7,.01],['fresnelStrength','Fresnel',0,3,.05],
-  ['edgeWidth','Épaisseur des arêtes',.3,2.5,.05],['edgeEmission','Émission des arêtes',.5,10,.1],
-  ['bloomIntensity','Intensité du bloom',0,2,.05],['bloomRadius','Rayon du bloom',.4,3,.05],
-  ['aberration','Dispersion chromatique · px',0,4,.1],['coreSize','Taille du noyau',.4,1.8,.05],
-  ['coreIntensity','Énergie du noyau',.1,3,.05],['ringYaw','Azimut des anneaux · XZ',-3.14,3.14,.05],
-  ['waveAmplitude','Amplitude des ondes',0,2,.05],['fragmentsIntensity','Micro-fragments',0,2,.05],
+  ['crystalOpacity','Crystal opacity',0,.7,.01],['fresnelStrength','Fresnel',0,3,.05],
+  ['edgeWidth','Edge width',.3,2.5,.05],['edgeEmission','Edge emission',.5,10,.1],
+  ['bloomIntensity','Bloom intensity',0,2,.05],['bloomRadius','Bloom radius',.4,3,.05],
+  ['aberration','Chromatic dispersion · px',0,4,.1],['coreSize','Core size',.4,1.8,.05],
+  ['coreIntensity','Core intensity',.1,3,.05],['ringYaw','Ring azimuth · XZ',-3.14,3.14,.05],
+  ['waveAmplitude','Wave amplitude',0,2,.05],['fragmentsIntensity','Micro-fragments',0,2,.05],
 ];
-const layerNames={crystal:'Cristal',fractures:'Fissures et micro-fragments',core:'Noyau',voiceRing:'Onde principale',innerWaveform:'Oscillogramme central',ticks:'Couronne graduée',filaments:'Filaments',particles:'Particules'};
+const layerNames={crystal:'Crystal',fractures:'Fractures and micro-fragments',core:'Core',voiceRing:'Main wave',innerWaveform:'Central waveform',ticks:'Graduated ring',filaments:'Filaments',particles:'Particles'};
 
 export class AvatarDebug {
   constructor(avatar){
@@ -41,14 +41,14 @@ export class AvatarDebug {
     });
     document.querySelector('#audio-file').addEventListener('change',async event=>{
       const file=event.target.files[0];if(!file)return;
-      try{await avatar.audio.playFile(file);this.message('Lecture locale : '+file.name);}catch{this.message('Lecture impossible. Essayez un MP3 ou un WAV.');}
+      try{await avatar.audio.playFile(file);this.message('Local playback: '+file.name);}catch{this.message('Playback failed. Try an MP3 or WAV file.');}
     });
-    document.querySelector('#audio-stop').addEventListener('click',()=>{avatar.audio.stop();avatar.controller.setState('idle');this.message('Signal arrêté.');});
+    document.querySelector('#audio-stop').addEventListener('click',()=>{avatar.audio.stop();avatar.controller.setState('idle');this.message('Signal stopped.');});
     document.querySelector('#microphone').addEventListener('click',async()=>{
-      try{await avatar.audio.requestMicrophone();this.message('Microphone actif. Aucun signal microphone n’est envoyé aux haut-parleurs.');}
-      catch(error){this.message(error.message||'Le microphone est indisponible.');}
+      try{await avatar.audio.requestMicrophone();this.message('Microphone active. Microphone input is never sent to the speakers.');}
+      catch(error){this.message(error.message||'The microphone is unavailable.');}
     });
-    if(!navigator.mediaDevices?.getUserMedia){document.querySelector('#microphone').disabled=true;this.message('Sur le réseau local en HTTP, utilisez un fichier ou un flux audio. Le microphone nécessite HTTPS ou localhost.');}
+    if(!navigator.mediaDevices?.getUserMedia){document.querySelector('#microphone').disabled=true;this.message('On a local HTTP connection, use an audio file or stream. The microphone requires HTTPS or localhost.');}
     document.querySelector('#reset-optics').addEventListener('click',()=>{
       Object.assign(avatar.config,defaults);avatar.stage=7;avatar.controller.setEmotion('neutral',.7);avatar.orbit.reset();
       this.controls.forEach(({key,input,output})=>{input.value=avatar.config[key];output.textContent=String(avatar.config[key]);});
@@ -62,6 +62,6 @@ export class AvatarDebug {
     document.querySelector('#emotion').value=this.avatar.controller.emotion;
     document.querySelector('#emotion-intensity').value=this.avatar.controller.emotionIntensity;
     document.querySelector('#demo-signal').checked=this.avatar.controller.demo;
-    document.querySelector('#hdr-status').textContent=this.avatar.post.hdr?'HDR 16 bits · bloom sélectif':'HDR indisponible sur ce navigateur · rendu de secours';
+    document.querySelector('#hdr-status').textContent=this.avatar.post.hdr?'16-bit HDR · selective bloom':'HDR unavailable in this browser · fallback rendering';
   }
 }

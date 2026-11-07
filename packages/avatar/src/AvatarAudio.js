@@ -45,7 +45,7 @@ export class AvatarAudio {
     this.output=new AudioAnalyser(this.context,source,true);
     this.controller.setDemo(false);this.controller.setState('speaking');
     audio.onended=()=>{if(version===this.version)this.stopOutput();};
-    audio.onerror=()=>{if(version===this.version){this.stopOutput();this.onChange('error','Ce format audio ne peut pas être lu. Essayez un MP3 ou un WAV.');}};
+    audio.onerror=()=>{if(version===this.version){this.stopOutput();this.onChange('error','This audio format cannot be played. Try an MP3 or WAV file.');}};
     try{await audio.play();if(version!==this.version){audio.pause();return false;}this.onChange('output');return true;}
     catch(error){if(version===this.version){this.stopOutput();throw error;}}
   }
@@ -59,7 +59,7 @@ export class AvatarAudio {
     this.controller.setDemo(false);this.controller.setState('listening');this.onChange('input');
   }
   async requestMicrophone(){
-    if(!navigator.mediaDevices?.getUserMedia)throw new Error('Le microphone nécessite HTTPS, ou une ouverture sur localhost. Un fichier audio fonctionne aussi sur le réseau local.');
+    if(!navigator.mediaDevices?.getUserMedia)throw new Error('The microphone requires HTTPS or localhost. You can also use an audio file on the local network.');
     const version=++this.inputVersion;
     const stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true},video:false});
     if(version!==this.inputVersion){stream.getTracks().forEach(track=>track.stop());return;}

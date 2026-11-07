@@ -1,10 +1,9 @@
-# Atelier navigateur
+# Browser playground
 
-Application existante de développement visuel : cristal, atelier optique,
-sets d’animation, voix et présentation énergétique. Monte aussi la mission
-fictive de `../signal-mission/`. Aucun agent réel ni activation de bureau.
+Existing visual development application: crystal, optical controls, animation
+profiles, voices and energy showcase. Also mounts the fictional mission from
+`../signal-mission/`. No real agent or desktop activation.
 
-Depuis la racine : `npm run dev`, `npm run build`, `npm run preview`.
-Le code de l’avatar est partagé depuis `packages/avatar/`.
-Les fixtures de profils et d’événements sont dans `fixtures/`.
-Le guide détaillé est dans [docs/avatar-guide.md](../../docs/avatar-guide.md).
+From the root: `npm run dev`, `npm run build`, `npm run preview`.
+Avatar code is shared from `packages/avatar/`. Profile and event fixtures are in
+`fixtures/`. See the detailed [avatar guide](../../docs/avatar-guide.md).
